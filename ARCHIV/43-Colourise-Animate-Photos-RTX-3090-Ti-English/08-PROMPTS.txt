@@ -1,0 +1,13 @@
+Exact prompts used
+
+Clothing edit:
+Replace only the woman's ivory brocade gown with an elegant emerald-green velvet evening gown. Preserve the same face, hairstyle, goggles, expression, pose, hands, body proportions, necklace, background, lighting and framing.
+
+LTX short prompt:
+eine Bewegung wie in den Harry-Potter-Filmen
+
+LTX technical long prompt:
+Animate this photograph as a quiet, natural living photo. Preserve the identity, age, facial features, clothing, number of people, background and original composition. Use only very subtle breathing, occasional gentle blinking and a slight natural movement of fabric. Keep the camera fixed. Do not add people or objects. No scene changes, no face morphing, no exaggerated gestures, no speaking, no text and no audio.
+
+Seeds and model settings are part of the result. The short and long LTX prompts
+are separate tests; prompt enhancement was disabled.

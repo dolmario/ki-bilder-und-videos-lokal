@@ -1,0 +1,17 @@
+Input-to-output workflow — RTX 3090 Ti / Ryzen 7 5700X3D / 32 GB RAM
+
+1. Confirm hardware, free SSD space, model licence and the exact task.
+2. Install the documented ComfyUI build and only the required GGUF custom node.
+3. Put each verified model in the folder listed in 06-MODELLE-UND-ORDNER.txt.
+4. Start only one heavy ComfyUI/model instance. Preserve the exact start command.
+5. Load the tested workflow, choose the input, model, seed and exact prompt.
+6. Generate one controlled result before starting a batch.
+7. Check content, faces, hands, text, alpha, crop and start/middle/end of videos.
+8. Keep failed outputs and logs; API success or a decodable file is not visual approval.
+9. Export only accepted results and retain prompt, seed, model, workflow and licence.
+
+Platform note:
+ComfyUI Portable NVIDIA v0.38.0, commit 6b747c0, Torch 2.14.0+cu130. The LTX UI subgraph was converted to API form by runner/ltx_api.py; prompt enhance was bypassed, longer dimension set to 1536 Lanczos and SaveVideo to auto.
+
+Clothing is not a virtual-try-on claim. The unmasked five-model test changed pose
+or arms; masked inpainting is a sensible next test but was not completed.

@@ -1,0 +1,91 @@
+QWEN 2.1 CLOTHING EDIT FROM INPUT TO OUTPUT
+Reconstruction of the recorded test. The reconstructed UI file was loaded and
+exported back; no new model calculation was performed.
+
+Purpose: vary your own card or social image while checking whether the person
+is preserved. An unmasked edit does not guarantee pose or clothing fidelity.
+
+1. For this path, select these three files rather than all21 test models:
+models/diffusion_models/qwen_image_2.1_int8_convrot.safetensors
+models/text_encoders/qwen3vl_8b_int8_convrot.safetensors
+models/vae/qwen_image_2.1_vae_bf16.safetensors
+Paths are relative to the active ComfyUI installation. See attachments05/14 for
+downloads,12 for installation/launch and13 for importing the supplied UI file.
+A filename is not a hash
+or licence check. Substituting the older Qwen VAE changes the tested setup.
+
+2. Reconstruct these eight nodes in a blank graph in the matching environment.
+Numbers are recorded test IDs; UI-assigned IDs may differ.
+1: UNETLoader
+2: CLIPLoader
+3: VAELoader
+8: LoadImage
+4: TextEncodeQwenImage21
+5: KSampler
+6: VAEDecode
+7: SaveImage
+Local definitions are in nodes.py and comfy_extras/nodes_qwen.py. The visible
+encoder name is "Text Encode Qwen Image 2.1". This specific path needs no GGUF
+custom node. The NVIDIA setup report also confirms this Qwen node is present.
+If missing, check the version instead of silently substituting another model.
+
+3. Upload/select the original baroque input in LoadImage. Recorded name on
+amd: 01_qwen2512_seed11.png
+A different image with the same name is not the same input. The companion ZIP
+deliberately contains no images. Load your own permitted source image and
+preserve the original and its hash. A different image makes this a new run,
+not a reproduction of our input.
+
+4. Set each loader to its file above. UNET weight_dtype=default;
+CLIP type=qwen_image, device=default. Set TextEncodeQwenImage21 resolution=1024
+and leave negative_prompt empty. The local schema preserves aspect ratio at
+approximately1024x1024 pixels, rounded to multiples of32, not a forced square.
+Connect the first dynamic image input, represented as images.image_1 in API.
+
+5. Paste this unchanged test prompt:
+Replace only the woman's ivory brocade gown with an elegant emerald-green velvet evening gown. Preserve the same face, hairstyle, goggles, expression, pose, hands, body proportions, necklace, background, lighting and framing.
+
+6. Wire the following edges. Left is node:output slot; right is target.input.
+Slots start at0. The loaders are not connected in one serial chain.
+2:0 -> 4.clip
+3:0 -> 4.vae
+8:0 -> 4.images.image_1
+1:0 -> 5.model
+4:0 -> 5.positive
+4:1 -> 5.negative
+4:2 -> 5.latent_image
+5:0 -> 6.samples
+3:0 -> 6.vae
+6:0 -> 7.images
+Encoder outputs0/1/2 are positive/negative/latent. UNET feeds KSampler directly.
+The VAE separately feeds the encoder and VAEDecode. There is no mask path.
+
+7. Use the exact sampler settings:
+{
+  "seed": 11,
+  "steps": 25,
+  "cfg": 1.0,
+  "sampler_name": "euler",
+  "scheduler": "simple",
+  "denoise": 1.0
+}
+Keep seed11 fixed for the comparison. Reducing denoise would be a new test.
+Recorded SaveImage prefix: kolor_qwen21edit_01_qwen2512_seed11_11
+Its historical kolor_ prefix does not mean this was a colourisation task;
+the prompt, input and graph establish the task.
+
+8. Only with free, suitable hardware, queue one result. Inspect the file from
+SaveImage in this instance's output folder against the original: face, goggles,
+hands, pose, necklace, background and gown. Green alone is not success. Mark
+unwanted person/pose changes as failures, not successful virtual try-on.
+Masked inpainting remains an untested follow-up, not a demonstrated solution.
+
+9. Preserve workflow, API export, input hash, output, model hashes, launch flags,
+prompt, seed and elapsed time. Bit-identical results across GPUs are not promised.
+
+Evidence:
+amd-23-Kleidung-qwen21edit-2d285115.api.json
+SHA256 original: 2d285115342ad0c5cc3aa46cb10a69a38d4c42811e5d2a66b3f727d01bfbad89
+Reconstructed ComfyUI views and UI import/re-export are documented. This did
+not verify a new model calculation or a clean installation; practical
+reproduction acceptance remains outstanding.

@@ -1,0 +1,29 @@
+The extra test animates two finished cards: Werner from Qwen twenty-five twelve and Get Well Soon from FLUX two dev. The second image was supplied as an input. Animating it does not prove that this thirty eighty Ti generated images with FLUX dev; that loading attempt still failed. Both cards used the same English prompt in attachment sixteen: gently move only existing elements, fix the camera and preserve every letter. Those are requirements, not guaranteed outcomes. The four original videos survived. Their API files were reconstructed from the same scripts after a drive was disconnected, and timings came from the run log. We therefore do not describe those files as the original submitted API requests.
+
+Unchanged original shared prompt:
+
+Animate this greeting card with gentle, motif-appropriate motion and subtle depth. Animate only people, objects, lights, particles and decorations that are already present. Keep the camera fixed and preserve the complete composition. Keep every letter and number perfectly stable, unchanged and readable for the entire video. Do not add, remove, replace or deform any text, people, objects or decorations. No scene change, no camera movement, no morphing, no flicker and no audio.
+
+Keep Distilled and approximate dev results separate. Original API requests for these four runs are not in the ZIP. Attachment13 supplies the previously import-checked photo Distilled graph; adapting it to cards is a new attempt, not retrospective proof of the historical request.
+
+PROMPT SHA256: 3f082489ee69fe796217f506df3b215d60122ffd7ca21f074a36ac92f203f988
+
+LTX-2.5 distilled - karte - 01-Werner-Qwen2512-seed22 - einheitlich - seed11
+Time from reconstructed measurement record: 230.5 s
+SHA256 MP4: b64a0208fc262260fce54cea00e203ba020fce9de57d58da5aca51720297618c
+
+LTX-2.5 dev (Naeherung) - karte - 01-Werner-Qwen2512-seed22 - einheitlich - seed11
+Time from reconstructed measurement record: 434.7 s
+SHA256 MP4: f3a410540ffe20f87ff8e19177fd6fd731edde3b5a97eee319ad348852dcee58
+
+LTX-2.5 distilled - karte - 02-Gute-Besserung-FLUX2-dev-seed11 - einheitlich - seed11
+Time from reconstructed measurement record: 228.4 s
+SHA256 MP4: b82f11d706c59c084c4aef42d8d94fad511349c5aa58392ace48b3b8ccf926ea
+
+LTX-2.5 dev (Naeherung) - karte - 02-Gute-Besserung-FLUX2-dev-seed11 - einheitlich - seed11
+Time from reconstructed measurement record: 486.8 s
+SHA256 MP4: b8f6efe48ffc33244774b44873a6e393adf5d1bff13c3ae85a3dc5ebc2086cae
+
+Sources: RUECKGABE/rtx3080ti/BERICHT.md; animation/messungen.jsonl; DOLMARIO-GRUSSKARTEN-ANIMATION-20261004/PROMPT-EINHEITLICH.txt
+
+No new model run. Report and sampled frames do not replace complete human video/audio acceptance.

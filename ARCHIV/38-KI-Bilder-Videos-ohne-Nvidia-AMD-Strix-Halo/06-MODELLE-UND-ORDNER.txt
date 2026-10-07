@@ -1,0 +1,30 @@
+Modell-Dateien und Zielordner aus dem Testpaket
+
+models/diffusion_models/
+- flux-2-klein-4b-fp8.safetensors
+- flux-2-klein-9b-fp8.safetensors
+- qwen_image_2.1_int8_convrot.safetensors
+- qwen_image_2512_fp8_e4m3fn.safetensors
+- qwen_image_edit_2511_int8_convrot.safetensors
+- ltx-2.5-22b-distilled-transformer-comfy-int8-convrot.safetensors
+
+models/unet/
+- flux2-dev-Q4_K_M.gguf
+
+models/text_encoders/
+- qwen_3_4b.safetensors
+- qwen_3_8b_fp8mixed.safetensors
+- qwen3vl_8b_int8_convrot.safetensors
+- qwen_2.5_vl_7b_fp8_scaled.safetensors
+- mistral_3_small_flux2_fp4_mixed.safetensors
+- gemma4-12b-with-proj-ltx-2.5-comfy-int8-convrot.safetensors
+
+models/vae/
+- flux2-vae.safetensors
+- qwen_image_2.1_vae_bf16.safetensors
+- qwen_image_vae.safetensors
+- ltx-2.5-video-vae-bf16.safetensors
+- ltx-2.5-audio-vae-bf16.safetensors
+
+models/latent_upscale_models/
+- ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors

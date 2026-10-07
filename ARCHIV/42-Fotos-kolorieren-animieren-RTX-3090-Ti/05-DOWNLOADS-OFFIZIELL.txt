@@ -1,0 +1,32 @@
+Im Quellenbericht am 04.10.2026 gepruefte Downloadquellen
+
+ComfyUI Portable fuer Windows
+https://docs.comfy.org/installation/comfyui_portable_windows
+
+Qwen-Image 2.1
+https://huggingface.co/Comfy-Org/Qwen-Image-2.1
+
+Qwen-Image 2512 und Qwen-Image Edit 2511
+https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI
+https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI
+
+FLUX.2 Klein 4B / 9B
+https://huggingface.co/black-forest-labs/FLUX.2-klein-4b-fp8
+https://huggingface.co/black-forest-labs/FLUX.2-klein-9b-fp8
+
+FLUX.2 dev GGUF sowie Textencoder und VAE
+https://huggingface.co/city96/FLUX.2-dev-gguf
+https://huggingface.co/Comfy-Org/flux2-dev
+
+Zusaetzlicher GGUF-Node
+https://github.com/city96/ComfyUI-GGUF
+
+LTX-2.5
+https://huggingface.co/Lightricks/LTX-2.5
+
+Vor Nutzung aktuelle Lizenz und Zugangsbedingungen lesen. Die Dateinamen im
+Testbericht identifizieren den damaligen Stand, keine beliebige neue Version.
+Nur fuer die eigene Aufgabe benoetigte Dateien laden und SHA256 abgleichen.
+Die rund184 GiB des gesamten Testpakets sind kein notwendiger Erstdownload.
+Community-Konvertierungen und GGUF-Nodes haben eigene Herausgeber; diese
+Quellen sind nicht saemtlich Original-Repositories der Modellhersteller.

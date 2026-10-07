@@ -1,0 +1,10 @@
+Cloudfrei heißt nicht automatisch uneingeschränkt kommerziell nutzbar. Klein vier B und Qwen fünfundzwanzig-zwölf sowie Edit fünfundzwanzig-elf nennen Apache zwei. Qwen zwei Punkt eins hat dagegen eine Research-Lizenz. Bei Klein neun B und FLUX dev müssen wir die Lizenz der Gewichte von den gesonderten Regeln für erzeugte Bilder unterscheiden. LTX hat eine eigene Community-Lizenz mit Bedingungen. Für bezahlte Aufträge prüfen wir die konkrete Version und Nutzung vorab. Ein Familienfoto kann unabhängig davon Rechte anderer Personen berühren. Eine passende Modelllizenz garantiert auch kein exklusives Urheberrecht am KI-Bild. Der praktische Nutzen bleibt: eigene Karten und Erinnerungsfotos lokal gestalten, Zeit und Strom kalkulieren und das Ergebnis menschlich nacharbeiten. Kein Schnellgeldversprechen.
+
+05.10.2026
+https://huggingface.co/black-forest-labs/FLUX.2-klein-4b-fp8
+https://huggingface.co/black-forest-labs/FLUX.2-klein-9b-fp8
+https://huggingface.co/black-forest-labs/FLUX.2-dev/blob/main/LICENSE.md
+https://huggingface.co/Qwen/Qwen-Image-2.1
+https://huggingface.co/Qwen/Qwen-Image-2512
+https://huggingface.co/Qwen/Qwen-Image-Edit-2511
+https://huggingface.co/Lightricks/LTX-2.5

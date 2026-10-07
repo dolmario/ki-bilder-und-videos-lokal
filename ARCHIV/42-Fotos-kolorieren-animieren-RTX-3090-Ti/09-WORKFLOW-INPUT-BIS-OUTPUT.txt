@@ -1,0 +1,21 @@
+Input-bis-Output-Ablauf — RTX 3090 Ti / Ryzen 7 5700X3D / 32 GB RAM
+
+1. Konkrete Aufgabe, Hardware, freien SSD-Platz und Modelllizenz festlegen.
+2. Den dokumentierten ComfyUI-Stand und benoetigte Nodes zuordnen.
+3. Modell, passenden Textencoder und VAE anhand Beilage06 zusammenstellen.
+4. Die passende Umgebung starten; Startbefehl und Softwarestand festhalten.
+5. Am gespeicherten Testgraphen Eingangsbild, Prompt, Seed und Parameter pruefen.
+6. Ein kontrolliertes Einzelergebnis erzeugen, bevor eine Serie begonnen wird.
+7. Gesichter, Haende, Schrift, Alpha, Pose und Bildausschnitt am Original pruefen.
+8. Bei Video den ganzen Clip ansehen; Decodierbarkeit allein belegt keine Qualitaet.
+9. Angenommene Ergebnisse mit Prompt, Seed, Modell, Workflow und Lizenz sichern.
+
+Plattformbeleg:
+NVIDIA Portable v0.38.0, Commit 6b747c0, Torch 2.14.0+cu130. runner/ltx_api.py ueberfuehrte den UI-Subgraph in den API-Graph. Prompt-Enhance wurde umgangen, Resize auf lange Kante1536/Lanczos und SaveVideo auf auto gesetzt.
+
+Beilage10 listet konkrete Node-Eingaenge und nullbasierte Output-Slots aus den
+gespeicherten Testgraphen. Die Graphen sind API-Daten, keine direkt zugesicherte
+UI-Importdatei. Die Anleitung und sichtbare UI-Demonstration sind noch in Pruefung.
+
+Der unmaskierte Kleidungstest veraenderte Pose oder Arme. Ein maskierter
+Inpainting-Vergleich wurde nicht fertig durchgefuehrt; keine Anprobe zusichern.

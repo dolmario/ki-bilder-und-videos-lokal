@@ -1,0 +1,731 @@
+{
+  "checked_utc": "2026-10-07T04:05:35.706265+00:00",
+  "source_repository": "dolmario/ki-video-workflows",
+  "source_head": "ab53acaef805f6e01f17a5e35835115d73361539",
+  "files": [
+    {
+      "path": "ARCHIV/38-KI-Bilder-Videos-ohne-Nvidia-AMD-Strix-Halo/05-DOWNLOADS-OFFIZIELL.txt",
+      "sha256": "357fde8bd539fa617303150a786b8ddfac4f44fefaccfbb4700f43adfd4b4be3",
+      "git_blob_sha": "4c5580968983259872bed88dc5f033691cdf3bb8",
+      "bytes": 1209,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/38-KI-Bilder-Videos-ohne-Nvidia-AMD-Strix-Halo/05-DOWNLOADS-OFFIZIELL.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/38-KI-Bilder-Videos-ohne-Nvidia-AMD-Strix-Halo/06-MODELLE-UND-ORDNER.txt",
+      "sha256": "fc4873d6c0b85351eb7a24036237e4f138a4ebaa07d87af88d8552f83bf2776a",
+      "git_blob_sha": "d226a15a9e77a569152e0dc8696af05cb542be54",
+      "bytes": 911,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/38-KI-Bilder-Videos-ohne-Nvidia-AMD-Strix-Halo/06-MODELLE-UND-ORDNER.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/38-KI-Bilder-Videos-ohne-Nvidia-AMD-Strix-Halo/07-NODES-STANDARD-UND-CUSTOM.txt",
+      "sha256": "1e7da595871251230ba3fd1227edd1f44b1d51a6426e2d98fc0c140fb4033755",
+      "git_blob_sha": "82ac7a48ffa011c2e4023dedeaaa308dfd6d4a7d",
+      "bytes": 1024,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/38-KI-Bilder-Videos-ohne-Nvidia-AMD-Strix-Halo/07-NODES-STANDARD-UND-CUSTOM.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/38-KI-Bilder-Videos-ohne-Nvidia-AMD-Strix-Halo/08-PROMPTS.txt",
+      "sha256": "53775640724de71ebce325aa81eb8659cfc6703c327489798c19a8fef883d059",
+      "git_blob_sha": "8da39774db7b24ce29fb21ee71a76a56cde78e5b",
+      "bytes": 1005,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/38-KI-Bilder-Videos-ohne-Nvidia-AMD-Strix-Halo/08-PROMPTS.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/38-KI-Bilder-Videos-ohne-Nvidia-AMD-Strix-Halo/09-WORKFLOW-INPUT-BIS-OUTPUT.txt",
+      "sha256": "a129440dc2d9a70a1783bff52648e4612d32bf555c2d3756b37789d014cfc82e",
+      "git_blob_sha": "c9456226ea30d06026878265aee10b5c58d3a6dd",
+      "bytes": 1424,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/38-KI-Bilder-Videos-ohne-Nvidia-AMD-Strix-Halo/09-WORKFLOW-INPUT-BIS-OUTPUT.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/38-KI-Bilder-Videos-ohne-Nvidia-AMD-Strix-Halo/10-NODE-VERBINDUNGEN-TESTBELEGE.txt",
+      "sha256": "833f9cb05271165694866e519536f661a45a322fcd2d110f77027abaa4d0100a",
+      "git_blob_sha": "d9c817d4c0929a05ccfae54bfff4149442039403",
+      "bytes": 40454,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/38-KI-Bilder-Videos-ohne-Nvidia-AMD-Strix-Halo/10-NODE-VERBINDUNGEN-TESTBELEGE.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/38-KI-Bilder-Videos-ohne-Nvidia-AMD-Strix-Halo/11-KLEIDUNG-QWEN21-NACHBAU.txt",
+      "sha256": "bddec5bcb21a77bf061f9d3d5b47ab3cf263431b500fe3d253814aa9ab69c26d",
+      "git_blob_sha": "047c7e99d37b73c18c06fd3cae62fd3f3cd658a5",
+      "bytes": 4976,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/38-KI-Bilder-Videos-ohne-Nvidia-AMD-Strix-Halo/11-KLEIDUNG-QWEN21-NACHBAU.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/38-KI-Bilder-Videos-ohne-Nvidia-AMD-Strix-Halo/12-AMD-INSTALLATION-START.txt",
+      "sha256": "e73b3e2c9cdc7c7e1851ad68d3958d9e20205ffb70154c7a586875a1352a24ac",
+      "git_blob_sha": "b37a745677b9a8906ca1e425bb9c18feab807579",
+      "bytes": 3545,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/38-KI-Bilder-Videos-ohne-Nvidia-AMD-Strix-Halo/12-AMD-INSTALLATION-START.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/38-KI-Bilder-Videos-ohne-Nvidia-AMD-Strix-Halo/13-UI-WORKFLOWS-IMPORT.txt",
+      "sha256": "1197be0ffe23bdcab5d64911824efe56a520260c772ac5c84d7b69f80780319c",
+      "git_blob_sha": "dafb3738f99fdcca97cfbecd76b08178db62461a",
+      "bytes": 1881,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/38-KI-Bilder-Videos-ohne-Nvidia-AMD-Strix-Halo/13-UI-WORKFLOWS-IMPORT.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/38-KI-Bilder-Videos-ohne-Nvidia-AMD-Strix-Halo/14-MODELLDOWNLOADS-KATALOG.txt",
+      "sha256": "ed675785e65cc91a57e9133662852608e987cbc42a97c82a63e9437068a9fb50",
+      "git_blob_sha": "2e7ea002209fb51b41c7e8b99efef80ea5b82213",
+      "bytes": 5728,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/38-KI-Bilder-Videos-ohne-Nvidia-AMD-Strix-Halo/14-MODELLDOWNLOADS-KATALOG.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/38-KI-Bilder-Videos-ohne-Nvidia-AMD-Strix-Halo/15-LIZENZEN-QUELLEN.txt",
+      "sha256": "55cd1d6a3cb12e3ae956875831b6d59c2dbcb918e32da5bf73571d2000e8a722",
+      "git_blob_sha": "60da41a4abc4f7021501e7e86bf0d00dde43d736",
+      "bytes": 1206,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/38-KI-Bilder-Videos-ohne-Nvidia-AMD-Strix-Halo/15-LIZENZEN-QUELLEN.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/38-KI-Bilder-Videos-ohne-Nvidia-AMD-Strix-Halo/README.md",
+      "sha256": "9fc922be48686cc9b4f623fbe9734f4865552af70165ec70b2d7ea85a6726a67",
+      "git_blob_sha": "bd26aec587ba0fafa48f06f04a137757ff548d86",
+      "bytes": 1172,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/38-KI-Bilder-Videos-ohne-Nvidia-AMD-Strix-Halo/README.md",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/38-KI-Bilder-Videos-ohne-Nvidia-AMD-Strix-Halo/WORKFLOWS.zip",
+      "sha256": "2740c4bc77e4ca2218041605bf518956d9f2c730c5f0daac1bfeebc06520db7f",
+      "git_blob_sha": "2fd77053eb08f073c4535af3afad1d882b4eccf3",
+      "bytes": 50583,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/38-KI-Bilder-Videos-ohne-Nvidia-AMD-Strix-Halo/WORKFLOWS.zip",
+      "public_zip_download_crc_checked": true
+    },
+    {
+      "path": "ARCHIV/38-KI-Bilder-Videos-ohne-Nvidia-AMD-Strix-Halo/index.html",
+      "sha256": "52bc5a0912c61e4f0099ce9664af5d44416d8e981fe895d78dba844ae964155f",
+      "git_blob_sha": "ed3cf101f7afa67734ab1580257c17dfbfb69f6f",
+      "bytes": 1682,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/38-KI-Bilder-Videos-ohne-Nvidia-AMD-Strix-Halo/index.html",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/39-AI-Images-Video-Without-Nvidia-AMD-Strix-Halo-English/05-DOWNLOADS-OFFIZIELL.txt",
+      "sha256": "b975663e9e19a66d11429cd730afa57de9f230be7f81cd80f7c8da8b9f3abb1e",
+      "git_blob_sha": "908f6f46172f54e9cc7322ad5410852af3a661b0",
+      "bytes": 919,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/39-AI-Images-Video-Without-Nvidia-AMD-Strix-Halo-English/05-DOWNLOADS-OFFIZIELL.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/39-AI-Images-Video-Without-Nvidia-AMD-Strix-Halo-English/06-MODELLE-UND-ORDNER.txt",
+      "sha256": "25d9133b744d20e1064620e8dcf354ca5e14e0b662b67c81e1efa8ebc914ad33",
+      "git_blob_sha": "320a1f2f4722ae6a2480298fa94956481c1cd1d1",
+      "bytes": 889,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/39-AI-Images-Video-Without-Nvidia-AMD-Strix-Halo-English/06-MODELLE-UND-ORDNER.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/39-AI-Images-Video-Without-Nvidia-AMD-Strix-Halo-English/07-NODES-STANDARD-UND-CUSTOM.txt",
+      "sha256": "5030ee1cab0b6d935d53e78570c88e8489af76754e0ecf70357e2a49714c2326",
+      "git_blob_sha": "f091790ad1c95f96387f44a0a93e8d93e312e536",
+      "bytes": 981,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/39-AI-Images-Video-Without-Nvidia-AMD-Strix-Halo-English/07-NODES-STANDARD-UND-CUSTOM.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/39-AI-Images-Video-Without-Nvidia-AMD-Strix-Halo-English/08-PROMPTS.txt",
+      "sha256": "166bc06d167d4d68ea7604fce09ef1ce7b600dd842119ccf8d2ea986869a4d24",
+      "git_blob_sha": "8c73493569b38952458b4d8fd09546ee13040ea3",
+      "bytes": 904,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/39-AI-Images-Video-Without-Nvidia-AMD-Strix-Halo-English/08-PROMPTS.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/39-AI-Images-Video-Without-Nvidia-AMD-Strix-Halo-English/09-WORKFLOW-INPUT-BIS-OUTPUT.txt",
+      "sha256": "928be5f7a7aaf488b2b03b4c4b0fa00c36491a0e3f911c7c3398e8b729dc80bb",
+      "git_blob_sha": "2d7b0683a3188daebafe908ca890f0764617e76f",
+      "bytes": 1172,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/39-AI-Images-Video-Without-Nvidia-AMD-Strix-Halo-English/09-WORKFLOW-INPUT-BIS-OUTPUT.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/39-AI-Images-Video-Without-Nvidia-AMD-Strix-Halo-English/10-NODE-VERBINDUNGEN-TESTBELEGE.txt",
+      "sha256": "833f9cb05271165694866e519536f661a45a322fcd2d110f77027abaa4d0100a",
+      "git_blob_sha": "d9c817d4c0929a05ccfae54bfff4149442039403",
+      "bytes": 40454,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/39-AI-Images-Video-Without-Nvidia-AMD-Strix-Halo-English/10-NODE-VERBINDUNGEN-TESTBELEGE.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/39-AI-Images-Video-Without-Nvidia-AMD-Strix-Halo-English/11-KLEIDUNG-QWEN21-NACHBAU.txt",
+      "sha256": "3a9a9c17dae4cd4b612deccd329be1d80a5af1b515d8a6828d00c38ce37ff095",
+      "git_blob_sha": "5fc1864a919386c5b62d6ebc5800bcdf5747b1b2",
+      "bytes": 4184,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/39-AI-Images-Video-Without-Nvidia-AMD-Strix-Halo-English/11-KLEIDUNG-QWEN21-NACHBAU.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/39-AI-Images-Video-Without-Nvidia-AMD-Strix-Halo-English/12-AMD-INSTALLATION-START.txt",
+      "sha256": "1dfa690b5510e2ce1b30036790126e6e1910a5338a16278122f013b857585b4e",
+      "git_blob_sha": "702b88a6359ce5f65228187d7698bc1d636a1f16",
+      "bytes": 3355,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/39-AI-Images-Video-Without-Nvidia-AMD-Strix-Halo-English/12-AMD-INSTALLATION-START.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/39-AI-Images-Video-Without-Nvidia-AMD-Strix-Halo-English/13-UI-WORKFLOWS-IMPORT.txt",
+      "sha256": "3606c2df1ad08b44f8cadaaed91511aa31e90c6afc3a47209bbd756a89a99189",
+      "git_blob_sha": "f52c998d37ab2307210c6f7d4c928a133cb21727",
+      "bytes": 1705,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/39-AI-Images-Video-Without-Nvidia-AMD-Strix-Halo-English/13-UI-WORKFLOWS-IMPORT.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/39-AI-Images-Video-Without-Nvidia-AMD-Strix-Halo-English/14-MODELLDOWNLOADS-KATALOG.txt",
+      "sha256": "e460f39f9962120e521e10263253df4de9e223781f08ff3518916e55bd550e26",
+      "git_blob_sha": "b71133ed8b450cd584706a03159cacd1a0506a07",
+      "bytes": 5689,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/39-AI-Images-Video-Without-Nvidia-AMD-Strix-Halo-English/14-MODELLDOWNLOADS-KATALOG.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/39-AI-Images-Video-Without-Nvidia-AMD-Strix-Halo-English/15-LIZENZEN-QUELLEN.txt",
+      "sha256": "daa0cbac347a2c41a10bf3e32ad38face835fe3104b265824d0466aeb82707ca",
+      "git_blob_sha": "ca171d07c8829f140175c3b12ced5096aa2010fe",
+      "bytes": 1123,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/39-AI-Images-Video-Without-Nvidia-AMD-Strix-Halo-English/15-LIZENZEN-QUELLEN.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/39-AI-Images-Video-Without-Nvidia-AMD-Strix-Halo-English/README.md",
+      "sha256": "120bdf20133e94a55bbd98ffdaecae1bc83a2fa8aafd790548580dee2072e00a",
+      "git_blob_sha": "b759e2c7a8bc432923a8b21578ebd598d36ab997",
+      "bytes": 1176,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/39-AI-Images-Video-Without-Nvidia-AMD-Strix-Halo-English/README.md",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/39-AI-Images-Video-Without-Nvidia-AMD-Strix-Halo-English/WORKFLOWS.zip",
+      "sha256": "434d4ab3ff1d39dc35ec46bb158915feed4d4b42f7ef07f86d20325cd05051fb",
+      "git_blob_sha": "6075f6fc3b2dfb4cb97649a25242e82ddf9b97f1",
+      "bytes": 49324,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/39-AI-Images-Video-Without-Nvidia-AMD-Strix-Halo-English/WORKFLOWS.zip",
+      "public_zip_download_crc_checked": true
+    },
+    {
+      "path": "ARCHIV/39-AI-Images-Video-Without-Nvidia-AMD-Strix-Halo-English/index.html",
+      "sha256": "c241cf5b7cc0eb9ae3a08451b8f4cd35fb4d45351cdaf5293eaabc0554619c58",
+      "git_blob_sha": "e93f0c57be3fa741f6cc82a9b8bbc93e47126cdc",
+      "bytes": 1683,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/39-AI-Images-Video-Without-Nvidia-AMD-Strix-Halo-English/index.html",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/40-KI-Bilder-Videos-12GB-RTX-3080-Ti/05-DOWNLOADS-OFFIZIELL.txt",
+      "sha256": "357fde8bd539fa617303150a786b8ddfac4f44fefaccfbb4700f43adfd4b4be3",
+      "git_blob_sha": "4c5580968983259872bed88dc5f033691cdf3bb8",
+      "bytes": 1209,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/40-KI-Bilder-Videos-12GB-RTX-3080-Ti/05-DOWNLOADS-OFFIZIELL.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/40-KI-Bilder-Videos-12GB-RTX-3080-Ti/06-MODELLE-UND-ORDNER.txt",
+      "sha256": "fc4873d6c0b85351eb7a24036237e4f138a4ebaa07d87af88d8552f83bf2776a",
+      "git_blob_sha": "d226a15a9e77a569152e0dc8696af05cb542be54",
+      "bytes": 911,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/40-KI-Bilder-Videos-12GB-RTX-3080-Ti/06-MODELLE-UND-ORDNER.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/40-KI-Bilder-Videos-12GB-RTX-3080-Ti/07-NODES-STANDARD-UND-CUSTOM.txt",
+      "sha256": "1e7da595871251230ba3fd1227edd1f44b1d51a6426e2d98fc0c140fb4033755",
+      "git_blob_sha": "82ac7a48ffa011c2e4023dedeaaa308dfd6d4a7d",
+      "bytes": 1024,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/40-KI-Bilder-Videos-12GB-RTX-3080-Ti/07-NODES-STANDARD-UND-CUSTOM.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/40-KI-Bilder-Videos-12GB-RTX-3080-Ti/08-PROMPTS.txt",
+      "sha256": "53775640724de71ebce325aa81eb8659cfc6703c327489798c19a8fef883d059",
+      "git_blob_sha": "8da39774db7b24ce29fb21ee71a76a56cde78e5b",
+      "bytes": 1005,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/40-KI-Bilder-Videos-12GB-RTX-3080-Ti/08-PROMPTS.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/40-KI-Bilder-Videos-12GB-RTX-3080-Ti/09-WORKFLOW-INPUT-BIS-OUTPUT.txt",
+      "sha256": "aa1bfa49ffcc0000a05c6b6039894c2a336d123c6661bf7cc333053c9bf064a8",
+      "git_blob_sha": "b1ee930153184ff4fa600bc7eb48bcbca1df343d",
+      "bytes": 2112,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/40-KI-Bilder-Videos-12GB-RTX-3080-Ti/09-WORKFLOW-INPUT-BIS-OUTPUT.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/40-KI-Bilder-Videos-12GB-RTX-3080-Ti/10-NODE-VERBINDUNGEN-TESTBELEGE.txt",
+      "sha256": "15661f2e133dcbe83933b61026c53900cffbbd7544492c8aeca37d01948ab7dc",
+      "git_blob_sha": "dd9193a4d0ff0198c50f323fe679c48298b75beb",
+      "bytes": 37533,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/40-KI-Bilder-Videos-12GB-RTX-3080-Ti/10-NODE-VERBINDUNGEN-TESTBELEGE.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/40-KI-Bilder-Videos-12GB-RTX-3080-Ti/11-KLEIDUNG-QWEN21-NACHBAU.txt",
+      "sha256": "b23092eab721effff196bddefc76415fb96df2d6059fb42d68661d5c0b4c637f",
+      "git_blob_sha": "12ff5acfbd3a659f3aeea29d70b3523d9974b649",
+      "bytes": 4957,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/40-KI-Bilder-Videos-12GB-RTX-3080-Ti/11-KLEIDUNG-QWEN21-NACHBAU.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/40-KI-Bilder-Videos-12GB-RTX-3080-Ti/12-NVIDIA-INSTALLATION-START.txt",
+      "sha256": "d8562ac60eb112cc3321b5f53ddd05abb535b0bc866973b4ce5426c4fbb7c9fb",
+      "git_blob_sha": "dc87443cc318f66505ecdf555053da73cb6be0f8",
+      "bytes": 8792,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/40-KI-Bilder-Videos-12GB-RTX-3080-Ti/12-NVIDIA-INSTALLATION-START.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/40-KI-Bilder-Videos-12GB-RTX-3080-Ti/13-UI-WORKFLOWS-IMPORT.txt",
+      "sha256": "9bd29de090de1d126f61aa926fa1e1fbd37afd4c081de6bba7afaddcd9bb8a95",
+      "git_blob_sha": "5d09fb5b9c36f064b7050ac773e2e936c0c9fee9",
+      "bytes": 1873,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/40-KI-Bilder-Videos-12GB-RTX-3080-Ti/13-UI-WORKFLOWS-IMPORT.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/40-KI-Bilder-Videos-12GB-RTX-3080-Ti/14-MODELLDOWNLOADS-KATALOG.txt",
+      "sha256": "ed675785e65cc91a57e9133662852608e987cbc42a97c82a63e9437068a9fb50",
+      "git_blob_sha": "2e7ea002209fb51b41c7e8b99efef80ea5b82213",
+      "bytes": 5728,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/40-KI-Bilder-Videos-12GB-RTX-3080-Ti/14-MODELLDOWNLOADS-KATALOG.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/40-KI-Bilder-Videos-12GB-RTX-3080-Ti/15-LIZENZEN-QUELLEN.txt",
+      "sha256": "55cd1d6a3cb12e3ae956875831b6d59c2dbcb918e32da5bf73571d2000e8a722",
+      "git_blob_sha": "60da41a4abc4f7021501e7e86bf0d00dde43d736",
+      "bytes": 1206,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/40-KI-Bilder-Videos-12GB-RTX-3080-Ti/15-LIZENZEN-QUELLEN.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/40-KI-Bilder-Videos-12GB-RTX-3080-Ti/16-GRUSSKARTEN-ANIMATION-3080TI.txt",
+      "sha256": "07dc223718e014b1b94f62aecf97a290adc50a1b04ffbf810f00bea69e882589",
+      "git_blob_sha": "24cef33461f64a12e5bb953161e014248a5f620e",
+      "bytes": 2743,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/40-KI-Bilder-Videos-12GB-RTX-3080-Ti/16-GRUSSKARTEN-ANIMATION-3080TI.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/40-KI-Bilder-Videos-12GB-RTX-3080-Ti/README.md",
+      "sha256": "385e68bacd2f10bdc1f1ebbe0e7c2fa18dee56a64ed3bd55b1aac6ef930fca5d",
+      "git_blob_sha": "962cfee1bd69153571416bc80a7b2605f2862c2a",
+      "bytes": 1256,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/40-KI-Bilder-Videos-12GB-RTX-3080-Ti/README.md",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/40-KI-Bilder-Videos-12GB-RTX-3080-Ti/WORKFLOWS.zip",
+      "sha256": "faf334cb7b4ef632467b0d2462d6a117e90e85a0706c9940c0a9161a83e0e58a",
+      "git_blob_sha": "b5cef9a6a55d16ec3032b6339e3787ffb8f827f9",
+      "bytes": 55915,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/40-KI-Bilder-Videos-12GB-RTX-3080-Ti/WORKFLOWS.zip",
+      "public_zip_download_crc_checked": true
+    },
+    {
+      "path": "ARCHIV/40-KI-Bilder-Videos-12GB-RTX-3080-Ti/index.html",
+      "sha256": "42a89468b67d81551622fb16b16dffc68c17a32eb030f849ae381d39c8469822",
+      "git_blob_sha": "d960ca8698bf4757b147be6f99139ad337a5242b",
+      "bytes": 1772,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/40-KI-Bilder-Videos-12GB-RTX-3080-Ti/index.html",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/41-AI-Images-Video-12GB-RTX-3080-Ti-English/05-DOWNLOADS-OFFIZIELL.txt",
+      "sha256": "b975663e9e19a66d11429cd730afa57de9f230be7f81cd80f7c8da8b9f3abb1e",
+      "git_blob_sha": "908f6f46172f54e9cc7322ad5410852af3a661b0",
+      "bytes": 919,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/41-AI-Images-Video-12GB-RTX-3080-Ti-English/05-DOWNLOADS-OFFIZIELL.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/41-AI-Images-Video-12GB-RTX-3080-Ti-English/06-MODELLE-UND-ORDNER.txt",
+      "sha256": "25d9133b744d20e1064620e8dcf354ca5e14e0b662b67c81e1efa8ebc914ad33",
+      "git_blob_sha": "320a1f2f4722ae6a2480298fa94956481c1cd1d1",
+      "bytes": 889,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/41-AI-Images-Video-12GB-RTX-3080-Ti-English/06-MODELLE-UND-ORDNER.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/41-AI-Images-Video-12GB-RTX-3080-Ti-English/07-NODES-STANDARD-UND-CUSTOM.txt",
+      "sha256": "5030ee1cab0b6d935d53e78570c88e8489af76754e0ecf70357e2a49714c2326",
+      "git_blob_sha": "f091790ad1c95f96387f44a0a93e8d93e312e536",
+      "bytes": 981,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/41-AI-Images-Video-12GB-RTX-3080-Ti-English/07-NODES-STANDARD-UND-CUSTOM.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/41-AI-Images-Video-12GB-RTX-3080-Ti-English/08-PROMPTS.txt",
+      "sha256": "166bc06d167d4d68ea7604fce09ef1ce7b600dd842119ccf8d2ea986869a4d24",
+      "git_blob_sha": "8c73493569b38952458b4d8fd09546ee13040ea3",
+      "bytes": 904,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/41-AI-Images-Video-12GB-RTX-3080-Ti-English/08-PROMPTS.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/41-AI-Images-Video-12GB-RTX-3080-Ti-English/09-WORKFLOW-INPUT-BIS-OUTPUT.txt",
+      "sha256": "49098ea4b7e24d9adcf6b6d8106aaed211388618a8238c9e9006012ab2800140",
+      "git_blob_sha": "0458ed74382b6a07ad225f5f8ea34ccbfbe71c43",
+      "bytes": 1843,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/41-AI-Images-Video-12GB-RTX-3080-Ti-English/09-WORKFLOW-INPUT-BIS-OUTPUT.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/41-AI-Images-Video-12GB-RTX-3080-Ti-English/10-NODE-VERBINDUNGEN-TESTBELEGE.txt",
+      "sha256": "15661f2e133dcbe83933b61026c53900cffbbd7544492c8aeca37d01948ab7dc",
+      "git_blob_sha": "dd9193a4d0ff0198c50f323fe679c48298b75beb",
+      "bytes": 37533,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/41-AI-Images-Video-12GB-RTX-3080-Ti-English/10-NODE-VERBINDUNGEN-TESTBELEGE.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/41-AI-Images-Video-12GB-RTX-3080-Ti-English/11-KLEIDUNG-QWEN21-NACHBAU.txt",
+      "sha256": "aa905057c43ed0b0e3878e1eba86b6394053a7d4bb5b047bc83d3046344fcd07",
+      "git_blob_sha": "2d479e5e6d53ec2f31b33376aa2ae91bdce7fc4a",
+      "bytes": 4165,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/41-AI-Images-Video-12GB-RTX-3080-Ti-English/11-KLEIDUNG-QWEN21-NACHBAU.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/41-AI-Images-Video-12GB-RTX-3080-Ti-English/12-NVIDIA-INSTALLATION-START.txt",
+      "sha256": "576ea0d9fa65f07d7455e5d2663c8716d7805034893ecbbc96bec5373b11d9db",
+      "git_blob_sha": "b78d0870ddad24d3a8b390c19b07cfb815d3c8d1",
+      "bytes": 8329,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/41-AI-Images-Video-12GB-RTX-3080-Ti-English/12-NVIDIA-INSTALLATION-START.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/41-AI-Images-Video-12GB-RTX-3080-Ti-English/13-UI-WORKFLOWS-IMPORT.txt",
+      "sha256": "262f09210d25406e9b9a279c707b0ba781e530f531fa872afc2a1ca8fbeed201",
+      "git_blob_sha": "eb042ea95649253975b4f40b9bc6b47f990aab32",
+      "bytes": 1697,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/41-AI-Images-Video-12GB-RTX-3080-Ti-English/13-UI-WORKFLOWS-IMPORT.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/41-AI-Images-Video-12GB-RTX-3080-Ti-English/14-MODELLDOWNLOADS-KATALOG.txt",
+      "sha256": "e460f39f9962120e521e10263253df4de9e223781f08ff3518916e55bd550e26",
+      "git_blob_sha": "b71133ed8b450cd584706a03159cacd1a0506a07",
+      "bytes": 5689,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/41-AI-Images-Video-12GB-RTX-3080-Ti-English/14-MODELLDOWNLOADS-KATALOG.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/41-AI-Images-Video-12GB-RTX-3080-Ti-English/15-LIZENZEN-QUELLEN.txt",
+      "sha256": "daa0cbac347a2c41a10bf3e32ad38face835fe3104b265824d0466aeb82707ca",
+      "git_blob_sha": "ca171d07c8829f140175c3b12ced5096aa2010fe",
+      "bytes": 1123,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/41-AI-Images-Video-12GB-RTX-3080-Ti-English/15-LIZENZEN-QUELLEN.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/41-AI-Images-Video-12GB-RTX-3080-Ti-English/16-GRUSSKARTEN-ANIMATION-3080TI.txt",
+      "sha256": "956c3203c8e3041efdc47938bc265079ea96dcb0e281bcb521522262e204482b",
+      "git_blob_sha": "e1d3b71d95471c3b08d3e11aeeeccd6f577230c6",
+      "bytes": 2679,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/41-AI-Images-Video-12GB-RTX-3080-Ti-English/16-GRUSSKARTEN-ANIMATION-3080TI.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/41-AI-Images-Video-12GB-RTX-3080-Ti-English/README.md",
+      "sha256": "65dd306283edd4d40eac17f5dbac637315e578f2e97e3674cc88f531c8f079ca",
+      "git_blob_sha": "fc62ce67ce481cf6079c2b1a60776619cecb4f62",
+      "bytes": 1260,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/41-AI-Images-Video-12GB-RTX-3080-Ti-English/README.md",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/41-AI-Images-Video-12GB-RTX-3080-Ti-English/WORKFLOWS.zip",
+      "sha256": "de07d1cbe301d67782efa4fbae981c3eac73630e70af6f20979e0b67aa3231c7",
+      "git_blob_sha": "c91cb35563c468d6d600d89aa5015a7cad73978a",
+      "bytes": 54300,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/41-AI-Images-Video-12GB-RTX-3080-Ti-English/WORKFLOWS.zip",
+      "public_zip_download_crc_checked": true
+    },
+    {
+      "path": "ARCHIV/41-AI-Images-Video-12GB-RTX-3080-Ti-English/index.html",
+      "sha256": "4f542d2a64f4442791a8272087deb0eb7e76c36a53b95789f10a65407045f645",
+      "git_blob_sha": "9576f7bf5c5d864fdbec9fd4bb13684147cf5867",
+      "bytes": 1770,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/41-AI-Images-Video-12GB-RTX-3080-Ti-English/index.html",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/42-Fotos-kolorieren-animieren-RTX-3090-Ti/05-DOWNLOADS-OFFIZIELL.txt",
+      "sha256": "357fde8bd539fa617303150a786b8ddfac4f44fefaccfbb4700f43adfd4b4be3",
+      "git_blob_sha": "4c5580968983259872bed88dc5f033691cdf3bb8",
+      "bytes": 1209,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/42-Fotos-kolorieren-animieren-RTX-3090-Ti/05-DOWNLOADS-OFFIZIELL.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/42-Fotos-kolorieren-animieren-RTX-3090-Ti/06-MODELLE-UND-ORDNER.txt",
+      "sha256": "fc4873d6c0b85351eb7a24036237e4f138a4ebaa07d87af88d8552f83bf2776a",
+      "git_blob_sha": "d226a15a9e77a569152e0dc8696af05cb542be54",
+      "bytes": 911,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/42-Fotos-kolorieren-animieren-RTX-3090-Ti/06-MODELLE-UND-ORDNER.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/42-Fotos-kolorieren-animieren-RTX-3090-Ti/07-NODES-STANDARD-UND-CUSTOM.txt",
+      "sha256": "1e7da595871251230ba3fd1227edd1f44b1d51a6426e2d98fc0c140fb4033755",
+      "git_blob_sha": "82ac7a48ffa011c2e4023dedeaaa308dfd6d4a7d",
+      "bytes": 1024,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/42-Fotos-kolorieren-animieren-RTX-3090-Ti/07-NODES-STANDARD-UND-CUSTOM.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/42-Fotos-kolorieren-animieren-RTX-3090-Ti/08-PROMPTS.txt",
+      "sha256": "53775640724de71ebce325aa81eb8659cfc6703c327489798c19a8fef883d059",
+      "git_blob_sha": "8da39774db7b24ce29fb21ee71a76a56cde78e5b",
+      "bytes": 1005,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/42-Fotos-kolorieren-animieren-RTX-3090-Ti/08-PROMPTS.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/42-Fotos-kolorieren-animieren-RTX-3090-Ti/09-WORKFLOW-INPUT-BIS-OUTPUT.txt",
+      "sha256": "a115d643182304e6f3426664073b872559b41b062f41436b5bbcf0324d76a77d",
+      "git_blob_sha": "bd03d418b25916ba3ba9554589ad1706e1e138ae",
+      "bytes": 1415,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/42-Fotos-kolorieren-animieren-RTX-3090-Ti/09-WORKFLOW-INPUT-BIS-OUTPUT.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/42-Fotos-kolorieren-animieren-RTX-3090-Ti/10-NODE-VERBINDUNGEN-TESTBELEGE.txt",
+      "sha256": "90164fbb5439312044ad422770afc1578ba56c847fe44253af4ab7bd87caaf2c",
+      "git_blob_sha": "660115ad93a04b100096b9e211c8b5b13b39a210",
+      "bytes": 42407,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/42-Fotos-kolorieren-animieren-RTX-3090-Ti/10-NODE-VERBINDUNGEN-TESTBELEGE.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/42-Fotos-kolorieren-animieren-RTX-3090-Ti/11-KLEIDUNG-QWEN21-NACHBAU.txt",
+      "sha256": "d3790f53107742dea1352372f5913cc838e09caa92bfaced31891485425814ab",
+      "git_blob_sha": "afde0140bdbd3208736f6f840d68d74f7d2dde28",
+      "bytes": 4957,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/42-Fotos-kolorieren-animieren-RTX-3090-Ti/11-KLEIDUNG-QWEN21-NACHBAU.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/42-Fotos-kolorieren-animieren-RTX-3090-Ti/12-NVIDIA-INSTALLATION-START.txt",
+      "sha256": "19658ec37180d73168b2cfe5017c107459b52e4f3e562669eab3017d290fbdc8",
+      "git_blob_sha": "a68cc24c29ad9097cea75b6362b0b57f16610969",
+      "bytes": 8031,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/42-Fotos-kolorieren-animieren-RTX-3090-Ti/12-NVIDIA-INSTALLATION-START.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/42-Fotos-kolorieren-animieren-RTX-3090-Ti/13-UI-WORKFLOWS-IMPORT.txt",
+      "sha256": "05fabe038b4ebbe3d2a0480c8aaf18d03cb14e1a8aac228260038a3d812a54e2",
+      "git_blob_sha": "77f367c417fa6af45661e1311d0cd93c0dce0cd1",
+      "bytes": 1873,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/42-Fotos-kolorieren-animieren-RTX-3090-Ti/13-UI-WORKFLOWS-IMPORT.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/42-Fotos-kolorieren-animieren-RTX-3090-Ti/14-MODELLDOWNLOADS-KATALOG.txt",
+      "sha256": "ed675785e65cc91a57e9133662852608e987cbc42a97c82a63e9437068a9fb50",
+      "git_blob_sha": "2e7ea002209fb51b41c7e8b99efef80ea5b82213",
+      "bytes": 5728,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/42-Fotos-kolorieren-animieren-RTX-3090-Ti/14-MODELLDOWNLOADS-KATALOG.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/42-Fotos-kolorieren-animieren-RTX-3090-Ti/15-LIZENZEN-QUELLEN.txt",
+      "sha256": "55cd1d6a3cb12e3ae956875831b6d59c2dbcb918e32da5bf73571d2000e8a722",
+      "git_blob_sha": "60da41a4abc4f7021501e7e86bf0d00dde43d736",
+      "bytes": 1206,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/42-Fotos-kolorieren-animieren-RTX-3090-Ti/15-LIZENZEN-QUELLEN.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/42-Fotos-kolorieren-animieren-RTX-3090-Ti/16-PAPIERABZUG-ANIMATION-3090TI.txt",
+      "sha256": "52ab07e093081431cfa0729e169c9ab633135212e561cb8e82d55d51f39269c2",
+      "git_blob_sha": "324f04bb94215807f9cfe3fc2a6806dc0b8fbb2f",
+      "bytes": 4750,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/42-Fotos-kolorieren-animieren-RTX-3090-Ti/16-PAPIERABZUG-ANIMATION-3090TI.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/42-Fotos-kolorieren-animieren-RTX-3090-Ti/17-GRUSSKARTEN-ZEITEN-3090TI.txt",
+      "sha256": "7f6e69a87e59e93b8e94c81dca98ed8bb42587f82041b861d19b2d7588e88a94",
+      "git_blob_sha": "6e3872f40a1097e26eb83935ae6188b5eba79f59",
+      "bytes": 3064,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/42-Fotos-kolorieren-animieren-RTX-3090-Ti/17-GRUSSKARTEN-ZEITEN-3090TI.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/42-Fotos-kolorieren-animieren-RTX-3090-Ti/README.md",
+      "sha256": "ae5a3677bb359d197f4a2dae1e8962b1fc07dafdc78eaf0499f56533365bd8c3",
+      "git_blob_sha": "837f156842bffd14bd5bbd4dceba7acc002606a0",
+      "bytes": 1328,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/42-Fotos-kolorieren-animieren-RTX-3090-Ti/README.md",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/42-Fotos-kolorieren-animieren-RTX-3090-Ti/WORKFLOWS.zip",
+      "sha256": "18f5ac364628c3cdec300f5cb8cc6c63c3ff6eed6786f2d1217c72ee25f9a6ea",
+      "git_blob_sha": "fac4959dc21845163417527bcdf8993ee0d3f400",
+      "bytes": 59170,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/42-Fotos-kolorieren-animieren-RTX-3090-Ti/WORKFLOWS.zip",
+      "public_zip_download_crc_checked": true
+    },
+    {
+      "path": "ARCHIV/42-Fotos-kolorieren-animieren-RTX-3090-Ti/index.html",
+      "sha256": "a878175f58f7d5f6b306893da3fdf3ff34d4de39124d03ba8727fec4522109cd",
+      "git_blob_sha": "cc679e033d27953e7179fd80f57d2c2e00b24235",
+      "bytes": 1865,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/42-Fotos-kolorieren-animieren-RTX-3090-Ti/index.html",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/43-Colourise-Animate-Photos-RTX-3090-Ti-English/05-DOWNLOADS-OFFIZIELL.txt",
+      "sha256": "b975663e9e19a66d11429cd730afa57de9f230be7f81cd80f7c8da8b9f3abb1e",
+      "git_blob_sha": "908f6f46172f54e9cc7322ad5410852af3a661b0",
+      "bytes": 919,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/43-Colourise-Animate-Photos-RTX-3090-Ti-English/05-DOWNLOADS-OFFIZIELL.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/43-Colourise-Animate-Photos-RTX-3090-Ti-English/06-MODELLE-UND-ORDNER.txt",
+      "sha256": "25d9133b744d20e1064620e8dcf354ca5e14e0b662b67c81e1efa8ebc914ad33",
+      "git_blob_sha": "320a1f2f4722ae6a2480298fa94956481c1cd1d1",
+      "bytes": 889,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/43-Colourise-Animate-Photos-RTX-3090-Ti-English/06-MODELLE-UND-ORDNER.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/43-Colourise-Animate-Photos-RTX-3090-Ti-English/07-NODES-STANDARD-UND-CUSTOM.txt",
+      "sha256": "5030ee1cab0b6d935d53e78570c88e8489af76754e0ecf70357e2a49714c2326",
+      "git_blob_sha": "f091790ad1c95f96387f44a0a93e8d93e312e536",
+      "bytes": 981,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/43-Colourise-Animate-Photos-RTX-3090-Ti-English/07-NODES-STANDARD-UND-CUSTOM.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/43-Colourise-Animate-Photos-RTX-3090-Ti-English/08-PROMPTS.txt",
+      "sha256": "166bc06d167d4d68ea7604fce09ef1ce7b600dd842119ccf8d2ea986869a4d24",
+      "git_blob_sha": "8c73493569b38952458b4d8fd09546ee13040ea3",
+      "bytes": 904,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/43-Colourise-Animate-Photos-RTX-3090-Ti-English/08-PROMPTS.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/43-Colourise-Animate-Photos-RTX-3090-Ti-English/09-WORKFLOW-INPUT-BIS-OUTPUT.txt",
+      "sha256": "bb344f239963930a775d3396de8f37596f88f83bfe34cf5f8bc1c3be2289c2d2",
+      "git_blob_sha": "f586afbacfc1fddce1339ee31255b6a20e68d558",
+      "bytes": 1175,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/43-Colourise-Animate-Photos-RTX-3090-Ti-English/09-WORKFLOW-INPUT-BIS-OUTPUT.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/43-Colourise-Animate-Photos-RTX-3090-Ti-English/10-NODE-VERBINDUNGEN-TESTBELEGE.txt",
+      "sha256": "90164fbb5439312044ad422770afc1578ba56c847fe44253af4ab7bd87caaf2c",
+      "git_blob_sha": "660115ad93a04b100096b9e211c8b5b13b39a210",
+      "bytes": 42407,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/43-Colourise-Animate-Photos-RTX-3090-Ti-English/10-NODE-VERBINDUNGEN-TESTBELEGE.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/43-Colourise-Animate-Photos-RTX-3090-Ti-English/11-KLEIDUNG-QWEN21-NACHBAU.txt",
+      "sha256": "b5b07133469b0ee9e3e6d2fa09cd21c3527b419da44ab0d6467c8a5e1c03b4c3",
+      "git_blob_sha": "e0cd8d6f722080ec9a01d7d78ca1a2335d9023e6",
+      "bytes": 4165,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/43-Colourise-Animate-Photos-RTX-3090-Ti-English/11-KLEIDUNG-QWEN21-NACHBAU.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/43-Colourise-Animate-Photos-RTX-3090-Ti-English/12-NVIDIA-INSTALLATION-START.txt",
+      "sha256": "fa0276ba73e84fb4a529143defb955f1de635e4c6f91409cb2a8081a7b21a494",
+      "git_blob_sha": "5f62d9c4b58e709bbc69572b51a2a370f95197ec",
+      "bytes": 7602,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/43-Colourise-Animate-Photos-RTX-3090-Ti-English/12-NVIDIA-INSTALLATION-START.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/43-Colourise-Animate-Photos-RTX-3090-Ti-English/13-UI-WORKFLOWS-IMPORT.txt",
+      "sha256": "07471b54ec7545af5f59aba723177593000140a36b4f3e5db8ffff31af0a18bb",
+      "git_blob_sha": "898ae57b6e9157725498ba3af579bcedb08f29e8",
+      "bytes": 1697,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/43-Colourise-Animate-Photos-RTX-3090-Ti-English/13-UI-WORKFLOWS-IMPORT.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/43-Colourise-Animate-Photos-RTX-3090-Ti-English/14-MODELLDOWNLOADS-KATALOG.txt",
+      "sha256": "e460f39f9962120e521e10263253df4de9e223781f08ff3518916e55bd550e26",
+      "git_blob_sha": "b71133ed8b450cd584706a03159cacd1a0506a07",
+      "bytes": 5689,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/43-Colourise-Animate-Photos-RTX-3090-Ti-English/14-MODELLDOWNLOADS-KATALOG.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/43-Colourise-Animate-Photos-RTX-3090-Ti-English/15-LIZENZEN-QUELLEN.txt",
+      "sha256": "daa0cbac347a2c41a10bf3e32ad38face835fe3104b265824d0466aeb82707ca",
+      "git_blob_sha": "ca171d07c8829f140175c3b12ced5096aa2010fe",
+      "bytes": 1123,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/43-Colourise-Animate-Photos-RTX-3090-Ti-English/15-LIZENZEN-QUELLEN.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/43-Colourise-Animate-Photos-RTX-3090-Ti-English/16-PAPIERABZUG-ANIMATION-3090TI.txt",
+      "sha256": "34942a45f3be6b375421c340d65bd33b7285287dea378fd878f951ec41aa53c7",
+      "git_blob_sha": "89f8d027da4349d969a0f7575b88d76197f1dccd",
+      "bytes": 4175,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/43-Colourise-Animate-Photos-RTX-3090-Ti-English/16-PAPIERABZUG-ANIMATION-3090TI.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/43-Colourise-Animate-Photos-RTX-3090-Ti-English/17-GRUSSKARTEN-ZEITEN-3090TI.txt",
+      "sha256": "e699626cc037eac0dec85617dafa7e35dc526299c6d13f5cf0571e2977e59d88",
+      "git_blob_sha": "00eaaac171b7f8f7fa10da85f7481cca0bacae11",
+      "bytes": 2800,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/43-Colourise-Animate-Photos-RTX-3090-Ti-English/17-GRUSSKARTEN-ZEITEN-3090TI.txt",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/43-Colourise-Animate-Photos-RTX-3090-Ti-English/README.md",
+      "sha256": "e9a97dacaf63fde4465c98daa4f1857eae0d9fefb4b48ac81986666b8243f382",
+      "git_blob_sha": "f8a5523d3e81d4acada4bb03bc260e96f588c440",
+      "bytes": 1332,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/43-Colourise-Animate-Photos-RTX-3090-Ti-English/README.md",
+      "public_zip_download_crc_checked": false
+    },
+    {
+      "path": "ARCHIV/43-Colourise-Animate-Photos-RTX-3090-Ti-English/WORKFLOWS.zip",
+      "sha256": "51def312b2b579301232895a868695981079205b24091df611c7cb06f0576c72",
+      "git_blob_sha": "716c195ae9d390c82b9c43ca64d6506667e6d373",
+      "bytes": 57149,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/43-Colourise-Animate-Photos-RTX-3090-Ti-English/WORKFLOWS.zip",
+      "public_zip_download_crc_checked": true
+    },
+    {
+      "path": "ARCHIV/43-Colourise-Animate-Photos-RTX-3090-Ti-English/index.html",
+      "sha256": "22dcc7fb066687b538f1e8fe78a9da737ff74f49705948ee7a200362ec748ed4",
+      "git_blob_sha": "0e1359d68ae50be4dafeceed0f2ffe1399d6d398",
+      "bytes": 1862,
+      "public_source": "https://github.com/dolmario/ki-video-workflows/blob/ab53acaef805f6e01f17a5e35835115d73361539/43-Colourise-Animate-Photos-RTX-3090-Ti-English/index.html",
+      "public_zip_download_crc_checked": false
+    }
+  ],
+  "fresh_runtime_execution": false,
+  "private_media_included": false,
+  "original_public_blobs_preserved": 90,
+  "old28_29_have_no_public_companion_in_this_source": true
+}

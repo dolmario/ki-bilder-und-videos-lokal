@@ -1,0 +1,32 @@
+Input-to-output workflow — RTX 3080 Ti / Ryzen 5 5600 / 16 GB RAM
+
+1. Confirm hardware, free SSD space, model licence and the exact task.
+2. Install the documented ComfyUI build and only the required GGUF custom node.
+3. Put each verified model in the folder listed in 06-MODELLE-UND-ORDNER.txt.
+4. Start only one heavy ComfyUI/model instance. Preserve the exact start command.
+5. Load the tested workflow, choose the input, model, seed and exact prompt.
+6. Generate one controlled result before starting a batch.
+7. Check content, faces, hands, text, alpha, crop and start/middle/end of videos.
+8. Keep failed outputs and logs; API success or a decodable file is not visual approval.
+9. Export only accepted results and retain prompt, seed, model, workflow and licence.
+
+Platform note:
+ComfyUI Portable NVIDIA v0.38.0, commit 6b747c0, Torch 2.14.0+cu130. Add the runner path to python313._pth. LTX requires ComfyUI to be started with --disable-pinned-memory on this tested machine.
+
+Clothing is not a virtual-try-on claim. The unmasked five-model test changed pose
+or arms; masked inpainting is a sensible next test but was not completed.
+
+
+BELEGTER PORTABLE-START / RECORDED PORTABLE LAUNCH
+Quelle / Source: RUECKGABE/rtx3080ti/runner/lauf-video-rest.ps1, Ensure-Comfy.
+Windows cmd.exe, Arbeitsordner / working directory:
+cd /d C:\ComfyUI-Dolmario\ComfyUI_windows_portable
+
+Ein einziger Aufruf / ONE command:
+python_embeded\python.exe -s ComfyUI\main.py --windows-standalone-build --disable-pinned-memory
+
+Browser: http://127.0.0.1:8188
+Der Ordner ist der belegte Testpfad und muss beim Nachbau zum Entpackort passen.
+The folder is the recorded test path; adapt it to the actual extracted folder.
+python313._pth wurde nur fuer Imports des Test-Runners ergaenzt.
+The python313._pth addition served test-runner imports, not ordinary UI use.

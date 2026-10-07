@@ -1,0 +1,14 @@
+Testprompts im Originalwortlaut
+
+Kleidung bearbeiten:
+Replace only the woman's ivory brocade gown with an elegant emerald-green velvet evening gown. Preserve the same face, hairstyle, goggles, expression, pose, hands, body proportions, necklace, background, lighting and framing.
+
+LTX-Kurzprompt:
+eine Bewegung wie in den Harry-Potter-Filmen
+
+LTX-Technik-Langprompt:
+Animate this photograph as a quiet, natural living photo. Preserve the identity, age, facial features, clothing, number of people, background and original composition. Use only very subtle breathing, occasional gentle blinking and a slight natural movement of fabric. Keep the camera fixed. Do not add people or objects. No scene changes, no face morphing, no exaggerated gestures, no speaking, no text and no audio.
+
+Englische Testprompts absichtlich nicht uebersetzt: Eine Uebersetzung waere
+eine andere Eingabe. Seeds und Modellparameter gehoeren zum Test.
+Kurz- und Langprompt sind getrennte Laeufe; Prompt-Enhance war ausgeschaltet.

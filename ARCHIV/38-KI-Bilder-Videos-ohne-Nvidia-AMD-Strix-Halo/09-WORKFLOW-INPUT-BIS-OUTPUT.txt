@@ -1,0 +1,21 @@
+Input-bis-Output-Ablauf — AMD Strix Halo / Ryzen AI Max+ 395 / EVO-X2
+
+1. Konkrete Aufgabe, Hardware, freien SSD-Platz und Modelllizenz festlegen.
+2. Den dokumentierten ComfyUI-Stand und benoetigte Nodes zuordnen.
+3. Modell, passenden Textencoder und VAE anhand Beilage06 zusammenstellen.
+4. Die passende Umgebung starten; Startbefehl und Softwarestand festhalten.
+5. Am gespeicherten Testgraphen Eingangsbild, Prompt, Seed und Parameter pruefen.
+6. Ein kontrolliertes Einzelergebnis erzeugen, bevor eine Serie begonnen wird.
+7. Gesichter, Haende, Schrift, Alpha, Pose und Bildausschnitt am Original pruefen.
+8. Bei Video den ganzen Clip ansehen; Decodierbarkeit allein belegt keine Qualitaet.
+9. Angenommene Ergebnisse mit Prompt, Seed, Modell, Workflow und Lizenz sichern.
+
+Plattformbeleg:
+Zwei lokale ComfyUI-Umgebungen, Ports 8189 und 8188. Der gespeicherte LTX-Runner comfy/ltx_video.py hat 8189 als Standardziel. Ein Port legt keinen Modelltyp fest. PyTorch 2.9.1+rocm7.2.1; nur eine schwere Modelllast gleichzeitig.
+
+Beilage10 listet konkrete Node-Eingaenge und nullbasierte Output-Slots aus den
+gespeicherten Testgraphen. Die Graphen sind API-Daten, keine direkt zugesicherte
+UI-Importdatei. Die Anleitung und sichtbare UI-Demonstration sind noch in Pruefung.
+
+Der unmaskierte Kleidungstest veraenderte Pose oder Arme. Ein maskierter
+Inpainting-Vergleich wurde nicht fertig durchgefuehrt; keine Anprobe zusichern.

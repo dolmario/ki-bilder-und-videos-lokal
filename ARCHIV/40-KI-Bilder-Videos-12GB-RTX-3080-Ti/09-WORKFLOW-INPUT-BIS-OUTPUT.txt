@@ -1,0 +1,36 @@
+Input-bis-Output-Ablauf — RTX 3080 Ti / Ryzen 5 5600 / 16 GB RAM
+
+1. Konkrete Aufgabe, Hardware, freien SSD-Platz und Modelllizenz festlegen.
+2. Den dokumentierten ComfyUI-Stand und benoetigte Nodes zuordnen.
+3. Modell, passenden Textencoder und VAE anhand Beilage06 zusammenstellen.
+4. Die passende Umgebung starten; Startbefehl und Softwarestand festhalten.
+5. Am gespeicherten Testgraphen Eingangsbild, Prompt, Seed und Parameter pruefen.
+6. Ein kontrolliertes Einzelergebnis erzeugen, bevor eine Serie begonnen wird.
+7. Gesichter, Haende, Schrift, Alpha, Pose und Bildausschnitt am Original pruefen.
+8. Bei Video den ganzen Clip ansehen; Decodierbarkeit allein belegt keine Qualitaet.
+9. Angenommene Ergebnisse mit Prompt, Seed, Modell, Workflow und Lizenz sichern.
+
+Plattformbeleg:
+NVIDIA Portable v0.38.0, Commit 6b747c0, Torch 2.14.0+cu130. Der Test-Runner benoetigte seinen Importpfad in python313._pth. Fuer die belegten LTX-Laeufe wurde --disable-pinned-memory ergaenzt; vollstaendiger Aufruf unten.
+
+Beilage10 listet konkrete Node-Eingaenge und nullbasierte Output-Slots aus den
+gespeicherten Testgraphen. Die Graphen sind API-Daten, keine direkt zugesicherte
+UI-Importdatei. Die Anleitung und sichtbare UI-Demonstration sind noch in Pruefung.
+
+Der unmaskierte Kleidungstest veraenderte Pose oder Arme. Ein maskierter
+Inpainting-Vergleich wurde nicht fertig durchgefuehrt; keine Anprobe zusichern.
+
+
+BELEGTER PORTABLE-START / RECORDED PORTABLE LAUNCH
+Quelle / Source: RUECKGABE/rtx3080ti/runner/lauf-video-rest.ps1, Ensure-Comfy.
+Windows cmd.exe, Arbeitsordner / working directory:
+cd /d C:\ComfyUI-Dolmario\ComfyUI_windows_portable
+
+Ein einziger Aufruf / ONE command:
+python_embeded\python.exe -s ComfyUI\main.py --windows-standalone-build --disable-pinned-memory
+
+Browser: http://127.0.0.1:8188
+Der Ordner ist der belegte Testpfad und muss beim Nachbau zum Entpackort passen.
+The folder is the recorded test path; adapt it to the actual extracted folder.
+python313._pth wurde nur fuer Imports des Test-Runners ergaenzt.
+The python313._pth addition served test-runner imports, not ordinary UI use.

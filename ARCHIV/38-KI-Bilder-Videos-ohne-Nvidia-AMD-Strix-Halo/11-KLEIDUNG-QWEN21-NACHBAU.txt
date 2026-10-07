@@ -1,0 +1,98 @@
+KLEIDUNG MIT QWEN 2.1 VOM EINGANG ZUM OUTPUT
+Nachbau anhand des gespeicherten Tests. Rekonstruierte UI-Datei geladen und
+zurueckexportiert; dabei keine neue Modellberechnung ausgefuehrt.
+
+Zweck: Ein vorhandenes eigenes Motiv fuer eine Karte oder einen Social-Beitrag
+variieren, ohne eine neue Person zu erfinden. Der Test zeigt zugleich die Grenze:
+Ein unmaskierter Edit garantiert weder unveraenderte Pose noch treue Kleidung.
+
+1. Nur diese drei Dateien fuer diesen Pfad zuordnen, nicht alle 21 Testmodelle:
+models/diffusion_models/qwen_image_2.1_int8_convrot.safetensors
+models/text_encoders/qwen3vl_8b_int8_convrot.safetensors
+models/vae/qwen_image_2.1_vae_bf16.safetensors
+Pfade beginnen im models-Ordner der konkret gestarteten ComfyUI-Installation.
+Downloads/Versionen stehen in Beilage05/14, Installation/Start in Beilage12.
+Beilage13 erklaert den Import der mitgelieferten rekonstruierten UI-Datei.
+Dateiname allein ist kein Hash- oder Lizenznachweis. Die Qwen-2.1-VAE ist hier
+nicht gegen die aeltere qwen_image_vae austauschbar, ohne den Test zu veraendern.
+
+2. In der passenden ComfyUI-Umgebung einen leeren Graphen fuer diese acht Nodes
+anlegen. Die Nummern unten sind Test-IDs; neue UI-IDs koennen anders ausfallen.
+1: UNETLoader
+2: CLIPLoader
+3: VAELoader
+8: LoadImage
+4: TextEncodeQwenImage21
+5: KSampler
+6: VAEDecode
+7: SaveImage
+Sie stammen lokal aus nodes.py sowie comfy_extras/nodes_qwen.py; der
+Textencoder heisst sichtbar "Text Encode Qwen Image 2.1". Diese konkrete Kette
+braucht keinen GGUF-Node. Der NVIDIA-SETUP-Beleg bestaetigt diesen Qwen-Node.
+Ein fehlender Node ist Anlass zum Versionsabgleich, nicht zum Modelltausch.
+
+3. In LoadImage das eigene Barock-Ausgangsbild hochladen/auswaehlen.
+Im gespeicherten amd-Test lautet dessen Eingabename: 01_qwen2512_seed11.png
+Ein gleichnamiges fremdes Bild ist nicht derselbe Input. Das Begleit-ZIP
+enthaelt bewusst keine Bilder. Fuer einen eigenen Nachbau ein eigenes,
+rechtlich nutzbares Ausgangsbild laden und dessen Original samt Hash sichern.
+Mit einem anderen Bild ist das ein neuer Lauf, keine Reproduktion unseres Inputs.
+
+4. In UNETLoader, CLIPLoader und VAELoader die oben genannten Dateien waehlen.
+UNET weight_dtype=default; CLIP type=qwen_image, device=default.
+In TextEncodeQwenImage21 resolution=1024, negative_prompt leer setzen.
+Resolution ist laut lokalem Schema eine ungefaehre Pixelflaeche 1024 mal1024
+mit erhaltenem Seitenverhaeltnis und Raster32, kein erzwungenes Quadrat.
+Den ersten dynamischen Bildeingang verbinden (API: images.image_1).
+
+5. Den folgenden Testprompt unveraendert in prompt einfuegen:
+Replace only the woman's ivory brocade gown with an elegant emerald-green velvet evening gown. Preserve the same face, hairstyle, goggles, expression, pose, hands, body proportions, necklace, background, lighting and framing.
+
+6. Diese Verbindungen herstellen. Links steht Node:Output-Slot, rechts
+Zielnode.Eingang; Slots beginnen bei0. Keine serielle Loader-Kette bauen.
+2:0 -> 4.clip
+3:0 -> 4.vae
+8:0 -> 4.images.image_1
+1:0 -> 5.model
+4:0 -> 5.positive
+4:1 -> 5.negative
+4:2 -> 5.latent_image
+5:0 -> 6.samples
+3:0 -> 6.vae
+6:0 -> 7.images
+Textencoder-Ausgang0 ist positive,1 negative,2 latent. Das Modell geht
+direkt vom UNETLoader zum KSampler. Die VAE hat zwei getrennte Verbraucher:
+Textencoder und VAEDecode. Es gibt hier keinen Maskenpfad.
+
+7. KSampler auf die gespeicherten Werte setzen:
+{
+  "seed": 11,
+  "steps": 25,
+  "cfg": 1.0,
+  "sampler_name": "euler",
+  "scheduler": "simple",
+  "denoise": 1.0
+}
+Seed11 festhalten, keine automatische Seed-Aenderung zwischen Vergleichslaeufen.
+Den Denoise-Wert nicht stillschweigend reduzieren; das waere ein neuer Test.
+SaveImage hatte im Test filename_prefix=kolor_qwen21edit_01_qwen2512_seed11_11
+Dieser Prefix beginnt historisch mit kolor_, obwohl dies ein Kleidungstest ist.
+Ein Prefix beweist die Aufgabe nicht; Graph, Prompt und Eingabebild tun es.
+
+8. Erst bei freier passender Hardware einen einzelnen Lauf ausloesen. Dann das
+von SaveImage geschriebene Ergebnis im Output-Ordner dieser Instanz oeffnen.
+Vor einer Serie Original und Ergebnis nebeneinander vergleichen: Gesicht,
+Brille, Haende, Pose, Schmuck, Hintergrund und Kleid. Gruen allein reicht nicht.
+Bei veraenderter Person/Pose Ergebnis als Fehlversuch markieren, nicht als
+gelungene Anprobe. Maskiertes Inpainting bleibt ein ungetesteter Folgeversuch.
+
+9. Fuer einen nachvollziehbaren eigenen Lauf Workflow, API-Export, Input-Hash,
+Output, Modell-Hashes, Startoptionen, Prompt, Seed und Laufzeit zusammen sichern.
+Diese Anleitung ist keine Zusicherung bitgleicher Bilder auf anderen GPUs.
+
+Beleg fuer diesen Nachbau:
+amd-23-Kleidung-qwen21edit-2d285115.api.json
+SHA256 original: 2d285115342ad0c5cc3aa46cb10a69a38d4c42811e5d2a66b3f727d01bfbad89
+Rekonstruierte ComfyUI-Ansichten und UI-Import/Rueckexport sind dokumentiert.
+Eine erneute Modellberechnung oder saubere Neuinstallation wurde damit nicht
+geprueft; diese praktische Reproduktionsabnahme bleibt offen.

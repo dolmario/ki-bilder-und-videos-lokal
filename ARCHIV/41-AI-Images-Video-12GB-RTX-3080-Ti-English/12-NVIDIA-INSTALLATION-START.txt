@@ -1,0 +1,133 @@
+NVIDIA: INSTALLATION AND STARTUP — EDITORIAL DRAFT
+
+Reconstruction guide based on returned evidence and official documentation. No fresh installation or new model execution performed. Four reconstructed UI graphs per computer were imported and exported again; see attachment 13. Do not apply this NVIDIA procedure to AMD. As of 2026-10-05.
+
+1. RECORD THE SOFTWARE AND MEMORY CONFIGURATION
+
+Tested: ComfyUI Portable NVIDIA v0.38.0, commit 6b747c0, embedded Python 3.13, Torch 2.14.0+cu130. The AMD reference uses a different commit. Do not present this as a same-version hardware comparison.
+
+2. SET UP PORTABLE ON A LOCAL SSD
+
+https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.38.0
+
+https://docs.comfy.org/installation/comfyui_portable_windows
+
+Select the NVIDIA portable archive on the release page and extract it completely with a suitable archive utility. Do not run it inside the archive or from the USB stick. Do not overwrite or automatically update an existing test installation. The commands assume this location; adapt it if different:
+
+C:\ComfyUI-Dolmario\ComfyUI_windows_portable
+
+ComfyUI_windows_portable/
+  python_embeded/python.exe
+  run_nvidia_gpu.bat
+  ComfyUI/main.py
+  ComfyUI/models/
+  ComfyUI/input/
+  ComfyUI/output/
+
+3. SELECT ONE MODEL BUNDLE FIRST
+
+Example A: Qwen 2.1 image editing from attachment 11. All three files must match. Check its research licence before use; this is not an approved channel-art or general commercial path.
+
+Model files on SSD, not RAM requirements: 16.10 GiB
+Allow additional space for ComfyUI, its runtime and outputs.
+
+ComfyUI/models/diffusion_models/qwen_image_2.1_int8_convrot.safetensors
+7256783064 Bytes
+https://huggingface.co/Comfy-Org/Qwen-Image-2.1/resolve/main/diffusion_models/qwen_image_2.1_int8_convrot.safetensors
+SHA256 (package manifest): cb74113cb03faecd79611b01fd7fd642f0aa60d6f0b95086abee214d75eaa57d
+
+ComfyUI/models/text_encoders/qwen3vl_8b_int8_convrot.safetensors
+9350798360 Bytes
+https://huggingface.co/Comfy-Org/Qwen-Image-2.1/resolve/main/text_encoders/qwen3vl_8b_int8_convrot.safetensors
+SHA256 (package manifest): 8bfd0f6e12abf2d2d697ecc888e5e90b0d6741d6708f05799f53afa560452e8f
+
+ComfyUI/models/vae/qwen_image_2.1_vae_bf16.safetensors
+675509688 Bytes
+https://huggingface.co/Comfy-Org/Qwen-Image-2.1/resolve/main/vae/qwen_image_2.1_vae_bf16.safetensors
+SHA256 (package manifest): bb21f7473051e1ac368515dd3f2e15cd44d7a11748ee8823e1ddca3e4876b7c9
+
+Example B: FLUX.2 Klein 4B. A different workflow, not a swap of Qwen weights. Include its encoder and VAE. Check licences and input-image rights separately.
+
+Model files on SSD, not RAM requirements: 11.60 GiB
+Allow additional space for ComfyUI, its runtime and outputs.
+
+ComfyUI/models/diffusion_models/flux-2-klein-4b-fp8.safetensors
+4070624520 Bytes
+https://huggingface.co/black-forest-labs/FLUX.2-klein-4b-fp8/resolve/main/flux-2-klein-4b-fp8.safetensors
+SHA256 (package manifest): 97ed34fe0567e436200f2faee3939b88f2b5d99f8af2a4dc16532c4245c0ccb6
+
+ComfyUI/models/text_encoders/qwen_3_4b.safetensors
+8044982048 Bytes
+https://huggingface.co/Comfy-Org/vae-text-encorder-for-flux-klein-4b/resolve/main/split_files/text_encoders/qwen_3_4b.safetensors
+SHA256 (package manifest): 6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a
+
+ComfyUI/models/vae/flux2-vae.safetensors
+336213556 Bytes
+https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/vae/flux2-vae.safetensors
+SHA256 (package manifest): d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
+
+Links come from the returned model manifest. Its SHA256 values identify the historical files, not future revisions at the same URL. After downloading, check in PowerShell; example for Klein 4B:
+
+Get-FileHash -Algorithm SHA256 -LiteralPath 'C:\ComfyUI-Dolmario\ComfyUI_windows_portable\ComfyUI\models\diffusion_models\flux-2-klein-4b-fp8.safetensors'
+
+Compare the entire hash. A mismatch must not be described as the same tested file. These two examples are not a full LTX or five-model installation; see attachment 10 for the actual loaders.
+
+4. CHECK THE EMBEDDED PYTHON
+
+In cmd.exe, not PowerShell syntax:
+
+cd /d C:\ComfyUI-Dolmario\ComfyUI_windows_portable
+
+python_embeded\python.exe --version
+
+python_embeded\python.exe -s -c "import torch; print(torch.__version__); print(torch.version.cuda); print(torch.cuda.is_available())"
+
+This checks the runtime without loading an image model. Do not use global pip or a separate Python installation here. The CUDA number in nvidia-smi describes driver capability and need not equal the Torch package CUDA version.
+
+5. START THE SERVER ONCE
+
+First check that no second instance or other heavy model job is running. For the normal NVIDIA portable installation, open run_nvidia_gpu.bat and keep its console open. After a successful start, open http://127.0.0.1:8188 in the browser. Do not start another server if one is already running.
+
+3080 Ti LTX deviation: the documented workaround
+
+cd /d C:\ComfyUI-Dolmario\ComfyUI_windows_portable
+
+python_embeded\python.exe -s ComfyUI\main.py --windows-standalone-build --disable-pinned-memory
+
+Evidence: the returned runner, not the earlier normal launch in SETUP.md. The later BERICHT.md documents the change for video runs.
+
+[LOCAL-DESKTOP]\DOLMARIO-CUDA-RUECKGABE-20261004\RUECKGABE\rtx3080ti\runner\lauf-video-rest.ps1
+
+SHA256 lauf-video-rest.ps1: 8e76860df5e005f698d5b5746da1a9eaae316563f7ebc9c48d8fef3e0a3646b8
+
+The second line is ONE complete invocation, replacing the normal launch only after your own idle server has stopped. The returned lauf-video-rest.ps1 records this exact option. In this run it avoids the problematic pinned-memory loading path. It adds neither VRAM to the 12 GiB GPU nor system RAM to the 16 GB computer and is not a universal OOM fix. FLUX.2 dev still failed while loading; successful LTX output does not contradict that result.
+
+6. GGUF ONLY FOR THE GGUF PATH
+
+https://github.com/city96/ComfyUI-GGUF
+
+Qwen 2.1 and Klein 4B do not require UnetLoaderGGUF. For FLUX.2 dev GGUF, the official guide provides these commands from the portable directory (Git must be available; current dependencies are not necessarily identical to the historical tested versions):
+
+git clone https://github.com/city96/ComfyUI-GGUF ComfyUI/custom_nodes/ComfyUI-GGUF
+
+python_embeded\python.exe -s -m pip install -r ComfyUI\custom_nodes\ComfyUI-GGUF\requirements.txt
+
+Do not clone into an existing directory or blindly change a working installation. The test copied the node package from USB; its exact commit is not established here. gguf 0.19.0 is documented. GGUF weights belong under ComfyUI/models/unet. After installation restart an idle server and check for UnetLoaderGGUF in the node menu.
+
+7. LOADING IS NOT EXECUTION
+
+Attachment 11 describes the eight-node, ten-link Qwen 2.1 clothing graph. Original API JSONs in attachment 10 have no verified visual layout; do not call them finished UI files. The easier starting point is its matching file under UI-REKONSTRUIERT: import it following attachment 13, select the models and choose your own permitted input in LoadImage. The ZIP contains no input photos. Alternatively connect the nodes manually following attachment 11. Check every link and parameter. Save the workflow before running. Begin with one controlled task, then inspect content and file integrity. SaveImage writes to ComfyUI/output; the historical kolor_ prefix was also used for clothing. A filename or success status alone does not constitute acceptance.
+
+The historical python313._pth change served the custom batch runners only. It is not a general installation step for browser workflows. Do not blindly copy paths from another computer.
+
+EVIDENCE / LIMITS
+
+[LOCAL-DESKTOP]\DOLMARIO-CUDA-RUECKGABE-20261004\RUECKGABE\rtx3080ti\SETUP.md
+
+SHA256 SETUP.md: 9a842703d12089bd8862398cc2fed510f74a0be965291017a8a1d85e9830c35f
+
+[LOCAL-DESKTOP]\DOLMARIO-CUDA-RUECKGABE-20261004\runner\modelle.json
+
+SHA256 modelle.json: ec57ce7665223b2b4b91fad264bcc5b74e8be8f6b2472a6f746360ff63f61f59
+
+Official documentation read on 2026-10-05. Model URLs are from the original manifest; nothing was downloaded in this work step. Real views of reconstructed graphs and UI import/export checks are available. A fresh installation and complete beginner reconstruction through a newly computed output remain unverified.
