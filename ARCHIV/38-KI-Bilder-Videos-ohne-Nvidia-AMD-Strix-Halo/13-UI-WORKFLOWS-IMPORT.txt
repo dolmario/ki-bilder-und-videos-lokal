@@ -1,0 +1,23 @@
+REKONSTRUIERTE COMFYUI-ANSICHTEN / IMPORTANLEITUNG
+
+Die Originaltests liefen über gespeicherte API-Graphen. Die UI-Dateien wurden am05.10. aus diesen Graphen in ComfyUI0.38.0/Frontend1.53.10 rekonstruiert. Kein neuer Modelllauf. Alle Scalarwerte und Kanten wurden nach Export UND erneutem UI-Import gegen die Original-API geprüft. NVIDIA-LTX-IDs mit Doppelpunkt sind für den UI-Import umnummeriert; .id-map.json erhält die Zuordnung.
+
+1. Passende ComfyUI-Version starten. Eine .ui.json ins Canvas ziehen oder über Workflow > Open öffnen. NICHT die .roundtrip.json laden. API-Dateien und UI-Dateien nicht verwechseln.
+2. In den Loadern die vollständigen Modellnamen aus Beilage06 auswählen.
+3. LoadImage: das eigene erlaubte Bild auswählen/hochladen; Test-Dateiname allein reicht nicht.
+4. Prompts und Parameter anhand Beilage10 vergleichen. Seed fest, Batch1.
+5. Erst bei freien Ressourcen Run einmal auslösen. Fortschritt und Fehler im Terminal beobachten.
+6. SaveImage schreibt unter output, SaveVideo unter dem filename_prefix. Ergebnis vollständig prüfen, bevor weitere Aufträge folgen.
+7. Workflow, Inputhash, Outputhash und Softwareversion zusammen aufbewahren.
+
+Die drei Kleidungs-Eingaben sind unterschiedliche, auf dem jeweiligen Rechner erzeugte Qwen2512-Barockbilder. Gleiche Dateinamen/Seeds beweisen keine Pixelgleichheit zwischen Rechnern. Innerhalb eines Rechners verwendete die Editserie denselben Input. LTX-eigene und EVO-Kolorierungen getrennt behandeln. Kein kontrollierter identischer Speedtest über drei Rechner behauptet.
+
+Workflowdateien: UI-REKONSTRUIERT/*.ui.json im entpackten Begleitpaket; Anleitung und Modellquellen in ANLEITUNG.
+
+clothing: amd-23-Kleidung-qwen21edit-2d285115.ui.json
+
+color: amd-22-Kolorieren-klein4edit-0716474f.ui.json
+
+card: amd-20-Grusskarten-qwen2512-49f6ffaa.ui.json
+
+ltx: amd-ltx-23-Bewegt-LTX25-d5e143c3.ui.json

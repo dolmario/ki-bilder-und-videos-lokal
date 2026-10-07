@@ -1,0 +1,20 @@
+Nodes aus den dokumentierten Test-Workflows
+
+ComfyUI/Core oder mitgelieferte Erweiterungen:
+LoadImage, UNETLoader, CLIPLoader, VAELoader, VAEEncode, VAEDecode,
+VAEDecodeTiled, SaveImage, SaveVideo, KSampler, KSamplerSelect, RandomNoise,
+SamplerCustomAdvanced, BasicGuider, CFGGuider, FluxGuidance, CFGNorm,
+Flux2Scheduler, ModelSamplingAuraFlow, TextEncodeQwenImage21,
+TextEncodeQwenImageEditPlus, FluxKontextImageScale,
+FluxKontextMultiReferenceLatentMethod, ImageScaleToTotalPixels, GetImageSize,
+ReferenceLatent, EmptyFlux2LatentImage, ResolutionSelector,
+ResizeImageMaskNode, LTXVPreprocess, LTXVConditioning,
+EmptyLTXVLatentVideo, LTXVImgToVideoInplace, LTXVLatentUpsampler,
+LatentUpscaleModelLoader, LTXVEmptyLatentAudio, LTXVConcatAVLatent,
+LTXVSeparateAVLatent, CreateVideo.
+
+Zusaetzlicher Node fuer den getesteten FLUX.2-dev-GGUF-Pfad:
+UnetLoaderGGUF aus ComfyUI-GGUF.
+
+Bei fehlenden Nodes zuerst ComfyUI-Version und Vorlage abgleichen.
+Fuer GGUF gezielt ComfyUI-GGUF pruefen; keine beliebigen Pakete installieren.

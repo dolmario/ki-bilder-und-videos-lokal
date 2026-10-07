@@ -1,0 +1,20 @@
+Nodes used in the verified workflows
+
+ComfyUI/Core or bundled extras:
+LoadImage, UNETLoader, CLIPLoader, VAELoader, VAEEncode, VAEDecode,
+VAEDecodeTiled, SaveImage, SaveVideo, KSampler, KSamplerSelect, RandomNoise,
+SamplerCustomAdvanced, BasicGuider, CFGGuider, FluxGuidance, CFGNorm,
+Flux2Scheduler, ModelSamplingAuraFlow, TextEncodeQwenImage21,
+TextEncodeQwenImageEditPlus, FluxKontextImageScale,
+FluxKontextMultiReferenceLatentMethod, ImageScaleToTotalPixels, GetImageSize,
+ReferenceLatent, EmptyFlux2LatentImage, ResolutionSelector,
+ResizeImageMaskNode, LTXVPreprocess, LTXVConditioning,
+EmptyLTXVLatentVideo, LTXVImgToVideoInplace, LTXVLatentUpsampler,
+LatentUpscaleModelLoader, LTXVEmptyLatentAudio, LTXVConcatAVLatent,
+LTXVSeparateAVLatent, CreateVideo.
+
+Required custom node for the tested FLUX.2-dev GGUF path:
+UnetLoaderGGUF from ComfyUI-GGUF.
+
+Do not install random node packs. If a core node is missing, check the exact
+ComfyUI version and its bundled templates first.

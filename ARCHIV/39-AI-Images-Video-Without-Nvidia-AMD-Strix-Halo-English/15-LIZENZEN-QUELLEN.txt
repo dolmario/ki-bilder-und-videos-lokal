@@ -1,0 +1,10 @@
+Cloud-free does not automatically mean unrestricted commercial use. Klein four B, Qwen twenty-five twelve and Edit twenty-five eleven list Apache two. Qwen two point one instead has a research licence. With Klein nine B and FLUX dev, distinguish the licence for the weights from separate terms for generated images. LTX has its own conditional community licence. Before paid work, check the specific version and intended use. A family photograph can independently involve other people’s rights. A suitable model licence does not guarantee exclusive copyright in an AI image. The practical benefit remains: create local personal cards and memories, account for time and electricity and refine the result yourself. No quick-money promise.
+
+05.10.2026
+https://huggingface.co/black-forest-labs/FLUX.2-klein-4b-fp8
+https://huggingface.co/black-forest-labs/FLUX.2-klein-9b-fp8
+https://huggingface.co/black-forest-labs/FLUX.2-dev/blob/main/LICENSE.md
+https://huggingface.co/Qwen/Qwen-Image-2.1
+https://huggingface.co/Qwen/Qwen-Image-2512
+https://huggingface.co/Qwen/Qwen-Image-Edit-2511
+https://huggingface.co/Lightricks/LTX-2.5

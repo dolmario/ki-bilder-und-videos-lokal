@@ -1,0 +1,23 @@
+The card series contains four saved results, but not four comparable inference times. Werner with Distilled logs three seconds. The return report explicitly identifies this as a cache hit after an earlier test. It reports roughly sixty-nine seconds for the earlier computation, followed by a saving failure. That approximate report is not silently promoted to a fresh measurement. The other logged durations are listed separately. Averaging in the three cached seconds would make the GPU look artificially faster. The measurement file also records two failed attempts, which remain part of this workflow’s history.
+
+All four saved card graphs contain the same motion instruction. The first noise stage uses seed eleven and the second forty-two. Both video and audio CFG values are one, and dev uses the same two sigma lists as Distilled. This differs from our thirty eighty Ti test, where dev used a separate approximation based on an older template. These results are therefore not a controlled direct dev hardware comparison. The return report describes sharp Distilled cards, blurred dev cards and a camera that was not strictly fixed. Before sending a greeting to family or friends, inspect the entire result, especially lettering and cropping. Attachment seventeen provides the shared prompt and all four graph hashes.
+
+Animate this greeting card with gentle, motif-appropriate motion and subtle depth. Animate only people, objects, lights, particles and decorations that are already present. Keep the camera fixed and preserve the complete composition. Keep every letter and number perfectly stable, unchanged and readable for the entire video. Do not add, remove, replace or deform any text, people, objects or decorations. No scene change, no camera movement, no morphing, no flicker and no audio.
+
+LTX-2.5 distilled - karte - 01-Werner-Qwen2512-seed22 - einheitlich - seed11.api.json
+SHA256 ae20f2c2e50023af21b9fcf4c1acd23e43cef63a37755f3317a2624a687aa9ba
+
+LTX-2.5 distilled - karte - 02-Gute-Besserung-FLUX2-dev-seed11 - einheitlich - seed11.api.json
+SHA256 7011480e9495f69e3168b926fb87db2daa993eecce840b3a4128bcfea3d41708
+
+LTX-2.5 dev - karte - 01-Werner-Qwen2512-seed22 - einheitlich - seed11.api.json
+SHA256 c3b8eed855287b67bec3ccd07eca980ddb0410bb336e62256ad6442a10d829b4
+
+LTX-2.5 dev - karte - 02-Gute-Besserung-FLUX2-dev-seed11 - einheitlich - seed11.api.json
+SHA256 774d655e9bae30b6c9ec497799c317d8bcb20dd1b9047a8c46851f65f0609e92
+
+Sources: RUECKGABE/rtx3090ti/BERICHT.md; animation/messungen.jsonl; animation/*/*.api.json
+
+SHA256 messungen.jsonl: 661afbd406ad1bc7571a61294ec0dcfd5f8beca5e283833e641829e5002fafac
+
+No fresh inference or full motion/audio acceptance. These four additional parameter checks are separate from the forty original API copies and twelve UI import checks.

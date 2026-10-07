@@ -1,0 +1,38 @@
+AMD STRIX HALO: NATIVE WINDOWS ENVIRONMENT
+
+As of 2026-10-05. Installation guidance from official AMD sources and the local version inventory. NOT freshly installed today. The example directory must not exist yet. Run commands individually and stop on errors. Do not overwrite a working environment.
+
+Hardware: GMKtec EVO-X2, Ryzen AI Max+395, Radeon8060S; 64GB physically shared, BIOS32GB iGPU and about31.6GB Windows. The AMD blog uses a DIFFERENT 128GB PC; its memory figures and benchmarks are not our measurements.
+
+Prerequisites: Windows, 64-bit Python3.12 and Git. Local interpreter3.12.10, Torch2.9.1+rocm7.2.1, torchvision0.24.1+rocm7.2.1, torchaudio2.9.1+rocm7.2.1. Do not substitute NVIDIA Portable/Python3.13 for this ROCm path.
+
+Driver: AMD’s7.2.1 instructions specify26.2.2. The local Windows driver reports32.0.22018.5 onOctober5; marketing and Windows version numbers are not interchangeable. No driver or BIOS change was performed. Check matching AMD/OEM support before a fresh installation.
+
+# PowerShell; new empty example directory, NOT the existing test installation.
+New-Item -ItemType Directory -Path C:\Dolmario-AMD
+Set-Location C:\Dolmario-AMD
+py -3.12 -m venv venv
+.\venv\Scripts\python.exe -m pip install -f https://repo.radeon.com/rocm/windows/rocm-rel-7.2.1/ "torch==2.9.1+rocm7.2.1" "torchvision==0.24.1+rocm7.2.1" "torchaudio==2.9.1+rocm7.2.1"
+git clone https://github.com/Comfy-Org/ComfyUI.git
+Set-Location ComfyUI
+git checkout fa98a189b4271c76f66210e15f81790b555eb610
+@('torch==2.9.1+rocm7.2.1','torchvision==0.24.1+rocm7.2.1','torchaudio==2.9.1+rocm7.2.1','rocm==7.2.1') | Set-Content -Encoding ascii torch-pin.txt
+..\venv\Scripts\python.exe -m pip install -f https://repo.radeon.com/rocm/windows/rocm-rel-7.2.1/ -c torch-pin.txt -r requirements.txt
+..\venv\Scripts\python.exe -m pip check
+..\venv\Scripts\python.exe -c "import torch; print(torch.__version__, torch.version.hip); print(torch.cuda.is_available()); print(torch.cuda.get_device_name(0))"
+..\venv\Scripts\python.exe main.py --listen 127.0.0.1 --port 8189
+# Browser: http://127.0.0.1:8189
+
+
+Why -f? AMD’s Windows repository is a file listing and also supplies the rocm dependency. Pins prevent an unnoticed switch to another Torch build when installing ComfyUI dependencies. torch.cuda returning True is the expected PyTorch API on AMD too, not NVIDIA detection. Stop on False or import errors.
+
+Models: attachment06 maps diffusion model, matching encoder and VAE. Choose one path first. FLUX.2 Klein4B needs no GGUF custom node. Only the FLUX.2 dev GGUF path requires ComfyUI-GGUF; its historical commit is not recorded. This is not a claim of a fully frozen fresh installation.
+
+Local launch evidence: comfy/START-COMFYUI-QWEN.cmd uses venv-qwen and8189. The valid LTX02c run is labelled No-Pin, but its complete historical launch command has not been recovered. Do not present the NVIDIA No-Pin fix as the historical AMD command. A port does not identify a model family.
+
+Sources / Quellen (05.10.2026):
+https://rocm.docs.amd.com/projects/radeon-ryzen/en/latest/docs/install/installryz/windows/install-pytorch.html
+https://rocm.blogs.amd.com/artificial-intelligence/comfyui-windows/README.html
+https://www.python.org/downloads/windows/
+https://git-scm.com/downloads/win
+https://github.com/Comfy-Org/ComfyUI/tree/fa98a189b4271c76f66210e15f81790b555eb610

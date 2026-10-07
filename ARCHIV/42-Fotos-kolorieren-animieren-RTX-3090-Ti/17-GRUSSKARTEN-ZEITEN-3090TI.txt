@@ -1,0 +1,23 @@
+Die Kartenserie enthält vier gespeicherte Ergebnisse, aber nicht vier vergleichbare Rechenzeiten. Bei Werner mit Distilled meldet das Protokoll drei Sekunden. Der Rückgabebericht erklärt diesen Wert ausdrücklich als Cache-Treffer nach einem früheren Test. Er nennt für die vorherige Berechnung ungefähr neunundsechzig Sekunden, mit anschließendem Fehler beim Speichern. Diese ungefähre Berichtsangabe ersetzen wir nicht heimlich durch eine neue Messung. Die anderen protokollierten Zeiten stehen hier getrennt. Ein Mittelwert mit den drei Cache-Sekunden würde die Karte künstlich schneller erscheinen lassen. Außerdem enthält die Messdatei zwei fehlgeschlagene Versuche; auch diese gehören zur Geschichte des Workflows.
+
+In allen vier gespeicherten Karten-Graphen steht derselbe Bewegungsauftrag. Die erste Noise-Stufe verwendet Seed elf, die zweite zweiundvierzig. Beide Video- und Audio-CFG-Werte stehen auf eins, und die beiden Sigma-Listen sind auch bei dev dieselben wie bei Distilled. Das erklärt den Unterschied zu unserem dreitausendachtzig-Ti-Versuch: Dort wurde dev mit einer gesonderten Näherung aus einer älteren Vorlage gerechnet. Die Ergebnisse sind daher kein sauberer direkter dev-Hardwarevergleich. Der Bericht beschreibt auf der dreitausendneunzig Ti scharfe Distilled-Karten, unscharfe dev-Karten und eine nicht streng feste Kamera. Vor einem Gruß an Familie oder Freunde prüfen wir deshalb das gesamte Ergebnis, besonders Schrift und Beschnitt. Der Einheitsprompt und die vier Graphhashes stehen in Beilage siebzehn.
+
+Animate this greeting card with gentle, motif-appropriate motion and subtle depth. Animate only people, objects, lights, particles and decorations that are already present. Keep the camera fixed and preserve the complete composition. Keep every letter and number perfectly stable, unchanged and readable for the entire video. Do not add, remove, replace or deform any text, people, objects or decorations. No scene change, no camera movement, no morphing, no flicker and no audio.
+
+LTX-2.5 distilled - karte - 01-Werner-Qwen2512-seed22 - einheitlich - seed11.api.json
+SHA256 ae20f2c2e50023af21b9fcf4c1acd23e43cef63a37755f3317a2624a687aa9ba
+
+LTX-2.5 distilled - karte - 02-Gute-Besserung-FLUX2-dev-seed11 - einheitlich - seed11.api.json
+SHA256 7011480e9495f69e3168b926fb87db2daa993eecce840b3a4128bcfea3d41708
+
+LTX-2.5 dev - karte - 01-Werner-Qwen2512-seed22 - einheitlich - seed11.api.json
+SHA256 c3b8eed855287b67bec3ccd07eca980ddb0410bb336e62256ad6442a10d829b4
+
+LTX-2.5 dev - karte - 02-Gute-Besserung-FLUX2-dev-seed11 - einheitlich - seed11.api.json
+SHA256 774d655e9bae30b6c9ec497799c317d8bcb20dd1b9047a8c46851f65f0609e92
+
+Sources: RUECKGABE/rtx3090ti/BERICHT.md; animation/messungen.jsonl; animation/*/*.api.json
+
+SHA256 messungen.jsonl: 661afbd406ad1bc7571a61294ec0dcfd5f8beca5e283833e641829e5002fafac
+
+Keine neue Berechnung oder vollständige Bewegungs-/Hörabnahme. Diese vier zusätzlichen Parameterabgleiche sind getrennt von den 40 Original-API-Abschriften und zwölf UI-Importprüfungen zu zählen.

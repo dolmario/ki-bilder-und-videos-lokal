@@ -1,0 +1,1190 @@
+EXAKTE TEST-WORKFLOW-ABSCHRIFT / KEINE AUSFUEHRUNG
+Quelle relativ zum Test-Desktop: Bildvergleich-Elara\23-Kleidung\fluxdevedit\01_qwen2512_seed11_seed11.api.json
+SHA256 Original: 36ca442e2d97e0a23077c92cc4fd9a0562dbb2628552451f0868c6bbc0d27045
+Parameter und Eingangsverbindungen stammen unveraendert aus der API-Datei.
+Output-Slots sind nullbasiert. Datentypen/Output-Namen nicht geraten.
+API-Graph ist kein UI-Workflow: keine erfundenen Layoutkoordinaten.
+Vor Nachbau mit passender ComfyUI-Version und Node-Schema abgleichen.
+Statische Kanten belegen keine Ausfuehrung bedingter/lazy Zweige.
+Dateiexistenz und vollstaendige Links beweisen keinen erfolgreichen Test.
+Ausgangsbild separat nach Quellen-/Rechtepruefung zuordnen.
+
+NODE 1 | UnetLoaderGGUF
+  unet_name = "flux2-dev-Q4_K_M.gguf"
+
+NODE 2 | CLIPLoader
+  clip_name = "mistral_3_small_flux2_fp4_mixed.safetensors"
+  type = "flux2"
+  device = "default"
+
+NODE 3 | VAELoader
+  vae_name = "flux2-vae.safetensors"
+
+NODE 4 | LoadImage
+  image = "01_qwen2512_seed11.png"
+
+NODE 5 | ImageScaleToTotalPixels
+  image <- NODE 4, OUTPUT 0 (zero-based)
+  upscale_method = "lanczos"
+  megapixels = 1.0
+  resolution_steps = 32
+
+NODE 6 | GetImageSize
+  image <- NODE 5, OUTPUT 0 (zero-based)
+
+NODE 7 | VAEEncode
+  pixels <- NODE 5, OUTPUT 0 (zero-based)
+  vae <- NODE 3, OUTPUT 0 (zero-based)
+
+NODE 8 | CLIPTextEncode
+  text = "Replace only the woman's ivory brocade gown with an elegant emerald-green velvet evening gown. Preserve the same face, hairstyle, goggles, expression, pose, hands, body proportions, necklace, background, lighting and framing."
+  clip <- NODE 2, OUTPUT 0 (zero-based)
+
+NODE 10 | ReferenceLatent
+  conditioning <- NODE 8, OUTPUT 0 (zero-based)
+  latent <- NODE 7, OUTPUT 0 (zero-based)
+
+NODE 13 | Flux2Scheduler
+  steps = 20
+  width <- NODE 6, OUTPUT 0 (zero-based)
+  height <- NODE 6, OUTPUT 1 (zero-based)
+
+NODE 14 | EmptyFlux2LatentImage
+  width <- NODE 6, OUTPUT 0 (zero-based)
+  height <- NODE 6, OUTPUT 1 (zero-based)
+  batch_size = 1
+
+NODE 15 | RandomNoise
+  noise_seed = 11
+
+NODE 16 | KSamplerSelect
+  sampler_name = "euler"
+
+NODE 17 | SamplerCustomAdvanced
+  noise <- NODE 15, OUTPUT 0 (zero-based)
+  guider <- NODE 12, OUTPUT 0 (zero-based)
+  sampler <- NODE 16, OUTPUT 0 (zero-based)
+  sigmas <- NODE 13, OUTPUT 0 (zero-based)
+  latent_image <- NODE 14, OUTPUT 0 (zero-based)
+
+NODE 18 | VAEDecode
+  samples <- NODE 17, OUTPUT 0 (zero-based)
+  vae <- NODE 3, OUTPUT 0 (zero-based)
+
+NODE 19 | SaveImage
+  images <- NODE 18, OUTPUT 0 (zero-based)
+  filename_prefix = "kolor_fluxdevedit_01_qwen2512_seed11_11"
+
+NODE 9 | FluxGuidance
+  conditioning <- NODE 10, OUTPUT 0 (zero-based)
+  guidance = 4.0
+
+NODE 12 | BasicGuider
+  model <- NODE 1, OUTPUT 0 (zero-based)
+  conditioning <- NODE 9, OUTPUT 0 (zero-based)
+
+DANGLING LINKS: []
+
+EXAKTE TEST-WORKFLOW-ABSCHRIFT / KEINE AUSFUEHRUNG
+Quelle relativ zum Test-Desktop: Bildvergleich-Elara\23-Kleidung\klein4edit\01_qwen2512_seed11_seed11.api.json
+SHA256 Original: d805f825ed23ff857a76b088d9fc4c97eee5ad9f22278a623f977c1f4d51df80
+Parameter und Eingangsverbindungen stammen unveraendert aus der API-Datei.
+Output-Slots sind nullbasiert. Datentypen/Output-Namen nicht geraten.
+API-Graph ist kein UI-Workflow: keine erfundenen Layoutkoordinaten.
+Vor Nachbau mit passender ComfyUI-Version und Node-Schema abgleichen.
+Statische Kanten belegen keine Ausfuehrung bedingter/lazy Zweige.
+Dateiexistenz und vollstaendige Links beweisen keinen erfolgreichen Test.
+Ausgangsbild separat nach Quellen-/Rechtepruefung zuordnen.
+
+NODE 1 | UNETLoader
+  unet_name = "flux-2-klein-4b-fp8.safetensors"
+  weight_dtype = "default"
+
+NODE 2 | CLIPLoader
+  clip_name = "qwen_3_4b.safetensors"
+  type = "flux2"
+  device = "default"
+
+NODE 3 | VAELoader
+  vae_name = "flux2-vae.safetensors"
+
+NODE 4 | LoadImage
+  image = "01_qwen2512_seed11.png"
+
+NODE 5 | ImageScaleToTotalPixels
+  image <- NODE 4, OUTPUT 0 (zero-based)
+  upscale_method = "lanczos"
+  megapixels = 1.0
+  resolution_steps = 32
+
+NODE 6 | GetImageSize
+  image <- NODE 5, OUTPUT 0 (zero-based)
+
+NODE 7 | VAEEncode
+  pixels <- NODE 5, OUTPUT 0 (zero-based)
+  vae <- NODE 3, OUTPUT 0 (zero-based)
+
+NODE 8 | CLIPTextEncode
+  text = "Replace only the woman's ivory brocade gown with an elegant emerald-green velvet evening gown. Preserve the same face, hairstyle, goggles, expression, pose, hands, body proportions, necklace, background, lighting and framing."
+  clip <- NODE 2, OUTPUT 0 (zero-based)
+
+NODE 10 | ReferenceLatent
+  conditioning <- NODE 8, OUTPUT 0 (zero-based)
+  latent <- NODE 7, OUTPUT 0 (zero-based)
+
+NODE 13 | Flux2Scheduler
+  steps = 4
+  width <- NODE 6, OUTPUT 0 (zero-based)
+  height <- NODE 6, OUTPUT 1 (zero-based)
+
+NODE 14 | EmptyFlux2LatentImage
+  width <- NODE 6, OUTPUT 0 (zero-based)
+  height <- NODE 6, OUTPUT 1 (zero-based)
+  batch_size = 1
+
+NODE 15 | RandomNoise
+  noise_seed = 11
+
+NODE 16 | KSamplerSelect
+  sampler_name = "euler"
+
+NODE 17 | SamplerCustomAdvanced
+  noise <- NODE 15, OUTPUT 0 (zero-based)
+  guider <- NODE 12, OUTPUT 0 (zero-based)
+  sampler <- NODE 16, OUTPUT 0 (zero-based)
+  sigmas <- NODE 13, OUTPUT 0 (zero-based)
+  latent_image <- NODE 14, OUTPUT 0 (zero-based)
+
+NODE 18 | VAEDecode
+  samples <- NODE 17, OUTPUT 0 (zero-based)
+  vae <- NODE 3, OUTPUT 0 (zero-based)
+
+NODE 19 | SaveImage
+  images <- NODE 18, OUTPUT 0 (zero-based)
+  filename_prefix = "kolor_klein4edit_01_qwen2512_seed11_11"
+
+NODE 9 | ConditioningZeroOut
+  conditioning <- NODE 8, OUTPUT 0 (zero-based)
+
+NODE 11 | ReferenceLatent
+  conditioning <- NODE 9, OUTPUT 0 (zero-based)
+  latent <- NODE 7, OUTPUT 0 (zero-based)
+
+NODE 12 | CFGGuider
+  model <- NODE 1, OUTPUT 0 (zero-based)
+  positive <- NODE 10, OUTPUT 0 (zero-based)
+  negative <- NODE 11, OUTPUT 0 (zero-based)
+  cfg = 1.0
+
+DANGLING LINKS: []
+
+EXAKTE TEST-WORKFLOW-ABSCHRIFT / KEINE AUSFUEHRUNG
+Quelle relativ zum Test-Desktop: Bildvergleich-Elara\23-Kleidung\klein9edit\01_qwen2512_seed11_seed11.api.json
+SHA256 Original: 8c083041c0f0f5a494a0137d432b776c47cbc1379c6f205ac05e4b5de8cc5e25
+Parameter und Eingangsverbindungen stammen unveraendert aus der API-Datei.
+Output-Slots sind nullbasiert. Datentypen/Output-Namen nicht geraten.
+API-Graph ist kein UI-Workflow: keine erfundenen Layoutkoordinaten.
+Vor Nachbau mit passender ComfyUI-Version und Node-Schema abgleichen.
+Statische Kanten belegen keine Ausfuehrung bedingter/lazy Zweige.
+Dateiexistenz und vollstaendige Links beweisen keinen erfolgreichen Test.
+Ausgangsbild separat nach Quellen-/Rechtepruefung zuordnen.
+
+NODE 1 | UNETLoader
+  unet_name = "flux-2-klein-9b-fp8.safetensors"
+  weight_dtype = "default"
+
+NODE 2 | CLIPLoader
+  clip_name = "qwen_3_8b_fp8mixed.safetensors"
+  type = "flux2"
+  device = "default"
+
+NODE 3 | VAELoader
+  vae_name = "flux2-vae.safetensors"
+
+NODE 4 | LoadImage
+  image = "01_qwen2512_seed11.png"
+
+NODE 5 | ImageScaleToTotalPixels
+  image <- NODE 4, OUTPUT 0 (zero-based)
+  upscale_method = "lanczos"
+  megapixels = 1.0
+  resolution_steps = 32
+
+NODE 6 | GetImageSize
+  image <- NODE 5, OUTPUT 0 (zero-based)
+
+NODE 7 | VAEEncode
+  pixels <- NODE 5, OUTPUT 0 (zero-based)
+  vae <- NODE 3, OUTPUT 0 (zero-based)
+
+NODE 8 | CLIPTextEncode
+  text = "Replace only the woman's ivory brocade gown with an elegant emerald-green velvet evening gown. Preserve the same face, hairstyle, goggles, expression, pose, hands, body proportions, necklace, background, lighting and framing."
+  clip <- NODE 2, OUTPUT 0 (zero-based)
+
+NODE 10 | ReferenceLatent
+  conditioning <- NODE 8, OUTPUT 0 (zero-based)
+  latent <- NODE 7, OUTPUT 0 (zero-based)
+
+NODE 13 | Flux2Scheduler
+  steps = 4
+  width <- NODE 6, OUTPUT 0 (zero-based)
+  height <- NODE 6, OUTPUT 1 (zero-based)
+
+NODE 14 | EmptyFlux2LatentImage
+  width <- NODE 6, OUTPUT 0 (zero-based)
+  height <- NODE 6, OUTPUT 1 (zero-based)
+  batch_size = 1
+
+NODE 15 | RandomNoise
+  noise_seed = 11
+
+NODE 16 | KSamplerSelect
+  sampler_name = "euler"
+
+NODE 17 | SamplerCustomAdvanced
+  noise <- NODE 15, OUTPUT 0 (zero-based)
+  guider <- NODE 12, OUTPUT 0 (zero-based)
+  sampler <- NODE 16, OUTPUT 0 (zero-based)
+  sigmas <- NODE 13, OUTPUT 0 (zero-based)
+  latent_image <- NODE 14, OUTPUT 0 (zero-based)
+
+NODE 18 | VAEDecode
+  samples <- NODE 17, OUTPUT 0 (zero-based)
+  vae <- NODE 3, OUTPUT 0 (zero-based)
+
+NODE 19 | SaveImage
+  images <- NODE 18, OUTPUT 0 (zero-based)
+  filename_prefix = "kolor_klein9edit_01_qwen2512_seed11_11"
+
+NODE 9 | ConditioningZeroOut
+  conditioning <- NODE 8, OUTPUT 0 (zero-based)
+
+NODE 11 | ReferenceLatent
+  conditioning <- NODE 9, OUTPUT 0 (zero-based)
+  latent <- NODE 7, OUTPUT 0 (zero-based)
+
+NODE 12 | CFGGuider
+  model <- NODE 1, OUTPUT 0 (zero-based)
+  positive <- NODE 10, OUTPUT 0 (zero-based)
+  negative <- NODE 11, OUTPUT 0 (zero-based)
+  cfg = 1.0
+
+DANGLING LINKS: []
+
+EXAKTE TEST-WORKFLOW-ABSCHRIFT / KEINE AUSFUEHRUNG
+Quelle relativ zum Test-Desktop: Bildvergleich-Elara\23-Kleidung\qwen21edit\01_qwen2512_seed11_seed11.api.json
+SHA256 Original: 2d285115342ad0c5cc3aa46cb10a69a38d4c42811e5d2a66b3f727d01bfbad89
+Parameter und Eingangsverbindungen stammen unveraendert aus der API-Datei.
+Output-Slots sind nullbasiert. Datentypen/Output-Namen nicht geraten.
+API-Graph ist kein UI-Workflow: keine erfundenen Layoutkoordinaten.
+Vor Nachbau mit passender ComfyUI-Version und Node-Schema abgleichen.
+Statische Kanten belegen keine Ausfuehrung bedingter/lazy Zweige.
+Dateiexistenz und vollstaendige Links beweisen keinen erfolgreichen Test.
+Ausgangsbild separat nach Quellen-/Rechtepruefung zuordnen.
+
+NODE 1 | UNETLoader
+  unet_name = "qwen_image_2.1_int8_convrot.safetensors"
+  weight_dtype = "default"
+
+NODE 2 | CLIPLoader
+  clip_name = "qwen3vl_8b_int8_convrot.safetensors"
+  type = "qwen_image"
+  device = "default"
+
+NODE 3 | VAELoader
+  vae_name = "qwen_image_2.1_vae_bf16.safetensors"
+
+NODE 8 | LoadImage
+  image = "01_qwen2512_seed11.png"
+
+NODE 4 | TextEncodeQwenImage21
+  clip <- NODE 2, OUTPUT 0 (zero-based)
+  vae <- NODE 3, OUTPUT 0 (zero-based)
+  prompt = "Replace only the woman's ivory brocade gown with an elegant emerald-green velvet evening gown. Preserve the same face, hairstyle, goggles, expression, pose, hands, body proportions, necklace, background, lighting and framing."
+  negative_prompt = ""
+  resolution = 1024
+  images.image_1 <- NODE 8, OUTPUT 0 (zero-based)
+
+NODE 5 | KSampler
+  model <- NODE 1, OUTPUT 0 (zero-based)
+  seed = 11
+  steps = 25
+  cfg = 1.0
+  sampler_name = "euler"
+  scheduler = "simple"
+  positive <- NODE 4, OUTPUT 0 (zero-based)
+  negative <- NODE 4, OUTPUT 1 (zero-based)
+  latent_image <- NODE 4, OUTPUT 2 (zero-based)
+  denoise = 1.0
+
+NODE 6 | VAEDecode
+  samples <- NODE 5, OUTPUT 0 (zero-based)
+  vae <- NODE 3, OUTPUT 0 (zero-based)
+
+NODE 7 | SaveImage
+  images <- NODE 6, OUTPUT 0 (zero-based)
+  filename_prefix = "kolor_qwen21edit_01_qwen2512_seed11_11"
+
+DANGLING LINKS: []
+
+EXAKTE TEST-WORKFLOW-ABSCHRIFT / KEINE AUSFUEHRUNG
+Quelle relativ zum Test-Desktop: Bildvergleich-Elara\23-Kleidung\qwen2511edit\01_qwen2512_seed11_seed11.api.json
+SHA256 Original: b936eff9230853d91aa3bc8e6a2e20859032c2807cbb8fdeab4a519dc47833f1
+Parameter und Eingangsverbindungen stammen unveraendert aus der API-Datei.
+Output-Slots sind nullbasiert. Datentypen/Output-Namen nicht geraten.
+API-Graph ist kein UI-Workflow: keine erfundenen Layoutkoordinaten.
+Vor Nachbau mit passender ComfyUI-Version und Node-Schema abgleichen.
+Statische Kanten belegen keine Ausfuehrung bedingter/lazy Zweige.
+Dateiexistenz und vollstaendige Links beweisen keinen erfolgreichen Test.
+Ausgangsbild separat nach Quellen-/Rechtepruefung zuordnen.
+
+NODE 1 | UNETLoader
+  unet_name = "qwen_image_edit_2511_int8_convrot.safetensors"
+  weight_dtype = "default"
+
+NODE 2 | CLIPLoader
+  clip_name = "qwen_2.5_vl_7b_fp8_scaled.safetensors"
+  type = "qwen_image"
+  device = "default"
+
+NODE 3 | VAELoader
+  vae_name = "qwen_image_vae.safetensors"
+
+NODE 4 | LoadImage
+  image = "01_qwen2512_seed11.png"
+
+NODE 5 | FluxKontextImageScale
+  image <- NODE 4, OUTPUT 0 (zero-based)
+
+NODE 6 | TextEncodeQwenImageEditPlus
+  clip <- NODE 2, OUTPUT 0 (zero-based)
+  prompt = "Replace only the woman's ivory brocade gown with an elegant emerald-green velvet evening gown. Preserve the same face, hairstyle, goggles, expression, pose, hands, body proportions, necklace, background, lighting and framing."
+  vae <- NODE 3, OUTPUT 0 (zero-based)
+  image1 <- NODE 5, OUTPUT 0 (zero-based)
+
+NODE 7 | TextEncodeQwenImageEditPlus
+  clip <- NODE 2, OUTPUT 0 (zero-based)
+  prompt = ""
+  vae <- NODE 3, OUTPUT 0 (zero-based)
+  image1 <- NODE 5, OUTPUT 0 (zero-based)
+
+NODE 8 | FluxKontextMultiReferenceLatentMethod
+  conditioning <- NODE 6, OUTPUT 0 (zero-based)
+  reference_latents_method = "index_timestep_zero"
+
+NODE 9 | FluxKontextMultiReferenceLatentMethod
+  conditioning <- NODE 7, OUTPUT 0 (zero-based)
+  reference_latents_method = "index_timestep_zero"
+
+NODE 10 | ModelSamplingAuraFlow
+  model <- NODE 1, OUTPUT 0 (zero-based)
+  shift = 3.1
+
+NODE 11 | CFGNorm
+  model <- NODE 10, OUTPUT 0 (zero-based)
+  strength = 1.0
+
+NODE 12 | VAEEncode
+  pixels <- NODE 5, OUTPUT 0 (zero-based)
+  vae <- NODE 3, OUTPUT 0 (zero-based)
+
+NODE 13 | KSampler
+  model <- NODE 11, OUTPUT 0 (zero-based)
+  seed = 11
+  steps = 40
+  cfg = 4.0
+  sampler_name = "euler"
+  scheduler = "simple"
+  positive <- NODE 8, OUTPUT 0 (zero-based)
+  negative <- NODE 9, OUTPUT 0 (zero-based)
+  latent_image <- NODE 12, OUTPUT 0 (zero-based)
+  denoise = 1.0
+
+NODE 14 | VAEDecode
+  samples <- NODE 13, OUTPUT 0 (zero-based)
+  vae <- NODE 3, OUTPUT 0 (zero-based)
+
+NODE 15 | SaveImage
+  images <- NODE 14, OUTPUT 0 (zero-based)
+  filename_prefix = "kolor_qwen2511edit_01_qwen2512_seed11_11"
+
+DANGLING LINKS: []
+
+EXAKTE TEST-WORKFLOW-ABSCHRIFT / KEINE AUSFUEHRUNG
+Quelle relativ zum Test-Desktop: Bildvergleich-Elara\22-Kolorieren\fluxdevedit\01-hochzeit-warten-1907_seed11.api.json
+SHA256 Original: 4c645f4dd70ed041b8b88dc89d243b652fa65ae6a759c95abe160f90c22d5ac6
+Parameter und Eingangsverbindungen stammen unveraendert aus der API-Datei.
+Output-Slots sind nullbasiert. Datentypen/Output-Namen nicht geraten.
+API-Graph ist kein UI-Workflow: keine erfundenen Layoutkoordinaten.
+Vor Nachbau mit passender ComfyUI-Version und Node-Schema abgleichen.
+Statische Kanten belegen keine Ausfuehrung bedingter/lazy Zweige.
+Dateiexistenz und vollstaendige Links beweisen keinen erfolgreichen Test.
+Ausgangsbild separat nach Quellen-/Rechtepruefung zuordnen.
+
+NODE 1 | UnetLoaderGGUF
+  unet_name = "flux2-dev-Q4_K_M.gguf"
+
+NODE 2 | CLIPLoader
+  clip_name = "mistral_3_small_flux2_fp4_mixed.safetensors"
+  type = "flux2"
+  device = "default"
+
+NODE 3 | VAELoader
+  vae_name = "flux2-vae.safetensors"
+
+NODE 4 | LoadImage
+  image = "01-hochzeit-warten-1907.jpg"
+
+NODE 5 | ImageScaleToTotalPixels
+  image <- NODE 4, OUTPUT 0 (zero-based)
+  upscale_method = "lanczos"
+  megapixels = 1.0
+  resolution_steps = 32
+
+NODE 6 | GetImageSize
+  image <- NODE 5, OUTPUT 0 (zero-based)
+
+NODE 7 | VAEEncode
+  pixels <- NODE 5, OUTPUT 0 (zero-based)
+  vae <- NODE 3, OUTPUT 0 (zero-based)
+
+NODE 8 | CLIPTextEncode
+  text = "Colorize this black-and-white photograph with natural, restrained colors. Preserve facial identity, age, expression, pose, clothing details, background and framing. Add color only."
+  clip <- NODE 2, OUTPUT 0 (zero-based)
+
+NODE 10 | ReferenceLatent
+  conditioning <- NODE 8, OUTPUT 0 (zero-based)
+  latent <- NODE 7, OUTPUT 0 (zero-based)
+
+NODE 13 | Flux2Scheduler
+  steps = 20
+  width <- NODE 6, OUTPUT 0 (zero-based)
+  height <- NODE 6, OUTPUT 1 (zero-based)
+
+NODE 14 | EmptyFlux2LatentImage
+  width <- NODE 6, OUTPUT 0 (zero-based)
+  height <- NODE 6, OUTPUT 1 (zero-based)
+  batch_size = 1
+
+NODE 15 | RandomNoise
+  noise_seed = 11
+
+NODE 16 | KSamplerSelect
+  sampler_name = "euler"
+
+NODE 17 | SamplerCustomAdvanced
+  noise <- NODE 15, OUTPUT 0 (zero-based)
+  guider <- NODE 12, OUTPUT 0 (zero-based)
+  sampler <- NODE 16, OUTPUT 0 (zero-based)
+  sigmas <- NODE 13, OUTPUT 0 (zero-based)
+  latent_image <- NODE 14, OUTPUT 0 (zero-based)
+
+NODE 18 | VAEDecode
+  samples <- NODE 17, OUTPUT 0 (zero-based)
+  vae <- NODE 3, OUTPUT 0 (zero-based)
+
+NODE 19 | SaveImage
+  images <- NODE 18, OUTPUT 0 (zero-based)
+  filename_prefix = "kolor_fluxdevedit_01-hochzeit-warten-1907_11"
+
+NODE 9 | FluxGuidance
+  conditioning <- NODE 10, OUTPUT 0 (zero-based)
+  guidance = 4.0
+
+NODE 12 | BasicGuider
+  model <- NODE 1, OUTPUT 0 (zero-based)
+  conditioning <- NODE 9, OUTPUT 0 (zero-based)
+
+DANGLING LINKS: []
+
+EXAKTE TEST-WORKFLOW-ABSCHRIFT / KEINE AUSFUEHRUNG
+Quelle relativ zum Test-Desktop: Bildvergleich-Elara\22-Kolorieren\klein4edit\01-hochzeit-warten-1907_seed11.api.json
+SHA256 Original: 0716474f033235636a5f41c4d5017695f1575cd194b0ad3da5683c322c870edc
+Parameter und Eingangsverbindungen stammen unveraendert aus der API-Datei.
+Output-Slots sind nullbasiert. Datentypen/Output-Namen nicht geraten.
+API-Graph ist kein UI-Workflow: keine erfundenen Layoutkoordinaten.
+Vor Nachbau mit passender ComfyUI-Version und Node-Schema abgleichen.
+Statische Kanten belegen keine Ausfuehrung bedingter/lazy Zweige.
+Dateiexistenz und vollstaendige Links beweisen keinen erfolgreichen Test.
+Ausgangsbild separat nach Quellen-/Rechtepruefung zuordnen.
+
+NODE 1 | UNETLoader
+  unet_name = "flux-2-klein-4b-fp8.safetensors"
+  weight_dtype = "default"
+
+NODE 2 | CLIPLoader
+  clip_name = "qwen_3_4b.safetensors"
+  type = "flux2"
+  device = "default"
+
+NODE 3 | VAELoader
+  vae_name = "flux2-vae.safetensors"
+
+NODE 4 | LoadImage
+  image = "01-hochzeit-warten-1907.jpg"
+
+NODE 5 | ImageScaleToTotalPixels
+  image <- NODE 4, OUTPUT 0 (zero-based)
+  upscale_method = "lanczos"
+  megapixels = 1.0
+  resolution_steps = 32
+
+NODE 6 | GetImageSize
+  image <- NODE 5, OUTPUT 0 (zero-based)
+
+NODE 7 | VAEEncode
+  pixels <- NODE 5, OUTPUT 0 (zero-based)
+  vae <- NODE 3, OUTPUT 0 (zero-based)
+
+NODE 8 | CLIPTextEncode
+  text = "Colorize this black-and-white photograph with natural, restrained colors. Preserve facial identity, age, expression, pose, clothing details, background and framing. Add color only."
+  clip <- NODE 2, OUTPUT 0 (zero-based)
+
+NODE 10 | ReferenceLatent
+  conditioning <- NODE 8, OUTPUT 0 (zero-based)
+  latent <- NODE 7, OUTPUT 0 (zero-based)
+
+NODE 13 | Flux2Scheduler
+  steps = 4
+  width <- NODE 6, OUTPUT 0 (zero-based)
+  height <- NODE 6, OUTPUT 1 (zero-based)
+
+NODE 14 | EmptyFlux2LatentImage
+  width <- NODE 6, OUTPUT 0 (zero-based)
+  height <- NODE 6, OUTPUT 1 (zero-based)
+  batch_size = 1
+
+NODE 15 | RandomNoise
+  noise_seed = 11
+
+NODE 16 | KSamplerSelect
+  sampler_name = "euler"
+
+NODE 17 | SamplerCustomAdvanced
+  noise <- NODE 15, OUTPUT 0 (zero-based)
+  guider <- NODE 12, OUTPUT 0 (zero-based)
+  sampler <- NODE 16, OUTPUT 0 (zero-based)
+  sigmas <- NODE 13, OUTPUT 0 (zero-based)
+  latent_image <- NODE 14, OUTPUT 0 (zero-based)
+
+NODE 18 | VAEDecode
+  samples <- NODE 17, OUTPUT 0 (zero-based)
+  vae <- NODE 3, OUTPUT 0 (zero-based)
+
+NODE 19 | SaveImage
+  images <- NODE 18, OUTPUT 0 (zero-based)
+  filename_prefix = "kolor_klein4edit_01-hochzeit-warten-1907_11"
+
+NODE 9 | ConditioningZeroOut
+  conditioning <- NODE 8, OUTPUT 0 (zero-based)
+
+NODE 11 | ReferenceLatent
+  conditioning <- NODE 9, OUTPUT 0 (zero-based)
+  latent <- NODE 7, OUTPUT 0 (zero-based)
+
+NODE 12 | CFGGuider
+  model <- NODE 1, OUTPUT 0 (zero-based)
+  positive <- NODE 10, OUTPUT 0 (zero-based)
+  negative <- NODE 11, OUTPUT 0 (zero-based)
+  cfg = 1.0
+
+DANGLING LINKS: []
+
+EXAKTE TEST-WORKFLOW-ABSCHRIFT / KEINE AUSFUEHRUNG
+Quelle relativ zum Test-Desktop: Bildvergleich-Elara\22-Kolorieren\klein9edit\01-hochzeit-warten-1907_seed11.api.json
+SHA256 Original: f2a037db6a663b608837663d7dcc0ffcd55f70befa4b4ca294bedca00bfc6deb
+Parameter und Eingangsverbindungen stammen unveraendert aus der API-Datei.
+Output-Slots sind nullbasiert. Datentypen/Output-Namen nicht geraten.
+API-Graph ist kein UI-Workflow: keine erfundenen Layoutkoordinaten.
+Vor Nachbau mit passender ComfyUI-Version und Node-Schema abgleichen.
+Statische Kanten belegen keine Ausfuehrung bedingter/lazy Zweige.
+Dateiexistenz und vollstaendige Links beweisen keinen erfolgreichen Test.
+Ausgangsbild separat nach Quellen-/Rechtepruefung zuordnen.
+
+NODE 1 | UNETLoader
+  unet_name = "flux-2-klein-9b-fp8.safetensors"
+  weight_dtype = "default"
+
+NODE 2 | CLIPLoader
+  clip_name = "qwen_3_8b_fp8mixed.safetensors"
+  type = "flux2"
+  device = "default"
+
+NODE 3 | VAELoader
+  vae_name = "flux2-vae.safetensors"
+
+NODE 4 | LoadImage
+  image = "01-hochzeit-warten-1907.jpg"
+
+NODE 5 | ImageScaleToTotalPixels
+  image <- NODE 4, OUTPUT 0 (zero-based)
+  upscale_method = "lanczos"
+  megapixels = 1.0
+  resolution_steps = 32
+
+NODE 6 | GetImageSize
+  image <- NODE 5, OUTPUT 0 (zero-based)
+
+NODE 7 | VAEEncode
+  pixels <- NODE 5, OUTPUT 0 (zero-based)
+  vae <- NODE 3, OUTPUT 0 (zero-based)
+
+NODE 8 | CLIPTextEncode
+  text = "Colorize this black-and-white photograph with natural, restrained colors. Preserve facial identity, age, expression, pose, clothing details, background and framing. Add color only."
+  clip <- NODE 2, OUTPUT 0 (zero-based)
+
+NODE 10 | ReferenceLatent
+  conditioning <- NODE 8, OUTPUT 0 (zero-based)
+  latent <- NODE 7, OUTPUT 0 (zero-based)
+
+NODE 13 | Flux2Scheduler
+  steps = 4
+  width <- NODE 6, OUTPUT 0 (zero-based)
+  height <- NODE 6, OUTPUT 1 (zero-based)
+
+NODE 14 | EmptyFlux2LatentImage
+  width <- NODE 6, OUTPUT 0 (zero-based)
+  height <- NODE 6, OUTPUT 1 (zero-based)
+  batch_size = 1
+
+NODE 15 | RandomNoise
+  noise_seed = 11
+
+NODE 16 | KSamplerSelect
+  sampler_name = "euler"
+
+NODE 17 | SamplerCustomAdvanced
+  noise <- NODE 15, OUTPUT 0 (zero-based)
+  guider <- NODE 12, OUTPUT 0 (zero-based)
+  sampler <- NODE 16, OUTPUT 0 (zero-based)
+  sigmas <- NODE 13, OUTPUT 0 (zero-based)
+  latent_image <- NODE 14, OUTPUT 0 (zero-based)
+
+NODE 18 | VAEDecode
+  samples <- NODE 17, OUTPUT 0 (zero-based)
+  vae <- NODE 3, OUTPUT 0 (zero-based)
+
+NODE 19 | SaveImage
+  images <- NODE 18, OUTPUT 0 (zero-based)
+  filename_prefix = "kolor_klein9edit_01-hochzeit-warten-1907_11"
+
+NODE 9 | ConditioningZeroOut
+  conditioning <- NODE 8, OUTPUT 0 (zero-based)
+
+NODE 11 | ReferenceLatent
+  conditioning <- NODE 9, OUTPUT 0 (zero-based)
+  latent <- NODE 7, OUTPUT 0 (zero-based)
+
+NODE 12 | CFGGuider
+  model <- NODE 1, OUTPUT 0 (zero-based)
+  positive <- NODE 10, OUTPUT 0 (zero-based)
+  negative <- NODE 11, OUTPUT 0 (zero-based)
+  cfg = 1.0
+
+DANGLING LINKS: []
+
+EXAKTE TEST-WORKFLOW-ABSCHRIFT / KEINE AUSFUEHRUNG
+Quelle relativ zum Test-Desktop: Bildvergleich-Elara\22-Kolorieren\qwen21edit\01-hochzeit-warten-1907_seed11.api.json
+SHA256 Original: a1a009ad6e0e04051b131386a4665358d4f8253f2569e3c0cb75fbbb5510dc44
+Parameter und Eingangsverbindungen stammen unveraendert aus der API-Datei.
+Output-Slots sind nullbasiert. Datentypen/Output-Namen nicht geraten.
+API-Graph ist kein UI-Workflow: keine erfundenen Layoutkoordinaten.
+Vor Nachbau mit passender ComfyUI-Version und Node-Schema abgleichen.
+Statische Kanten belegen keine Ausfuehrung bedingter/lazy Zweige.
+Dateiexistenz und vollstaendige Links beweisen keinen erfolgreichen Test.
+Ausgangsbild separat nach Quellen-/Rechtepruefung zuordnen.
+
+NODE 1 | UNETLoader
+  unet_name = "qwen_image_2.1_int8_convrot.safetensors"
+  weight_dtype = "default"
+
+NODE 2 | CLIPLoader
+  clip_name = "qwen3vl_8b_int8_convrot.safetensors"
+  type = "qwen_image"
+  device = "default"
+
+NODE 3 | VAELoader
+  vae_name = "qwen_image_2.1_vae_bf16.safetensors"
+
+NODE 8 | LoadImage
+  image = "01-hochzeit-warten-1907.jpg"
+
+NODE 4 | TextEncodeQwenImage21
+  clip <- NODE 2, OUTPUT 0 (zero-based)
+  vae <- NODE 3, OUTPUT 0 (zero-based)
+  prompt = "Colorize this black-and-white photograph with natural, restrained colors. Preserve facial identity, age, expression, pose, clothing details, background and framing. Add color only."
+  negative_prompt = ""
+  resolution = 1024
+  images.image_1 <- NODE 8, OUTPUT 0 (zero-based)
+
+NODE 5 | KSampler
+  model <- NODE 1, OUTPUT 0 (zero-based)
+  seed = 11
+  steps = 25
+  cfg = 1.0
+  sampler_name = "euler"
+  scheduler = "simple"
+  positive <- NODE 4, OUTPUT 0 (zero-based)
+  negative <- NODE 4, OUTPUT 1 (zero-based)
+  latent_image <- NODE 4, OUTPUT 2 (zero-based)
+  denoise = 1.0
+
+NODE 6 | VAEDecode
+  samples <- NODE 5, OUTPUT 0 (zero-based)
+  vae <- NODE 3, OUTPUT 0 (zero-based)
+
+NODE 7 | SaveImage
+  images <- NODE 6, OUTPUT 0 (zero-based)
+  filename_prefix = "kolor_qwen21edit_01-hochzeit-warten-1907_11"
+
+DANGLING LINKS: []
+
+EXAKTE TEST-WORKFLOW-ABSCHRIFT / KEINE AUSFUEHRUNG
+Quelle relativ zum Test-Desktop: Bildvergleich-Elara\22-Kolorieren\qwen2511edit\01-hochzeit-warten-1907_seed11.api.json
+SHA256 Original: 81a8b48381521916139490a63453c144f64d67e58dc53d007eb2125fca746cf3
+Parameter und Eingangsverbindungen stammen unveraendert aus der API-Datei.
+Output-Slots sind nullbasiert. Datentypen/Output-Namen nicht geraten.
+API-Graph ist kein UI-Workflow: keine erfundenen Layoutkoordinaten.
+Vor Nachbau mit passender ComfyUI-Version und Node-Schema abgleichen.
+Statische Kanten belegen keine Ausfuehrung bedingter/lazy Zweige.
+Dateiexistenz und vollstaendige Links beweisen keinen erfolgreichen Test.
+Ausgangsbild separat nach Quellen-/Rechtepruefung zuordnen.
+
+NODE 1 | UNETLoader
+  unet_name = "qwen_image_edit_2511_int8_convrot.safetensors"
+  weight_dtype = "default"
+
+NODE 2 | CLIPLoader
+  clip_name = "qwen_2.5_vl_7b_fp8_scaled.safetensors"
+  type = "qwen_image"
+  device = "default"
+
+NODE 3 | VAELoader
+  vae_name = "qwen_image_vae.safetensors"
+
+NODE 4 | LoadImage
+  image = "01-hochzeit-warten-1907.jpg"
+
+NODE 5 | FluxKontextImageScale
+  image <- NODE 4, OUTPUT 0 (zero-based)
+
+NODE 6 | TextEncodeQwenImageEditPlus
+  clip <- NODE 2, OUTPUT 0 (zero-based)
+  prompt = "Colorize this black-and-white photograph with natural, restrained colors. Preserve facial identity, age, expression, pose, clothing details, background and framing. Add color only."
+  vae <- NODE 3, OUTPUT 0 (zero-based)
+  image1 <- NODE 5, OUTPUT 0 (zero-based)
+
+NODE 7 | TextEncodeQwenImageEditPlus
+  clip <- NODE 2, OUTPUT 0 (zero-based)
+  prompt = ""
+  vae <- NODE 3, OUTPUT 0 (zero-based)
+  image1 <- NODE 5, OUTPUT 0 (zero-based)
+
+NODE 8 | FluxKontextMultiReferenceLatentMethod
+  conditioning <- NODE 6, OUTPUT 0 (zero-based)
+  reference_latents_method = "index_timestep_zero"
+
+NODE 9 | FluxKontextMultiReferenceLatentMethod
+  conditioning <- NODE 7, OUTPUT 0 (zero-based)
+  reference_latents_method = "index_timestep_zero"
+
+NODE 10 | ModelSamplingAuraFlow
+  model <- NODE 1, OUTPUT 0 (zero-based)
+  shift = 3.1
+
+NODE 11 | CFGNorm
+  model <- NODE 10, OUTPUT 0 (zero-based)
+  strength = 1.0
+
+NODE 12 | VAEEncode
+  pixels <- NODE 5, OUTPUT 0 (zero-based)
+  vae <- NODE 3, OUTPUT 0 (zero-based)
+
+NODE 13 | KSampler
+  model <- NODE 11, OUTPUT 0 (zero-based)
+  seed = 11
+  steps = 40
+  cfg = 4.0
+  sampler_name = "euler"
+  scheduler = "simple"
+  positive <- NODE 8, OUTPUT 0 (zero-based)
+  negative <- NODE 9, OUTPUT 0 (zero-based)
+  latent_image <- NODE 12, OUTPUT 0 (zero-based)
+  denoise = 1.0
+
+NODE 14 | VAEDecode
+  samples <- NODE 13, OUTPUT 0 (zero-based)
+  vae <- NODE 3, OUTPUT 0 (zero-based)
+
+NODE 15 | SaveImage
+  images <- NODE 14, OUTPUT 0 (zero-based)
+  filename_prefix = "kolor_qwen2511edit_01-hochzeit-warten-1907_11"
+
+DANGLING LINKS: []
+
+EXAKTE TEST-WORKFLOW-ABSCHRIFT / KEINE AUSFUEHRUNG
+Quelle relativ zum Test-Desktop: Bildvergleich-Elara\20-Grusskarten\flux\geburtstag-1x1_seed11.api.json
+SHA256 Original: 18857630863ebb1835c08ad4b51c7350b97d488d6c278e527b2d3c490d313389
+Parameter und Eingangsverbindungen stammen unveraendert aus der API-Datei.
+Output-Slots sind nullbasiert. Datentypen/Output-Namen nicht geraten.
+API-Graph ist kein UI-Workflow: keine erfundenen Layoutkoordinaten.
+Vor Nachbau mit passender ComfyUI-Version und Node-Schema abgleichen.
+Statische Kanten belegen keine Ausfuehrung bedingter/lazy Zweige.
+Dateiexistenz und vollstaendige Links beweisen keinen erfolgreichen Test.
+Ausgangsbild separat nach Quellen-/Rechtepruefung zuordnen.
+
+NODE 12 | UnetLoaderGGUF
+  unet_name = "flux2-dev-Q4_K_M.gguf"
+
+NODE 38 | CLIPLoader
+  clip_name = "mistral_3_small_flux2_fp4_mixed.safetensors"
+  type = "flux2"
+  device = "default"
+
+NODE 10 | VAELoader
+  vae_name = "flux2-vae.safetensors"
+
+NODE 6 | CLIPTextEncode
+  text = "Create an elegant square birthday greeting card for a man named Werner turning seventy. A warm still life with a small dark-wood table, tasteful golden and deep-blue paper decorations, a simple birthday cake with two number candles shaped as 7 and 0, soft window light, realistic materials, premium but personal rather than luxurious, balanced composition, generous clear space around the lettering. Show exactly this German text, spelled exactly and only once: \"Alles Gute, Werner!\" Add a smaller second line spelled exactly: \"70 Jahre jung!\" No other words, letters, numbers, logos, signatures or watermarks. Square 1:1 composition for 1080 × 1080."
+  clip <- NODE 38, OUTPUT 0 (zero-based)
+
+NODE 26 | FluxGuidance
+  conditioning <- NODE 6, OUTPUT 0 (zero-based)
+  guidance = 4.0
+
+NODE 22 | BasicGuider
+  model <- NODE 12, OUTPUT 0 (zero-based)
+  conditioning <- NODE 26, OUTPUT 0 (zero-based)
+
+NODE 48 | Flux2Scheduler
+  steps = 20
+  width = 1088
+  height = 1088
+
+NODE 47 | EmptyFlux2LatentImage
+  width = 1088
+  height = 1088
+  batch_size = 1
+
+NODE 16 | KSamplerSelect
+  sampler_name = "euler"
+
+NODE 25 | RandomNoise
+  noise_seed = 11
+
+NODE 13 | SamplerCustomAdvanced
+  noise <- NODE 25, OUTPUT 0 (zero-based)
+  guider <- NODE 22, OUTPUT 0 (zero-based)
+  sampler <- NODE 16, OUTPUT 0 (zero-based)
+  sigmas <- NODE 48, OUTPUT 0 (zero-based)
+  latent_image <- NODE 47, OUTPUT 0 (zero-based)
+
+NODE 8 | VAEDecode
+  samples <- NODE 13, OUTPUT 0 (zero-based)
+  vae <- NODE 10, OUTPUT 0 (zero-based)
+
+NODE 9 | SaveImage
+  images <- NODE 8, OUTPUT 0 (zero-based)
+  filename_prefix = "karte_flux_geburtstag-1x1_11"
+
+DANGLING LINKS: []
+
+EXAKTE TEST-WORKFLOW-ABSCHRIFT / KEINE AUSFUEHRUNG
+Quelle relativ zum Test-Desktop: Bildvergleich-Elara\20-Grusskarten\klein\geburtstag-1x1_seed11.api.json
+SHA256 Original: f959b841a8c4f94dcd4c20478ff6ddf9cd4f80707f7b804da04cf1fae1a16ac4
+Parameter und Eingangsverbindungen stammen unveraendert aus der API-Datei.
+Output-Slots sind nullbasiert. Datentypen/Output-Namen nicht geraten.
+API-Graph ist kein UI-Workflow: keine erfundenen Layoutkoordinaten.
+Vor Nachbau mit passender ComfyUI-Version und Node-Schema abgleichen.
+Statische Kanten belegen keine Ausfuehrung bedingter/lazy Zweige.
+Dateiexistenz und vollstaendige Links beweisen keinen erfolgreichen Test.
+Ausgangsbild separat nach Quellen-/Rechtepruefung zuordnen.
+
+NODE 1 | UNETLoader
+  unet_name = "flux-2-klein-4b-fp8.safetensors"
+  weight_dtype = "default"
+
+NODE 2 | CLIPLoader
+  clip_name = "qwen_3_4b.safetensors"
+  type = "flux2"
+  device = "default"
+
+NODE 3 | VAELoader
+  vae_name = "flux2-vae.safetensors"
+
+NODE 4 | CLIPTextEncode
+  text = "Create an elegant square birthday greeting card for a man named Werner turning seventy. A warm still life with a small dark-wood table, tasteful golden and deep-blue paper decorations, a simple birthday cake with two number candles shaped as 7 and 0, soft window light, realistic materials, premium but personal rather than luxurious, balanced composition, generous clear space around the lettering. Show exactly this German text, spelled exactly and only once: \"Alles Gute, Werner!\" Add a smaller second line spelled exactly: \"70 Jahre jung!\" No other words, letters, numbers, logos, signatures or watermarks. Square 1:1 composition for 1080 × 1080."
+  clip <- NODE 2, OUTPUT 0 (zero-based)
+
+NODE 5 | ConditioningZeroOut
+  conditioning <- NODE 4, OUTPUT 0 (zero-based)
+
+NODE 6 | CFGGuider
+  model <- NODE 1, OUTPUT 0 (zero-based)
+  positive <- NODE 4, OUTPUT 0 (zero-based)
+  negative <- NODE 5, OUTPUT 0 (zero-based)
+  cfg = 1.0
+
+NODE 7 | Flux2Scheduler
+  steps = 4
+  width = 1088
+  height = 1088
+
+NODE 8 | EmptyFlux2LatentImage
+  width = 1088
+  height = 1088
+  batch_size = 1
+
+NODE 9 | KSamplerSelect
+  sampler_name = "euler"
+
+NODE 10 | RandomNoise
+  noise_seed = 11
+
+NODE 11 | SamplerCustomAdvanced
+  noise <- NODE 10, OUTPUT 0 (zero-based)
+  guider <- NODE 6, OUTPUT 0 (zero-based)
+  sampler <- NODE 9, OUTPUT 0 (zero-based)
+  sigmas <- NODE 7, OUTPUT 0 (zero-based)
+  latent_image <- NODE 8, OUTPUT 0 (zero-based)
+
+NODE 12 | VAEDecode
+  samples <- NODE 11, OUTPUT 0 (zero-based)
+  vae <- NODE 3, OUTPUT 0 (zero-based)
+
+NODE 13 | SaveImage
+  images <- NODE 12, OUTPUT 0 (zero-based)
+  filename_prefix = "karte_klein_geburtstag-1x1_11"
+
+DANGLING LINKS: []
+
+EXAKTE TEST-WORKFLOW-ABSCHRIFT / KEINE AUSFUEHRUNG
+Quelle relativ zum Test-Desktop: Bildvergleich-Elara\20-Grusskarten\qwen2512\geburtstag-1x1_seed11.api.json
+SHA256 Original: 49f6ffaada20060f4ee76c0027b12edee42646c931fd7218f257deb7bb011a6d
+Parameter und Eingangsverbindungen stammen unveraendert aus der API-Datei.
+Output-Slots sind nullbasiert. Datentypen/Output-Namen nicht geraten.
+API-Graph ist kein UI-Workflow: keine erfundenen Layoutkoordinaten.
+Vor Nachbau mit passender ComfyUI-Version und Node-Schema abgleichen.
+Statische Kanten belegen keine Ausfuehrung bedingter/lazy Zweige.
+Dateiexistenz und vollstaendige Links beweisen keinen erfolgreichen Test.
+Ausgangsbild separat nach Quellen-/Rechtepruefung zuordnen.
+
+NODE 1 | UNETLoader
+  unet_name = "qwen_image_2512_fp8_e4m3fn.safetensors"
+  weight_dtype = "default"
+
+NODE 2 | CLIPLoader
+  clip_name = "qwen_2.5_vl_7b_fp8_scaled.safetensors"
+  type = "qwen_image"
+  device = "default"
+
+NODE 3 | VAELoader
+  vae_name = "qwen_image_vae.safetensors"
+
+NODE 4 | CLIPTextEncode
+  text = "Create an elegant square birthday greeting card for a man named Werner turning seventy. A warm still life with a small dark-wood table, tasteful golden and deep-blue paper decorations, a simple birthday cake with two number candles shaped as 7 and 0, soft window light, realistic materials, premium but personal rather than luxurious, balanced composition, generous clear space around the lettering. Show exactly this German text, spelled exactly and only once: \"Alles Gute, Werner!\" Add a smaller second line spelled exactly: \"70 Jahre jung!\" No other words, letters, numbers, logos, signatures or watermarks. Square 1:1 composition for 1080 × 1080."
+  clip <- NODE 2, OUTPUT 0 (zero-based)
+
+NODE 5 | CLIPTextEncode
+  text = "low resolution, low quality, deformed limbs, deformed fingers, oversaturated, waxy look, faceless, overly smooth, AI look, chaotic composition, blurry or distorted text"
+  clip <- NODE 2, OUTPUT 0 (zero-based)
+
+NODE 6 | ModelSamplingAuraFlow
+  model <- NODE 1, OUTPUT 0 (zero-based)
+  shift = 3.1
+
+NODE 7 | EmptySD3LatentImage
+  width = 1088
+  height = 1088
+  batch_size = 1
+
+NODE 8 | KSampler
+  model <- NODE 6, OUTPUT 0 (zero-based)
+  seed = 11
+  steps = 50
+  cfg = 4.0
+  sampler_name = "euler"
+  scheduler = "simple"
+  positive <- NODE 4, OUTPUT 0 (zero-based)
+  negative <- NODE 5, OUTPUT 0 (zero-based)
+  latent_image <- NODE 7, OUTPUT 0 (zero-based)
+  denoise = 1.0
+
+NODE 9 | VAEDecode
+  samples <- NODE 8, OUTPUT 0 (zero-based)
+  vae <- NODE 3, OUTPUT 0 (zero-based)
+
+NODE 10 | SaveImage
+  images <- NODE 9, OUTPUT 0 (zero-based)
+  filename_prefix = "karte_qwen2512_geburtstag-1x1_11"
+
+DANGLING LINKS: []
+
+EXAKTE TEST-WORKFLOW-ABSCHRIFT / KEINE AUSFUEHRUNG
+Quelle relativ zum Test-Desktop: Bildvergleich-Elara\23-Bewegt-LTX25\02c-hochzeit-distilled-lang-nopin-seed11.api.json
+SHA256 Original: d5e143c3d965c275fcfc18ccc27ebdc1e551e3152a7ef7a80f224bb08df26ae5
+Parameter und Eingangsverbindungen stammen unveraendert aus der API-Datei.
+Output-Slots sind nullbasiert. Datentypen/Output-Namen nicht geraten.
+API-Graph ist kein UI-Workflow: keine erfundenen Layoutkoordinaten.
+Vor Nachbau mit passender ComfyUI-Version und Node-Schema abgleichen.
+Statische Kanten belegen keine Ausfuehrung bedingter/lazy Zweige.
+Dateiexistenz und vollstaendige Links beweisen keinen erfolgreichen Test.
+Ausgangsbild separat nach Quellen-/Rechtepruefung zuordnen.
+
+NODE 1 | LoadImage
+  image = "01-hochzeit-warten-1907_seed11.png"
+
+NODE 2 | ResizeImageMaskNode
+  input <- NODE 1, OUTPUT 0 (zero-based)
+  resize_type = "scale longer dimension"
+  resize_type.longer_size = 1536
+  scale_method = "lanczos"
+
+NODE 3 | LTXVPreprocess
+  image <- NODE 2, OUTPUT 0 (zero-based)
+  img_compression = 18
+
+NODE 4 | CLIPLoader
+  clip_name = "gemma4-12b-with-proj-ltx-2.5-comfy-int8-convrot.safetensors"
+  type = "ltxv"
+  device = "default"
+
+NODE 5 | CLIPTextEncode
+  text = "Animate this photograph as a quiet, natural living photo. Preserve the identity, age, facial features, clothing, number of people, background and original composition. Use only very subtle breathing, occasional gentle blinking and a slight natural movement of fabric. Keep the camera fixed. Do not add people or objects. No scene changes, no face morphing, no exaggerated gestures, no speaking, no text and no audio."
+  clip <- NODE 4, OUTPUT 0 (zero-based)
+
+NODE 6 | CLIPTextEncode
+  text = "pc game, console game, video game, cartoon, childish, ugly"
+  clip <- NODE 4, OUTPUT 0 (zero-based)
+
+NODE 7 | UNETLoader
+  unet_name = "ltx-2.5-22b-distilled-transformer-comfy-int8-convrot.safetensors"
+  weight_dtype = "default"
+
+NODE 8 | VAELoader
+  vae_name = "ltx-2.5-video-vae-bf16.safetensors"
+
+NODE 9 | VAELoader
+  vae_name = "ltx-2.5-audio-vae-bf16.safetensors"
+
+NODE 10 | LTXVConditioning
+  positive <- NODE 5, OUTPUT 0 (zero-based)
+  negative <- NODE 6, OUTPUT 0 (zero-based)
+  frame_rate = 24.0
+
+NODE 11 | EmptyLTXVLatentVideo
+  width = 640
+  height = 360
+  length = 121
+  batch_size = 1
+
+NODE 12 | LTXVImgToVideoInplace
+  vae <- NODE 8, OUTPUT 0 (zero-based)
+  image <- NODE 3, OUTPUT 0 (zero-based)
+  latent <- NODE 11, OUTPUT 0 (zero-based)
+  strength = 0.7
+  bypass = false
+
+NODE 13 | LTXVEmptyLatentAudio
+  audio_vae <- NODE 9, OUTPUT 0 (zero-based)
+  frames_number = 121
+  frame_rate = 24
+  batch_size = 1
+
+NODE 14 | LTXVConcatAVLatent
+  video_latent <- NODE 12, OUTPUT 0 (zero-based)
+  audio_latent <- NODE 13, OUTPUT 0 (zero-based)
+
+NODE 15 | RandomNoise
+  noise_seed = 11
+
+NODE 16 | KSamplerSelect
+  sampler_name = "euler_ancestral"
+
+NODE 17 | ManualSigmas
+  sigmas = "1.0, 0.99375, 0.9875, 0.98125, 0.975, 0.909375, 0.725, 0.421875, 0.0"
+
+NODE 18 | LTXVDualCFGGuider
+  model <- NODE 7, OUTPUT 0 (zero-based)
+  positive <- NODE 10, OUTPUT 0 (zero-based)
+  negative <- NODE 10, OUTPUT 1 (zero-based)
+  video_cfg = 1.0
+  audio_cfg = 1.0
+
+NODE 19 | SamplerCustomAdvanced
+  noise <- NODE 15, OUTPUT 0 (zero-based)
+  guider <- NODE 18, OUTPUT 0 (zero-based)
+  sampler <- NODE 16, OUTPUT 0 (zero-based)
+  sigmas <- NODE 17, OUTPUT 0 (zero-based)
+  latent_image <- NODE 14, OUTPUT 0 (zero-based)
+
+NODE 20 | LTXVSeparateAVLatent
+  av_latent <- NODE 19, OUTPUT 0 (zero-based)
+
+NODE 21 | LatentUpscaleModelLoader
+  model_name = "ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors"
+
+NODE 22 | LTXVLatentUpsampler
+  samples <- NODE 20, OUTPUT 0 (zero-based)
+  upscale_model <- NODE 21, OUTPUT 0 (zero-based)
+  vae <- NODE 8, OUTPUT 0 (zero-based)
+
+NODE 23 | LTXVImgToVideoInplace
+  vae <- NODE 8, OUTPUT 0 (zero-based)
+  image <- NODE 3, OUTPUT 0 (zero-based)
+  latent <- NODE 22, OUTPUT 0 (zero-based)
+  strength = 1.0
+  bypass = false
+
+NODE 24 | LTXVConcatAVLatent
+  video_latent <- NODE 23, OUTPUT 0 (zero-based)
+  audio_latent <- NODE 20, OUTPUT 1 (zero-based)
+
+NODE 25 | RandomNoise
+  noise_seed = 42
+
+NODE 26 | KSamplerSelect
+  sampler_name = "euler_ancestral"
+
+NODE 27 | ManualSigmas
+  sigmas = "0.85, 0.7250, 0.4219, 0.0"
+
+NODE 28 | LTXVDualCFGGuider
+  model <- NODE 7, OUTPUT 0 (zero-based)
+  positive <- NODE 10, OUTPUT 0 (zero-based)
+  negative <- NODE 10, OUTPUT 1 (zero-based)
+  video_cfg = 1.0
+  audio_cfg = 1.0
+
+NODE 29 | SamplerCustomAdvanced
+  noise <- NODE 25, OUTPUT 0 (zero-based)
+  guider <- NODE 28, OUTPUT 0 (zero-based)
+  sampler <- NODE 26, OUTPUT 0 (zero-based)
+  sigmas <- NODE 27, OUTPUT 0 (zero-based)
+  latent_image <- NODE 24, OUTPUT 0 (zero-based)
+
+NODE 30 | LTXVSeparateAVLatent
+  av_latent <- NODE 29, OUTPUT 0 (zero-based)
+
+NODE 31 | VAEDecodeTiled
+  samples <- NODE 30, OUTPUT 0 (zero-based)
+  vae <- NODE 8, OUTPUT 0 (zero-based)
+  tile_size = 512
+  overlap = 64
+  temporal_size = 64
+  temporal_overlap = 16
+
+NODE 32 | CreateVideo
+  images <- NODE 31, OUTPUT 0 (zero-based)
+  fps = 24.0
+  bit_depth = 8
+  color_space = "sRGB"
+  codec = "h264"
+
+NODE 33 | SaveVideo
+  video <- NODE 32, OUTPUT 0 (zero-based)
+  filename_prefix = "ltx25/02c-hochzeit-distilled-lang-nopin-seed11"
+  format = "mp4"
+  codec = "h264"
+
+DANGLING LINKS: []
