@@ -2,8 +2,11 @@
   "recorded_example_three_stages_completed": true,
   "full_clip_decode_passed": true,
   "full_local_model_hashes_matched_public_metadata": true,
-  "public_runner_graph_links_checked": false,
-  "public_runner_three_stage_run": false,
+  "public_runner_graph_links_checked": true,
+  "public_runner_three_stage_run": true,
   "fresh_driver_python_install": false,
-  "new_whole_tutorial_human_listening": false
+  "new_whole_tutorial_human_listening": false,
+  "public_runner_sha256": "253af4efe87b03a484f4be8aca14abf842255111bcea3d1ca50cfbb22cbbd11c",
+  "public_runner_validation": "RUNNER-VALIDATION.json",
+  "existing_conditioning_filename_collision_checked": true
 }
