@@ -16,7 +16,7 @@ The runner verifies all eight model files, then starts a separate local ComfyUI 
 
 1. `01-IMAGE`: generate `results/IMAGE.png` and copy it to the video input.
 2. `02-PROMPTS`: encode the positive and negative motion texts once, save the conditioning, and close that process. On our AMD machine this stage uses `--gpu-only --disable-dynamic-vram`.
-3. `03-CLIP`: load the saved conditioning and starting image, run both video passes, and save `results/CLIP.mp4`.
+3. `03-CLIP`: load the saved conditioning and starting image, run both video passes, and save `results/CLIP.mp4`. This 64 GB Strix Halo profile keeps 16 GiB out of the video model budget with `--reserve-vram 16`; `--clip-reserve-vram` changes that runner value. It is not a preset validated on smaller dedicated GPUs.
 
 Choose a new output folder for another run. The runner preserves existing folders. Its default port is `18189`; `--port` selects another free port. It stops only the processes it starts. Finish other GPU jobs before running the example. It does not stop a Wiki, router, or another ComfyUI instance for you.
 

@@ -28,7 +28,7 @@ def stop_owned(process,expected):
     parent=psutil.Process(process.pid)
     assert parent.create_time()==expected['created'] and parent.cmdline()==expected['command']
     owned=[(p,identity(p)) for p in parent.children(recursive=True)]+[(parent,expected)]
-    for p,proof in reversed(owned):
+    for p,proof in owned:
         try:
             assert p.create_time()==proof['created'] and p.cmdline()==proof['command'];p.terminate()
         except psutil.NoSuchProcess:pass
@@ -61,6 +61,8 @@ def stage(args,root,name,graph,extra_options):
     def healthy():
         if process.poll() is not None:raise RuntimeError('Owned ComfyUI exited; read '+str(root/(name+'.log')))
         free=psutil.virtual_memory().available/2**30
+        with (root/(name+'-RAM.csv')).open('a',encoding='utf-8') as sample:
+            sample.write(f'{time.time():.3f},{free:.6f}\n')
         proof['minimum_available_windows_ram_gib']=min(proof.get('minimum_available_windows_ram_gib',free),free)
         if free<.25:
             proof.setdefault('critical_since',time.monotonic())
@@ -124,6 +126,7 @@ def main():
     parser.add_argument('--output',type=Path,default=Path('my-image-and-clip'))
     parser.add_argument('--port',type=int,default=18189)
     parser.add_argument('--timeout',type=int,default=1200)
+    parser.add_argument('--clip-reserve-vram',type=float,default=16,help='GiB kept out of the video model budget; 16 is the recorded 64 GiB Strix Halo profile')
     parser.add_argument('--check',action='store_true',help='Verify files and graph links; no server or inference')
     args=parser.parse_args();args.comfyui=args.comfyui.resolve();args.python=args.python.resolve();root=args.output.resolve()
     if not (args.comfyui/'main.py').is_file() or not args.python.is_file():parser.error('Supply the existing ComfyUI directory and its Python executable')
@@ -139,7 +142,7 @@ def main():
     if occupied(args.port):raise RuntimeError('Port is occupied; choose a free port')
     root.mkdir(parents=True)
     for name in ('input','output','user','embeddings','results'):(root/name).mkdir()
-    (root/'extra-model-paths.yaml').write_text('example:\n  base_path: '+root.as_posix()+'\n  embeddings: embeddings\n',encoding='utf-8')
+    (root/'extra-model-paths.yaml').write_text('example:\n  base_path: '+root.as_posix()+'\n  is_default: true\n  embeddings: embeddings\n',encoding='utf-8')
     (root/'MODELS-VERIFIED.json').write_text(json.dumps(models,indent=2)+'\n',encoding='utf-8')
     image=read(KIT/'workflows/01-IMAGE.api.json');image['97']['inputs']['filename_prefix']='example/image'
     files=stage(args,root,'01-image',image,[]);source=next(Path(f['path']) for f in files if Path(f['path']).suffix.lower()=='.png')
@@ -150,7 +153,7 @@ def main():
     clip=read(KIT/'workflows/03-CLIP.api.json');clip['1']['inputs']['image']='START.png'
     for node,label in (('5','positive'),('6','negative')):clip[node]['inputs']['conditioning_name']='clip-'+label+'.safetensors'
     clip['33']['inputs']['filename_prefix']='example/clip'
-    files=stage(args,root,'03-clip',clip,[]);source=next(Path(f['path']) for f in files if Path(f['path']).suffix.lower()=='.mp4')
+    files=stage(args,root,'03-clip',clip,['--reserve-vram',str(args.clip_reserve_vram)]);source=next(Path(f['path']) for f in files if Path(f['path']).suffix.lower()=='.mp4')
     (root/'results/CLIP.mp4').write_bytes(source.read_bytes())
     result=dict(status='completed',image=str(root/'results/IMAGE.png'),image_sha256=sha(root/'results/IMAGE.png'),clip=str(root/'results/CLIP.mp4'),clip_sha256=sha(root/'results/CLIP.mp4'),completed_at=datetime.now().astimezone().isoformat())
     (root/'RESULT.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8');print(json.dumps(result,indent=2))

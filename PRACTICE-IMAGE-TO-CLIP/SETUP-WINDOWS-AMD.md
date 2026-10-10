@@ -40,6 +40,12 @@ On our recorded AMD machine, run the prompt-saving workflow in a separate proces
 
 Import `02-PROMPTS.workflow.json`, run it, and move the two `output/conditioning/first-clip-*.safetensors` results to `models/embeddings`, naming them `first-clip-positive.safetensors` and `first-clip-negative.safetensors`. Close that ComfyUI process before returning to the normal start command for the clip.
 
+For the separate clip process on this 64 GB Strix Halo profile, start with:
+
+```powershell
+..\venv\Scripts\python.exe main.py --listen 127.0.0.1 --port 8189 --disable-pinned-memory --reserve-vram 16
+```
+
 Copy the generated PNG to `input/GENERATED-FIRST-IMAGE.png`, then open `03-CLIP.workflow.json`. Its Load Image and both Load Conditioning names now match those files. The runner in README performs these separate stages automatically into its own new input/output/embeddings directories.
 
 The measured environment is Python 3.12.10, Torch 2.9.1+rocm7.2.1, ComfyUI `fa98a189b4271c76f66210e15f81790b555eb610`, frontend 1.53.10, templates 0.11.74. The same complete setup has not been newly validated on NVIDIA or another AMD GPU.
