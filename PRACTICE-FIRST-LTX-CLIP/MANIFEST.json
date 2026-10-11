@@ -22,8 +22,8 @@
     },
     {
       "path": "comfy_runner.py",
-      "bytes": 6984,
-      "sha256": "4eb13fb65d70848f9100fb78642a5b1a94ce9851d71f7a4c9a78848d5327c40f"
+      "bytes": 7918,
+      "sha256": "10cbaed6041c0e3624f614587b57e76ffd82ebd70052a981018c76b39d4b6262"
     },
     {
       "path": "download_models.py",
@@ -82,8 +82,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4019,
-      "sha256": "9f72ec6a35c7bfc0b974b3ac7711ea6471d561fcc7b0673988c9d298ad5cc8be"
+      "bytes": 4851,
+      "sha256": "cb56a56e20b0ea53d9e95c39a1e75a6e89cd9f7d2b57340e56c41b0b19dac5d8"
     },
     {
       "path": "run_clip.py",
@@ -98,7 +98,7 @@
     {
       "path": "VALIDATION.json",
       "bytes": 874,
-      "sha256": "1fd77b96a687871fb6f6918a8cf9e138a5bc234c9ddf0ca4847a1bbc1dbfce58"
+      "sha256": "28f22edcbce21d0142a076a9180841380392e9f00ee754b83917c6282637ed14"
     }
   ]
 }

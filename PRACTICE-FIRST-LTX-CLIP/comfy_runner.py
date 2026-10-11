@@ -1,10 +1,13 @@
 """Start, monitor and stop one owned ComfyUI stage."""
 from pathlib import Path
 from datetime import datetime
-import argparse,hashlib,json,os,socket,subprocess,sys,time,urllib.error,urllib.request
+import argparse,ctypes,hashlib,json,os,socket,subprocess,sys,time,urllib.error,urllib.request
 import psutil
 
 KIT=Path(__file__).resolve().parent
+
+class Memory(ctypes.Structure):
+    _fields_=[('length',ctypes.c_ulong),('load',ctypes.c_ulong),('total_physical',ctypes.c_ulonglong),('available_physical',ctypes.c_ulonglong),('total_page',ctypes.c_ulonglong),('available_page',ctypes.c_ulonglong),('total_virtual',ctypes.c_ulonglong),('available_virtual',ctypes.c_ulonglong),('available_extended',ctypes.c_ulonglong)]
 
 def read(path):return json.loads(Path(path).read_text('utf-8-sig'))
 def sha(path):
@@ -50,12 +53,17 @@ def stage(args,root,name,graph,extra_options):
     def healthy():
         if process.poll() is not None:raise RuntimeError('Owned ComfyUI exited; read '+str(root/(name+'.log')))
         free=psutil.virtual_memory().available/2**30
+        data=Memory();data.length=ctypes.sizeof(data)
+        if not ctypes.windll.kernel32.GlobalMemoryStatusEx(ctypes.byref(data)):raise OSError('Cannot read Windows commit reserve')
+        commit_free=data.available_page/2**30
         with (root/(name+'-RAM.csv')).open('a',encoding='utf-8') as sample:
-            sample.write(f'{time.time():.3f},{free:.6f}\n')
+            sample.write(f'{time.time():.3f},{free:.6f},{commit_free:.6f}\n')
         proof['minimum_available_windows_ram_gib']=min(proof.get('minimum_available_windows_ram_gib',free),free)
-        if free<.25:
+        proof['minimum_available_commit_gib']=min(proof.get('minimum_available_commit_gib',commit_free),commit_free)
+        proof['memory_guard']=dict(physical_emergency_mib=4,combined_physical_mib=256,combined_commit_gib=2,critical_seconds=5)
+        if free<4/1024 or(free<.25 and commit_free<2):
             proof.setdefault('critical_since',time.monotonic())
-            if time.monotonic()-proof['critical_since']>=5:raise RuntimeError('Windows RAM below 256 MiB for five seconds; stopping this owned process')
+            if time.monotonic()-proof['critical_since']>=5:raise RuntimeError('Windows physical/commit reserve critically low for five seconds; stopping this owned process')
         else:proof.pop('critical_since',None)
     with (root/(name+'.log')).open('w',encoding='utf-8') as log:
         flags=subprocess.CREATE_NO_WINDOW if os.name=='nt' else 0
