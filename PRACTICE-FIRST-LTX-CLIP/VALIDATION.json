@@ -1,5 +1,5 @@
 {
-  "created": "2026-10-11T05:52:07.689410+02:00",
+  "created": "2026-10-11T06:05:19.747238+02:00",
   "native_text_and_clip_completed": true,
   "native_run_clicked": true,
   "new_motion_conditioning": true,
@@ -19,6 +19,38 @@
   "video_reserve_vram_gib": 16,
   "existing_amd_python_driver_torch": true,
   "fresh_driver_install": false,
-  "downloaded_public_installer_and_runner_execution_pending": true,
-  "whole_human_listening": false
+  "downloaded_public_installer_and_runner_execution_pending": false,
+  "whole_human_listening": false,
+  "checked_at": "2026-10-11T06:04:16.893487+02:00",
+  "downloaded_installer_execution": true,
+  "downloaded_runner_execution": true,
+  "all_pinned_source_archive_members_match": true,
+  "sources": [
+    {
+      "name": "ComfyUI",
+      "commit": "fa98a189b4271c76f66210e15f81790b555eb610",
+      "all_archive_member_hashes_match": true,
+      "files": 1238
+    }
+  ],
+  "all_five_models_full_sha_verified": true,
+  "both_separate_stages_executed": true,
+  "seconds": {
+    "00-text": 35.4369999999908,
+    "01-clip": 584.2960000000021
+  },
+  "minimum_available_windows_ram_gib": {
+    "00-text": 4.344413757324219,
+    "01-clip": 0.1988067626953125
+  },
+  "public_clip_sha256": "1b317d85afffeaaa9b476670f859d1380eae35f3ea3ed18d2696cb8c824536cd",
+  "native_clip_sha256": "de090c4e2558fb583b4e3f07c339b974657d1489b5fa0251746e70ea78613e63",
+  "decoded_native_public_frames_identical": true,
+  "actual_public_result_full_decoded": true,
+  "frames": 121,
+  "width": 1024,
+  "height": 1024,
+  "silent": true,
+  "all_owned_servers_stopped": true,
+  "services_restored": true
 }
