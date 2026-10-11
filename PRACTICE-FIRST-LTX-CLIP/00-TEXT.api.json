@@ -1,0 +1,50 @@
+{
+  "4": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "gemma4-12b-with-proj-ltx-2.5-comfy-int8-convrot.safetensors",
+      "type": "ltxv",
+      "device": "default"
+    }
+  },
+  "5": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "A close cinematic portrait of an adult woman in green velvet in a warm library. She slowly turns her head toward the window and blinks naturally. A gentle camera push in. Her face, eyes and clothing stay consistent. Warm window light, subtle movement, no cuts, no added text.",
+      "clip": [
+        "4",
+        0
+      ]
+    }
+  },
+  "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "cartoon, deformed face, extra limbs, blurry, flicker, sudden camera motion, text, watermark",
+      "clip": [
+        "4",
+        0
+      ]
+    }
+  },
+  "100": {
+    "class_type": "SaveConditioning",
+    "inputs": {
+      "conditioning": [
+        "5",
+        0
+      ],
+      "filename_prefix": "conditioning/first-clip-positive"
+    }
+  },
+  "101": {
+    "class_type": "SaveConditioning",
+    "inputs": {
+      "conditioning": [
+        "6",
+        0
+      ],
+      "filename_prefix": "conditioning/first-clip-negative"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sources": [
+    {
+      "name": "ComfyUI",
+      "repository": "Comfy-Org/ComfyUI",
+      "commit": "fa98a189b4271c76f66210e15f81790b555eb610",
+      "url": "https://github.com/Comfy-Org/ComfyUI/archive/fa98a189b4271c76f66210e15f81790b555eb610.zip",
+      "bytes": 13310659,
+      "sha256": "6d16f680ebb84d1cb30ad17ee77cd832c772a22f3c2d3f2f64e11f5f20610404"
+    }
+  ]
+}

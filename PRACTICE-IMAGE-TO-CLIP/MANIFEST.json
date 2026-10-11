@@ -1,0 +1,22 @@
+{
+  "package": "IMAGE-TO-CLIP-KIT.zip",
+  "updated_at": "2026-10-11T01:06:38.885130+02:00",
+  "files": {
+    "MODEL-FOLDERS.md": "8035cb4a1bb8cfd62693e00043fbca3f4d3a23fb3326253987d5fe8a25feea90",
+    "MODELS.json": "55900563c99f9c4ddffccd16cf75c79968c4c894421f333aa7e8d84a348ff030",
+    "README.md": "82002074c3b70924fa812e10d190c094cffbb291a45ce4a0c2ee9c97ee6e9508",
+    "RUNNER-VALIDATION.json": "e96e5092dd85f17c95c3fe1d7ab0eaedfaddf907bcd9321800dde1d9589f70e1",
+    "run_example.py": "253af4efe87b03a484f4be8aca14abf842255111bcea3d1ca50cfbb22cbbd11c",
+    "SETUP-WINDOWS-AMD.md": "828bc86ce466d3ce71e28fb411f02a8ee81c66b43f7b428ba7696ddfc68ff1ea",
+    "VALIDATION.json": "4c393d0eb872e420a09068db41237f71aa3ecee83a46ac70bc7515aaca3e080b",
+    "example/CLIP.mp4": "55e5262519175475ea9f34b2a82922c18ad65ea79e5079cb20f6b8631a736d3d",
+    "example/IMAGE.png": "0931f2081034ac3a3ebc84e3a4d3b8263a4b834278de483adeee76765c22ec45",
+    "example/RUN.json": "8da15d52e05d38e66daf58d24aa4d78e0ccd7e613220251ac7e83a56c21db197",
+    "workflows/01-IMAGE.api.json": "0d1e8a022a36243fe4bb4437efeaf8732631a2a0bed97d0eba2c568076d59a29",
+    "workflows/01-IMAGE.workflow.json": "95141891d52f420db0e6e3b0990ecafbbedf6298e13c7fbd1ca0d8896636427c",
+    "workflows/02-PROMPTS.api.json": "3819aafdf822106b73cf24a06c9770685430d7f26ada1a1bde1cb36117d81f05",
+    "workflows/02-PROMPTS.workflow.json": "5cf0bc0dd949776f7ae1426a9c44862bde74231fe9d4f551e0cec62bf1670ef8",
+    "workflows/03-CLIP.api.json": "0ea88c23dbdd81691372bafa01b97f262c393d9a337f1ab9b989326f5520af23",
+    "workflows/03-CLIP.workflow.json": "f466b54a4dd08b3bfdbb84b7f680a55067777e2ae209f24748f93b0ce3d543fd"
+  }
+}

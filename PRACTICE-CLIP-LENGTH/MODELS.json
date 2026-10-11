@@ -1,0 +1,42 @@
+{
+  "models": [
+    {
+      "path": "diffusion_models/ltx-2.5-22b-distilled-transformer-comfy-int8-convrot.safetensors",
+      "bytes": 21504034224,
+      "sha256": "c4279eeff115cbeaca494bd2183e7d768c38fe85a184dc6afbb7159157c44334",
+      "repository": "Lightricks/LTX-2.5",
+      "revision": "2356ce76915d6c48d313d7e8b25900e1dd3abaa8",
+      "remote_path": "diffusion_models/ltx-2.5-22b-distilled-transformer-comfy-int8-convrot.safetensors",
+      "url": "https://huggingface.co/Lightricks/LTX-2.5/resolve/2356ce76915d6c48d313d7e8b25900e1dd3abaa8/diffusion_models/ltx-2.5-22b-distilled-transformer-comfy-int8-convrot.safetensors"
+    },
+    {
+      "path": "vae/ltx-2.5-video-vae-bf16.safetensors",
+      "bytes": 1472223346,
+      "sha256": "847e14ca7f3355debca0cea4eaa24ac0fbcdf0061da054ac89ca638a869ddba3",
+      "repository": "Lightricks/LTX-2.5",
+      "revision": "2356ce76915d6c48d313d7e8b25900e1dd3abaa8",
+      "remote_path": "vae/ltx-2.5-video-vae-bf16.safetensors",
+      "url": "https://huggingface.co/Lightricks/LTX-2.5/resolve/2356ce76915d6c48d313d7e8b25900e1dd3abaa8/vae/ltx-2.5-video-vae-bf16.safetensors"
+    },
+    {
+      "path": "vae/ltx-2.5-audio-vae-bf16.safetensors",
+      "bytes": 364866540,
+      "sha256": "c52733d37f6a7fb7949c3dc0fb468c6cb2169e4d836983a73babb9f0d54837a5",
+      "repository": "Lightricks/LTX-2.5",
+      "revision": "2356ce76915d6c48d313d7e8b25900e1dd3abaa8",
+      "remote_path": "vae/ltx-2.5-audio-vae-bf16.safetensors",
+      "url": "https://huggingface.co/Lightricks/LTX-2.5/resolve/2356ce76915d6c48d313d7e8b25900e1dd3abaa8/vae/ltx-2.5-audio-vae-bf16.safetensors"
+    },
+    {
+      "path": "latent_upscale_models/ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors",
+      "bytes": 995778752,
+      "sha256": "eb5a71fe4068ee87ccdb1c3aa635e547ca76bd2d30ae20ae889f2c325c0677e8",
+      "repository": "Lightricks/LTX-2.5",
+      "revision": "2356ce76915d6c48d313d7e8b25900e1dd3abaa8",
+      "remote_path": "latent_upscale_models/ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors",
+      "url": "https://huggingface.co/Lightricks/LTX-2.5/resolve/2356ce76915d6c48d313d7e8b25900e1dd3abaa8/latent_upscale_models/ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors"
+    }
+  ],
+  "remote_metadata_checked_at": "2026-10-11T00:34:18.762127+02:00",
+  "full_local_hashes_verified": true
+}

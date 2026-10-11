@@ -1,0 +1,17 @@
+{
+  "source_commits": {
+    "comfyui": "fa98a189b4271c76f66210e15f81790b555eb610"
+  },
+  "source_clone": "Pinned official ComfyUI source archive",
+  "existing_python_environment": "C:\\Users\\JT\\Desktop\\comfy\\venv-qwen\\Scripts\\python.exe",
+  "packages": {
+    "torch": "2.9.1+rocm7.2.1",
+    "gguf": "0.19.0",
+    "comfyui-frontend-package": "1.53.10",
+    "comfy-kitchen": "0.2.36",
+    "transformers": "5.17.0",
+    "safetensors": "0.8.0"
+  },
+  "fresh_driver_install": false,
+  "fresh_torch_install": false
+}

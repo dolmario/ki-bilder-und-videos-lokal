@@ -1,0 +1,78 @@
+{
+  "models": [
+    {
+      "path": "diffusion_models/flux-2-klein-4b-fp8.safetensors",
+      "bytes": 4070624520,
+      "sha256": "97ed34fe0567e436200f2faee3939b88f2b5d99f8af2a4dc16532c4245c0ccb6",
+      "repository": "black-forest-labs/FLUX.2-klein-4b-fp8",
+      "revision": "5b4408e59397a4a37ccb46afe426d8ed86379441",
+      "remote_path": "flux-2-klein-4b-fp8.safetensors",
+      "url": "https://huggingface.co/black-forest-labs/FLUX.2-klein-4b-fp8/resolve/5b4408e59397a4a37ccb46afe426d8ed86379441/flux-2-klein-4b-fp8.safetensors"
+    },
+    {
+      "path": "text_encoders/qwen_3_4b.safetensors",
+      "bytes": 8044982048,
+      "sha256": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a",
+      "repository": "Comfy-Org/vae-text-encorder-for-flux-klein-4b",
+      "revision": "5f526678002e43af5551dadb73ce2e8c91b43afe",
+      "remote_path": "split_files/text_encoders/qwen_3_4b.safetensors",
+      "url": "https://huggingface.co/Comfy-Org/vae-text-encorder-for-flux-klein-4b/resolve/5f526678002e43af5551dadb73ce2e8c91b43afe/split_files/text_encoders/qwen_3_4b.safetensors"
+    },
+    {
+      "path": "vae/flux2-vae.safetensors",
+      "bytes": 336213556,
+      "sha256": "d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5",
+      "repository": "Comfy-Org/flux2-dev",
+      "revision": "ed33133cd56476eac818c0943b6f9419b3e4a3a1",
+      "remote_path": "split_files/vae/flux2-vae.safetensors",
+      "url": "https://huggingface.co/Comfy-Org/flux2-dev/resolve/ed33133cd56476eac818c0943b6f9419b3e4a3a1/split_files/vae/flux2-vae.safetensors"
+    },
+    {
+      "path": "diffusion_models/ltx-2.5-22b-distilled-transformer-comfy-int8-convrot.safetensors",
+      "bytes": 21504034224,
+      "sha256": "c4279eeff115cbeaca494bd2183e7d768c38fe85a184dc6afbb7159157c44334",
+      "repository": "Lightricks/LTX-2.5",
+      "revision": "2356ce76915d6c48d313d7e8b25900e1dd3abaa8",
+      "remote_path": "diffusion_models/ltx-2.5-22b-distilled-transformer-comfy-int8-convrot.safetensors",
+      "url": "https://huggingface.co/Lightricks/LTX-2.5/resolve/2356ce76915d6c48d313d7e8b25900e1dd3abaa8/diffusion_models/ltx-2.5-22b-distilled-transformer-comfy-int8-convrot.safetensors"
+    },
+    {
+      "path": "text_encoders/gemma4-12b-with-proj-ltx-2.5-comfy-int8-convrot.safetensors",
+      "bytes": 15372969374,
+      "sha256": "6ce688a0aa98a5fa36a9f1e6c3f42152a498cc2b53ee8c15674c64244f91487f",
+      "repository": "Lightricks/LTX-2.5",
+      "revision": "2356ce76915d6c48d313d7e8b25900e1dd3abaa8",
+      "remote_path": "text_encoders/gemma4-12b-with-proj-ltx-2.5-comfy-int8-convrot.safetensors",
+      "url": "https://huggingface.co/Lightricks/LTX-2.5/resolve/2356ce76915d6c48d313d7e8b25900e1dd3abaa8/text_encoders/gemma4-12b-with-proj-ltx-2.5-comfy-int8-convrot.safetensors"
+    },
+    {
+      "path": "vae/ltx-2.5-video-vae-bf16.safetensors",
+      "bytes": 1472223346,
+      "sha256": "847e14ca7f3355debca0cea4eaa24ac0fbcdf0061da054ac89ca638a869ddba3",
+      "repository": "Lightricks/LTX-2.5",
+      "revision": "2356ce76915d6c48d313d7e8b25900e1dd3abaa8",
+      "remote_path": "vae/ltx-2.5-video-vae-bf16.safetensors",
+      "url": "https://huggingface.co/Lightricks/LTX-2.5/resolve/2356ce76915d6c48d313d7e8b25900e1dd3abaa8/vae/ltx-2.5-video-vae-bf16.safetensors"
+    },
+    {
+      "path": "vae/ltx-2.5-audio-vae-bf16.safetensors",
+      "bytes": 364866540,
+      "sha256": "c52733d37f6a7fb7949c3dc0fb468c6cb2169e4d836983a73babb9f0d54837a5",
+      "repository": "Lightricks/LTX-2.5",
+      "revision": "2356ce76915d6c48d313d7e8b25900e1dd3abaa8",
+      "remote_path": "vae/ltx-2.5-audio-vae-bf16.safetensors",
+      "url": "https://huggingface.co/Lightricks/LTX-2.5/resolve/2356ce76915d6c48d313d7e8b25900e1dd3abaa8/vae/ltx-2.5-audio-vae-bf16.safetensors"
+    },
+    {
+      "path": "latent_upscale_models/ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors",
+      "bytes": 995778752,
+      "sha256": "eb5a71fe4068ee87ccdb1c3aa635e547ca76bd2d30ae20ae889f2c325c0677e8",
+      "repository": "Lightricks/LTX-2.5",
+      "revision": "2356ce76915d6c48d313d7e8b25900e1dd3abaa8",
+      "remote_path": "latent_upscale_models/ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors",
+      "url": "https://huggingface.co/Lightricks/LTX-2.5/resolve/2356ce76915d6c48d313d7e8b25900e1dd3abaa8/latent_upscale_models/ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors"
+    }
+  ],
+  "remote_metadata_checked_at": "2026-10-11T00:34:18.762127+02:00",
+  "full_local_hashes_verified": true
+}
