@@ -1,0 +1,69 @@
+{
+  "downloaded_zip_sha256": "ac0ba9c9d6cb83714ceacb814610d69f8243ab44e9ac34fe666cd0e30daf2f74",
+  "tested_source_commit": "9ce4cd806b4fd5dbf88c6e494bc1b6b7cc40534f",
+  "runner_sha256": "253af4efe87b03a484f4be8aca14abf842255111bcea3d1ca50cfbb22cbbd11c",
+  "three_stage_execution_passed": true,
+  "all_eight_weights_hash_verified": true,
+  "full_clip_decode_passed": true,
+  "recorded_profile": "64 GB Strix Halo / Windows / 32 GB reserved iGPU",
+  "reserve_vram_gib": 16,
+  "fresh_driver_install": false,
+  "whole_human_listening": false,
+  "stages": [
+    {
+      "name": "01-image",
+      "status": "completed",
+      "seconds": 30.375,
+      "minimum_available_windows_ram_gib": 9.833763122558594,
+      "outputs": [
+        {
+          "file": "image_00001_.png",
+          "sha256": "c1ce9478d2108aa429c9e3534611025c54bd95607f8be4988e7590580b1a5374",
+          "bytes": 2125767,
+          "kind": "images"
+        }
+      ]
+    },
+    {
+      "name": "02-prompts",
+      "status": "completed",
+      "seconds": 42.20299999999406,
+      "minimum_available_windows_ram_gib": 2.347503662109375,
+      "outputs": [
+        {
+          "file": "clip-positive.safetensors",
+          "sha256": "88c8dc032780c58bf88536db49ed7b9777a013ffc187edf2c8c3a8a9d25cd6e9",
+          "bytes": 1081512,
+          "kind": "conditioning"
+        },
+        {
+          "file": "clip-negative.safetensors",
+          "sha256": "3b3e1f2164cd3683fd0375abaa426b79ab38512c574342e0c4c3e099c7059ebc",
+          "bytes": 565416,
+          "kind": "conditioning"
+        }
+      ]
+    },
+    {
+      "name": "03-clip",
+      "status": "completed",
+      "seconds": 385.4530000000086,
+      "minimum_available_windows_ram_gib": 0.10614013671875,
+      "outputs": [
+        {
+          "file": "clip_00001_.mp4",
+          "sha256": "7d4d0554d48a371f9bc08f26c874707b0ea4f83c90f1ee2a62669bca278b7116",
+          "bytes": 3181905,
+          "kind": "images"
+        }
+      ]
+    }
+  ],
+  "clip": {
+    "width": 1280,
+    "height": 704,
+    "frames": 121,
+    "fps": 24,
+    "seconds": 5.04
+  }
+}

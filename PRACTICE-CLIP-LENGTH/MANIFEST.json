@@ -1,0 +1,139 @@
+{
+  "files": [
+    {
+      "path": "01-CLIP.api.json",
+      "bytes": 6420,
+      "sha256": "003b0a631e929c646489dd0b8cde74dfacc74e0fcfab53ad360da8aa2bb78c1c"
+    },
+    {
+      "path": "01-CLIP.json",
+      "bytes": 29777,
+      "sha256": "b0d4c63746ad4b14f5bf49a5681f6ed88ccb278ccfd5c1c55c8d0206f85901f6"
+    },
+    {
+      "path": "BASELINE-ASSETS.json",
+      "bytes": 797,
+      "sha256": "2258ea2cf93e49c6520678503f6826ab4ad372c4261fbe57d2d0b8f7197f02fa"
+    },
+    {
+      "path": "comfy_runner.py",
+      "bytes": 7918,
+      "sha256": "10cbaed6041c0e3624f614587b57e76ffd82ebd70052a981018c76b39d4b6262"
+    },
+    {
+      "path": "download_models.py",
+      "bytes": 2152,
+      "sha256": "e513ce95dcf2709a2246886c4e3f4d4627dd2b714ff1b05e0c422a25b5394bf8"
+    },
+    {
+      "path": "ENVIRONMENT.json",
+      "bytes": 534,
+      "sha256": "85d6f201e4024033ec98a7fdcf1316dc1e86bafd65e31473f55c1052b18fe93b"
+    },
+    {
+      "path": "example/BASELINE-FIVE-SECONDS.json",
+      "bytes": 372,
+      "sha256": "02273d0e80b8dcbef3911ece0bd10ffed58e446e5506e907fe3e942dcc9e1ccf"
+    },
+    {
+      "path": "example/CLIP.mp4",
+      "bytes": 3133027,
+      "sha256": "a061e4f46ba80efb042069f549dcb45a1c3a10e6aa8ff46893a423592181e3b0"
+    },
+    {
+      "path": "example/conditioning/first-clip-negative.safetensors",
+      "bytes": 491688,
+      "sha256": "5ac83035bccc47cc7ff9d52cbd3d946607add13c90c4a9852242ba8d438c62c8"
+    },
+    {
+      "path": "example/conditioning/first-clip-positive.safetensors",
+      "bytes": 1450152,
+      "sha256": "eb728cd4141ddab696118d56faa4afbe6ceedee9922a62d6fd37915954e168e4"
+    },
+    {
+      "path": "example/FIVE-SECONDS.mp4",
+      "bytes": 1669743,
+      "sha256": "de090c4e2558fb583b4e3f07c339b974657d1489b5fa0251746e70ea78613e63"
+    },
+    {
+      "path": "example/NATIVE-CLIP-HISTORY.json",
+      "bytes": 54900,
+      "sha256": "ee412d6dc9641b800c514c2776a076f1c6241892fbd938dfaeded70807923de4"
+    },
+    {
+      "path": "example/PORTRAIT.png",
+      "bytes": 1492296,
+      "sha256": "35a4812046c6447b2b5f19d084fb4da33494186b8bd49e07ee9268e2f24ef860"
+    },
+    {
+      "path": "install_sources.py",
+      "bytes": 3077,
+      "sha256": "e2602108fb99c45529e912c9fdea31bc3f9f8b85f726d2bba272bd5886f83b37"
+    },
+    {
+      "path": "MODELS.json",
+      "bytes": 2382,
+      "sha256": "c39be46786387886aadc14b911f8a2e44e81c11ee1e305213c21ca304807a025"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3740,
+      "sha256": "8e26ad3a73719ade6a7eb40f08afd22c6244f1f5c0fb4866e9f805c01b024719"
+    },
+    {
+      "path": "run_clip.py",
+      "bytes": 5689,
+      "sha256": "c5d64fc5f6509215f1dcfc536cd8d1a015913f88765f11978d3a65ef7bcb4313"
+    },
+    {
+      "path": "SOURCES.json",
+      "bytes": 387,
+      "sha256": "c6c228cb197bef19e23ee9ed0942e4a7549ba71b7f91aaa8d4040f2363cdc522"
+    },
+    {
+      "path": "VALIDATION.json",
+      "bytes": 730,
+      "sha256": "f36129bf5e93e49edff7562ff2d3ecd0c49a2c98427c08aefe7daf4261070194"
+    },
+    {
+      "path": "views/cached-conditioning.json",
+      "bytes": 29779,
+      "sha256": "d002a9f7c4d3f5a041b70bd6c02d1ef340101ee86102fa9ca579f9f4397c4394"
+    },
+    {
+      "path": "views/cached-first-pass.json",
+      "bytes": 29782,
+      "sha256": "d17008c5a273d6f3dfa06082a63f8c6ee86694d27b6b55c1f02c0a408689fe2f"
+    },
+    {
+      "path": "views/cached-refine.json",
+      "bytes": 29782,
+      "sha256": "4834e3c5be8419510acb312f754273a374ddcf3f0dc765452e79bd9c1e2b3e36"
+    },
+    {
+      "path": "views/cached-save.json",
+      "bytes": 29809,
+      "sha256": "187fd8907a21357327b183dc620400ffabe09f86e972ba91cac671b26b56970a"
+    },
+    {
+      "path": "views/cached-size.json",
+      "bytes": 29779,
+      "sha256": "87ba042f7830f19d8da5834bbadfb971de2c118075fd74e8cba77058d245c27a"
+    },
+    {
+      "path": "views/cached-start.json",
+      "bytes": 29777,
+      "sha256": "14b77549a3782b16e872473c212d3ade08cdd05fab99d4aa12b56ce0f45a8b76"
+    },
+    {
+      "path": "views/cached-upscale.json",
+      "bytes": 29782,
+      "sha256": "8047b130759fc658cb4997570f10d6cab823623db248b98af236f18a15393d7b"
+    },
+    {
+      "path": "views/long-models-readable.json",
+      "bytes": 29775,
+      "sha256": "cb28aa3c044e761345d955168edeb049726f96b1ecf172b269a86f377071f360"
+    }
+  ]
+}

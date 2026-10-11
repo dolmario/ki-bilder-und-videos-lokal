@@ -1,0 +1,50 @@
+{
+  "4": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "gemma4-12b-with-proj-ltx-2.5-comfy-int8-convrot.safetensors",
+      "type": "ltxv",
+      "device": "default"
+    }
+  },
+  "5": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "A slow cinematic push forward over the copper roofs of a baroque steampunk town at sunrise. Thin steam drifts gently from the chimneys. Buildings remain stable, realistic warm light, subtle motion, no cuts, no added text.",
+      "clip": [
+        "4",
+        0
+      ]
+    }
+  },
+  "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "pc game, console game, video game, cartoon, childish, ugly, deformed face, extra limbs, blurry",
+      "clip": [
+        "4",
+        0
+      ]
+    }
+  },
+  "100": {
+    "class_type": "SaveConditioning",
+    "inputs": {
+      "conditioning": [
+        "5",
+        0
+      ],
+      "filename_prefix": "conditioning/first-clip-positive"
+    }
+  },
+  "101": {
+    "class_type": "SaveConditioning",
+    "inputs": {
+      "conditioning": [
+        "6",
+        0
+      ],
+      "filename_prefix": "conditioning/first-clip-negative"
+    }
+  }
+}

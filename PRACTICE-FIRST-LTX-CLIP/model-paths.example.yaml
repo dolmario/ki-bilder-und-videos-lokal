@@ -1,0 +1,9 @@
+existing_ltx:
+  base_path: C:/Models
+  diffusion_models: diffusion_models
+  text_encoders: text_encoders
+  vae: vae
+  latent_upscale_models: latent_upscale_models
+own_text:
+  base_path: C:/AI/LTX/manual-run
+  embeddings: embeddings
