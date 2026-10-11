@@ -1,0 +1,19 @@
+{
+  "created": "2026-10-11T06:55:25.970363+02:00",
+  "native_run_clicked": true,
+  "new_ten_second_sampling": true,
+  "new_text_encoding": false,
+  "reused_source_image_and_conditioning": true,
+  "frames": 241,
+  "fps": 24,
+  "width": 1024,
+  "height": 1024,
+  "silent": true,
+  "native_seconds": 2120.295,
+  "native_clip_sha256": "a061e4f46ba80efb042069f549dcb45a1c3a10e6aa8ff46893a423592181e3b0",
+  "baseline_clip_sha256": "de090c4e2558fb583b4e3f07c339b974657d1489b5fa0251746e70ea78613e63",
+  "source_image_sha256": "35a4812046c6447b2b5f19d084fb4da33494186b8bd49e07ee9268e2f24ef860",
+  "existing_amd_driver_python_torch": true,
+  "fresh_driver_install": false,
+  "downloaded_public_execution_pending": true
+}

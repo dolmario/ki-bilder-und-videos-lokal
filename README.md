@@ -1,5 +1,12 @@
 # ComfyUI: create an image and turn it into a clip
 
+## Five seconds or ten with LTX-2.5
+
+Compare a separately sampled ten-second portrait clip with the earlier five-second result. Same PNG, motion conditioning, seed and size; both frame counts change to 241. Includes a pinned source installer and a runner that reuses the supplied conditioning.
+
+[Download the length comparison kit](downloads/CLIP-LENGTH-KIT.zip) · [Guide](PRACTICE-CLIP-LENGTH/README.md) · [Execution record](PRACTICE-CLIP-LENGTH/VALIDATION.json)
+
+
 ## Your first LTX-2.5 portrait clip
 
 Turn an existing portrait into a new local five-second LTX clip. The new kit includes a pinned source installer, two native UI/API graphs, separate text/video runner, five model links and the actual input/clip pair. The recorded AMD profile starts at512×512 and refines to1024×1024.
