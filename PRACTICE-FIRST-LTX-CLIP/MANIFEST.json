@@ -1,0 +1,104 @@
+{
+  "files": [
+    {
+      "path": "00-TEXT.api.json",
+      "bytes": 1275,
+      "sha256": "4c609b7dbae96aabfd33d4e6d9bd4f52c42701e0200f8417e861b8714ceecf2e"
+    },
+    {
+      "path": "00-TEXT.json",
+      "bytes": 5184,
+      "sha256": "1ec4c5cd7702410f1515e7a73c05d988140018edaa512d9f373c14e3528b57d0"
+    },
+    {
+      "path": "01-CLIP.api.json",
+      "bytes": 6411,
+      "sha256": "88c61396a1b9a4b2c39804b1a469afe89eaae058deef0469961288eb7ed67bc3"
+    },
+    {
+      "path": "01-CLIP.json",
+      "bytes": 29767,
+      "sha256": "8d28b4bb2e047f4503cb004512044fabad58082ac19227e92519440f4ef4311f"
+    },
+    {
+      "path": "comfy_runner.py",
+      "bytes": 6984,
+      "sha256": "4eb13fb65d70848f9100fb78642a5b1a94ce9851d71f7a4c9a78848d5327c40f"
+    },
+    {
+      "path": "download_models.py",
+      "bytes": 2152,
+      "sha256": "f1e9c3b995dc488ae122528bc502613406d3a6e1f065f4939bcba0a008cc694b"
+    },
+    {
+      "path": "ENVIRONMENT.json",
+      "bytes": 750,
+      "sha256": "f602964de679ba8e129526dfe6d37669905be115279c007ffe92f4c887b14ee0"
+    },
+    {
+      "path": "example/CLIP.mp4",
+      "bytes": 1669743,
+      "sha256": "de090c4e2558fb583b4e3f07c339b974657d1489b5fa0251746e70ea78613e63"
+    },
+    {
+      "path": "example/conditioning/first-clip-negative.safetensors",
+      "bytes": 491688,
+      "sha256": "5ac83035bccc47cc7ff9d52cbd3d946607add13c90c4a9852242ba8d438c62c8"
+    },
+    {
+      "path": "example/conditioning/first-clip-positive.safetensors",
+      "bytes": 1450152,
+      "sha256": "eb728cd4141ddab696118d56faa4afbe6ceedee9922a62d6fd37915954e168e4"
+    },
+    {
+      "path": "example/NATIVE-CLIP-HISTORY.json",
+      "bytes": 54861,
+      "sha256": "8755d8594dbb69bc3f33b2a7908780df392bb12b634cabcbf38bc7de26a5c6ae"
+    },
+    {
+      "path": "example/NATIVE-TEXT-HISTORY.json",
+      "bytes": 10076,
+      "sha256": "91473b6e08f99a0703eeb05270920789d70a416d6ff08776fb47aa41450699a9"
+    },
+    {
+      "path": "example/PORTRAIT.png",
+      "bytes": 1492296,
+      "sha256": "35a4812046c6447b2b5f19d084fb4da33494186b8bd49e07ee9268e2f24ef860"
+    },
+    {
+      "path": "install_sources.py",
+      "bytes": 3077,
+      "sha256": "e2602108fb99c45529e912c9fdea31bc3f9f8b85f726d2bba272bd5886f83b37"
+    },
+    {
+      "path": "model-paths.example.yaml",
+      "bytes": 241,
+      "sha256": "465e44556dcb180d4ab28ee87478c71faee1d814ea34a6e010086e4819640ff3"
+    },
+    {
+      "path": "MODELS.json",
+      "bytes": 2989,
+      "sha256": "0a12d39b7bfb4c1fb9bbf3b9e03a96e418ccd9a5a60a25c4d52f4f23e05f4310"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4019,
+      "sha256": "9f72ec6a35c7bfc0b974b3ac7711ea6471d561fcc7b0673988c9d298ad5cc8be"
+    },
+    {
+      "path": "run_clip.py",
+      "bytes": 4968,
+      "sha256": "0414f52a6579e1744f76a718c9a4bd08936a125c9410b7f401b808da6e4251f4"
+    },
+    {
+      "path": "SOURCES.json",
+      "bytes": 387,
+      "sha256": "c6c228cb197bef19e23ee9ed0942e4a7549ba71b7f91aaa8d4040f2363cdc522"
+    },
+    {
+      "path": "VALIDATION.json",
+      "bytes": 874,
+      "sha256": "1fd77b96a687871fb6f6918a8cf9e138a5bc234c9ddf0ca4847a1bbc1dbfce58"
+    }
+  ]
+}

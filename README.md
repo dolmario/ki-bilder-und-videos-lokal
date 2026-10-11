@@ -1,5 +1,12 @@
 # ComfyUI: create an image and turn it into a clip
 
+## Your first LTX-2.5 portrait clip
+
+Turn an existing portrait into a new local five-second LTX clip. The new kit includes a pinned source installer, two native UI/API graphs, separate text/video runner, five model links and the actual input/clip pair. The recorded AMD profile starts at512×512 and refines to1024×1024.
+
+[Download the first LTX clip kit](downloads/FIRST-LTX-CLIP-KIT.zip) · [English guide](PRACTICE-FIRST-LTX-CLIP/README.md) · [Actual execution record](PRACTICE-FIRST-LTX-CLIP/VALIDATION.json)
+
+
 Make a copper-roofed town with FLUX.2 Klein, then animate that exact PNG with LTX. The practical example has three ready-to-open workflows, a runner for the separate model stages, and the complete image/clip pair.
 
 ![Our actual generated starting image](PRACTICE-IMAGE-TO-CLIP/example/IMAGE.png)
